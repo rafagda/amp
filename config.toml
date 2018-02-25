@@ -1,0 +1,120 @@
+baseURL = "http://www.ampsicologia.es/"
+languageCode = "es"
+title = "AMP Psicología"
+publishDir = "dist"
+
+[params]
+    name = "Alaitz Martínez Latorre"
+    description = "Página web de AMP Psicología"
+    email = "contacto@ampsicologia.es"
+    phone = "915 220 679 - 686 898 494"
+    address = """Calle de Los Madrazo 28, 1º izq
+    28014 Madrid (Madrid)"""
+    year = 2018
+    background = ""
+    favicon = "images/gt_favicon.png"
+    DateForm = "January 2, 2006"
+
+    showSubheader = true
+    showTerapias = true
+
+    footerEnableContact = true
+    footerEnableFollowme = true
+
+[params.disqus]
+    site = "disqus.ampsicologia.com"
+
+[params.sharethis]
+    property = "123456789012345678901234"
+    custom = true
+
+[params.google.analytics]
+    trackerID = "GA-000000000-0"
+
+[[params.social]]
+	title = "twitter"
+	url = "https://twitter.com/am_psicologia"
+    icon = "fa-twitter-square"
+    footer = true
+    sharethis = true
+    network = "twitter"
+
+[[params.social]]
+	title = "facebook"
+	url = "https://www.facebook.com/ampsicologiamadrid"
+    icon = "fa-facebook-square"
+    footer = true
+    sharethis = true
+    network = "facebook"
+
+[[params.social]]
+	title = "linkedin"
+	url = "https://es.linkedin.com/in/alaitz-mart%C3%ADnez-latorre-a8b8788a"
+    icon = "fa-linkedin-square"
+    footer = true
+    sharethis = true
+    network = "linkedin"
+
+[[params.social]]
+	title = "email"
+	url = "mailto:contacto@ampsicologia.es"
+    icon = "fa-envelope"
+    footer = false
+    sharethis = true
+    network = "email"
+
+[[menu.main]]
+    name = "inicio"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "sobre mi"
+    url = "/sobre-mi/"
+    weight = 2
+
+[[menu.main]]
+    name = "terapias"
+    url = "#"
+    weight = 3
+
+[[menu.main]]
+    parent = "terapias"
+    name = "adultos"
+    url = "/terapias/adultos"
+    weight = 1
+
+[[menu.main]]
+    parent = "terapias"
+    name = "pareja"
+    url = "/terapias/pareja"
+    weight = 2
+
+[[menu.main]]
+    parent = "terapias"
+    name = "infantil"
+    url = "/terapias/infantil"
+    weight = 3
+
+[[menu.main]]
+    parent = "terapias"
+    name = "familia"
+    url = "/terapias/familia"
+    weight = 4
+
+[[menu.main]]
+    parent = "terapias"
+    name = "coaching"
+    url = "/terapias/coaching"
+    weight = 5
+
+[[menu.main]]
+    parent = "terapias"
+    name = "informes"
+    url = "/terapias/informes"
+    weight = 6
+
+[[menu.main]]
+    name = "blog"
+    url = "/posts/"
+    weight = 4

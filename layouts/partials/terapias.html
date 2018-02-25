@@ -1,0 +1,19 @@
+<div class="row section featured topspace">
+
+    <h2 class="section-title"><span>Terapias</span></h2>
+
+    <div class="terapias">
+        {{ range where .Data.Pages "Section" "terapias" }}
+            {{ if .Params.showHome }}
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="{{ .Param "thumbnail.image" }}" alt="{{ .Param "thumbnail.alt" }}" class="img-rounded" >
+                <h3 class="text-center">{{ .Title }}</h3>
+                <p class="text-center">{{ .Param "pricing.single" }}</p>
+                <p class="text-center">{{ .Param "pricing.pass" }}</p>
+                <p class="text-center"><a href="{{ .Permalink }}" class="btn btn-action">Leer más</a></p>
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>
+
+</div> <!-- / section -->
