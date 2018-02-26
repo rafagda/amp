@@ -115,6 +115,71 @@ publishDir = "dist"
     weight = 6
 
 [[menu.main]]
+    name = "areas intervención"
+    url = "#"
+    weight = 4
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "adiciones"
+    url = "/areas-intervencion/adicciones"
+    weight = 1
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "ansiedad"
+    url = "/areas-intervencion/ansiedad"
+    weight = 2
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "depresion"
+    url = "/areas-intervencion/depresion"
+    weight = 3
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "duelos"
+    url = "/areas-intervencion/duelos"
+    weight = 4
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "estres"
+    url = "/areas-intervencion/estres"
+    weight = 5
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "fobias"
+    url = "/areas-intervencion/fobias"
+    weight = 6
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "obsesiones"
+    url = "/areas-intervencion/obsesiones"
+    weight = 7
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "alimentacion"
+    url = "/areas-intervencion/alimentacion"
+    weight = 8
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "personalidad"
+    url = "/areas-intervencion/personalidad"
+    weight = 9
+
+[[menu.main]]
+    parent = "areas intervención"
+    name = "sueno"
+    url = "/areas-intervencion/sueno"
+    weight = 10
+
+[[menu.main]]
     name = "blog"
     url = "/posts/"
-    weight = 4
+    weight = 5
