@@ -1,0 +1,21 @@
+<section class="row section blog topspace bottomspace">
+    <header>
+        <h2 class="section-title">
+            <span>Blog</span>
+        </h2>
+    </header>
+
+    {{ range first 2 (sort (where .Data.Pages "Section" "posts") "Date") }}
+    <div class="col-sm-6 col-md-6 text-center">
+        <article>
+            <header>
+                <a href="{{ .Permalink }}"><img src="{{ .Param `thumbnail.image` }}" alt="{{ .Param `thumbnail.alt` }}" class="img-rounded"></a>
+                <h3 class="text-center">{{ .Title }}</h3>
+            </header>
+            <div class="content">{{ .Content }}</div>
+        </article>
+        <a href="{{ .Permalink }}" class="btn btn-action text-center">Leer más</a>
+    </div>
+    {{ end }}
+
+</section>

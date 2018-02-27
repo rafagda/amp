@@ -7,6 +7,7 @@ draft = false
 image = "/images/depresion.jpg"
 alt = "depresion"
 +++
+
 La **depresión** se puede describir como el hecho de sentirse triste, melancólico, infeliz, abatido o derrumbado. La mayoría de nosotros se siente de esta manera de vez en cuando durante períodos cortos
 
 La **depresión** clínica es un trastorno del estado anímico en el cual los sentimientos de tristeza, pérdida, ira o frustración interfieren con la vida diaria durante un período de algunas semanas o más.

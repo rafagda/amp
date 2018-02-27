@@ -15,6 +15,7 @@
 					<h1 class="entry-title">
 						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
 					</h1>
+					<img src="{{ .Param "thumbnail.image" }}" alt="{{ .Param "thumbnail.alt" }}" class="img-rounded">
 				</header>
 				<div class="entry-content">
 					{{ .Content }}

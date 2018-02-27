@@ -7,6 +7,7 @@ draft = false
 image = "/images/duelos.jpg"
 alt = "duelos"
 +++
+
 En algún momento de la vida, cada individuo, debe enfrentarse a la muerte o a la pérdida ya que es de las pocas cosas que no se pueden evitar.
 
 Se pueden tratar de:

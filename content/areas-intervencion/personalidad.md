@@ -7,6 +7,7 @@ draft = false
 image = "/images/personalidad.jpg"
 alt = "personalidad"
 +++
+
 Los trastornos de la personalidad son un conjunto de perturbaciones o anormalidades que se
 dan en las dimensiones [emocionales]( https://es.wikipedia.org/wiki/Emoci%C3%B3n),
 [afectivas]( https://es.wikipedia.org/wiki/Afectividad), [motivacionales](

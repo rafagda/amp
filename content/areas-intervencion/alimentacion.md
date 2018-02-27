@@ -7,6 +7,7 @@ draft = false
 image = "/images/alimentacion.jpg"
 alt = "alimentacion"
 +++
+
 Los **trastornos de la alimentación** son enfermedades crónicas y progresivas que se
 manifiestan a través de la conducta alimentaria.
 
@@ -19,28 +20,28 @@ de una buena imagen corporal.
 Existen varios tipos de trastornos, aunque los más comunes son la anorexia nerviosa y la
 bulimia nerviosa.
 
-## Anorexia nerviosa
+# Anorexia nerviosa
 
 Miedo intenso a ser obeso. Se manifiesta por una bajada por lo menos del 15% de su peso
 corporal.
 
-## Bulimia nerviosa
+# Bulimia nerviosa
 
 Tendencia a comer demasiado para después purgarse o vomitar todo. Generalmente está
 cerca de su peso corporal, por lo que es menos reconocible.
 
-## Comer compulsivamente
+# Comer compulsivamente
 
 Ingesta desproporcional de alimentos como forma de compensa emocional. Tiene serias
 consecuencias como obesidad, diabetes, hipertensión y enfermedades cardíacas.
 
-## Ortorexia
+# Ortorexia
 
 Obsesión por lo que el paciente considera una “buena alimentación” y que, por el contrario, lo
 lleva a evitar grasas, proteínas y vitaminas básicas para el organismo. Paradójicamente su afán
 por “comer sano” lo lleva a una mala nutrición, anemias, etc.
 
-## Vigorexia
+# Vigorexia
 
 Adicción al ejercicio a la que se suma una visión distorsionada de sí mismos, al verse débiles y
 enclenques.

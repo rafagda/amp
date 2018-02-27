@@ -8,4 +8,12 @@
         {{ partial "therapies.html" . }}
     {{ end }}
 
+    {{ if .Site.Params.showNosAdaptamos }}
+        {{ partial "adapt.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.showBlog }}
+        {{ partial "blog.html" . }}
+    {{ end }}
+
 </main>

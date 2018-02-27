@@ -11,9 +11,6 @@ html {
   .topspace {
     margin-top: 40px;
   }
-  .bottomspace {
-    margin-bottom: 40px;
-  }
   /*********************************************************************
   
   
@@ -56,11 +53,6 @@ html {
   .navbar-collapse .navbar-nav > li {
     float: none;
     display: inline-block;
-  }
-  @media (max-width: 800px) {
-    .navbar-collapse .navbar-nav > li {
-      display: block;
-    }
   }
   .navbar-collapse .navbar-nav > li > a {
     padding: 20px 30px;
@@ -532,26 +524,26 @@ html {
   .terapias p {
     margin: 0 0 10px;
   }
-  .terapia-page .thumb {
-    margin: 0 0 20px 20px;
+
+  .blog {
+    margin-bottom: 100px;
   }
-  /*********************************************************************
-  
-  
-                                   BLOG
-  
-  
-  **********************************************************************/
   .blog img {
     max-width: 95%;
   }
-  .blog article {
-    height: 375px;
-    display: block;
+  .blog h3 {
+    margin: 20px 0 10px;
+    font-size: 1rem;
+  }
+  .blog p {
+    margin: 0 0 10px;
+  }
+  .blog .truncate {
     margin-bottom: 10px;
+    height: 85px;
     text-overflow:ellipsis;
     overflow:hidden;
-    /* white-space: nowrap; */
+    white-space: nowrap;
   }
 
   /*********************************************************************

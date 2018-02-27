@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main id="main" class="container">
+<main id="main" class="terapia-page container">
 
 	<div class="row topspace">
 		<div class="col-sm-8 col-sm-offset-2">
@@ -9,8 +9,8 @@
 						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
 					</h1>
 				</header>
-				<div class="pull-right">
-					<img src="{{ .Param " thumbnail.image " }}" alt="{{ .Param " thumbnail.alt " }}" class="img-rounded">
+				<div class="pull-right thumb">
+					<img src="{{ .Param `thumbnail.image` }}" alt="{{ .Param `thumbnail.alt` }}" class="img-rounded">
 				</div>
 				<div class="entry-content">
 					{{ .Content }}

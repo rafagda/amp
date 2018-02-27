@@ -7,6 +7,7 @@ draft = false
 image = "/images/obsesiones.jpg"
 alt = "obsesiones"
 +++
+
 El **TOC** es un trastorno perteneciente al grupo de los trastornos de [ansiedad]( http://www.cuidateplus.com/enfermedades/psiquiatricas/ansiedad.html) caracterizado por:
 
 - **Obsesiones**: son ideas, pensamientos, imágenes o impulsos recurrentes y persistentes

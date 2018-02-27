@@ -4,9 +4,10 @@ author = "Alaitz Martínez Latorre"
 title = "Amaxofobia: el pánico a conducir"
 share = true
 draft = false
+[thumbnail]
+image = "/images/amaxofobia.jpg"
+alt = "amaxofobia"
 +++
-
-![amaxofobia](/images/amaxofobia.jpg)
 
 *"En España, uno de cada tres conductores sufre este miedo al volante."*
 
@@ -14,7 +15,7 @@ Ocupas el asiento del conductor, introduces las llaves en el contacto del coche 
 
 Si sufres una sensación similar, padeces **amaxofobia**.
 
-## ¿Qué es la amaxofobia?
+# ¿Qué es la amaxofobia?
 
 Como indica su nombre, se trata de la **fobia a conducir**. Son muchas las causas que pueden generar este miedo, aunque la mayoría se debe a haber sufrido un **accidente de tráfico**, ansiedad en situaciones de gran **estrés**, como atascos, o incluso **ataques de pánico** al volante.
 
@@ -22,7 +23,7 @@ Durante la conducción se manejan muchos estímulos de manera simultánea: los p
 
 En definitiva, **hay multitud de factores que obligan al conductor a estar en guardia**. Esto puede originar un alto nivel de estrés que impide que todos los pasos de la conducción se hagan de manera automática, como en el caso de la mayoría de conductores. Para quienes padecen amaxofobia, cada movimiento debe medirse, lo que produce que la conducción no se disfrute.
 
-## Tratamientos para la amaxofobia
+# Tratamientos para la amaxofobia
 
 Este pánico a conducir se produce por diferentes causas y en diferentes grados, desde la simple desgana hasta un gran miedo a conducir, por lo que no existe una forma específica para tratarlo. El perfil de quienes la padecen suele ser de personas de aproximadamente 40 años, la mayoría mujeres, aunque esta fobia abarca todo tipo de edades.
 

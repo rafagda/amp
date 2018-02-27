@@ -17,6 +17,7 @@ publishDir = "dist"
 
     showSubheader = true
     showTerapias = true
+    showBlog = true
 
     footerEnableContact = true
     footerEnableFollowme = true
