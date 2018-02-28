@@ -184,3 +184,8 @@ publishDir = "dist"
     name = "blog"
     url = "/posts/"
     weight = 5
+
+[[menu.main]]
+    name = "contaco"
+    url = "/contacto/"
+    weight = 6

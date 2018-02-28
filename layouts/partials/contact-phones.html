@@ -1,0 +1,3 @@
+{{ range (split .Site.Params.phone " - ")}}
+<p><i class="fa fa-phone-square fa-2"></i> {{ . }}</p>
+{{ end }}

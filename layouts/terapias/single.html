@@ -2,7 +2,7 @@
 <main id="main" class="terapia-page container">
 
 	<div class="row topspace">
-		<div class="col-sm-8 col-sm-offset-2">
+		<div class="col-sm-8">
 			<article class="post">
 				<header class="entry-header">
 					<h1 class="entry-title">
@@ -16,6 +16,24 @@
 					{{ .Content }}
 				</div>
 			</article>
+		</div>
+
+		<div class="col-sm-4">
+			<header class="entry-header">
+				<h1 class="entry-title">Contacta</h1>
+			</header>
+			<div class="entry-content">
+				<h2>Teléfono</h2>
+				{{ partial "contact-phones.html" . }}
+			</div>
+			<div class="entry-content">
+				<h2>Formulario</h2>
+				{{ partial "contact-form.html" . }}
+			</div>
+			<div class="entry-content">
+				<h2>Dirección</h2>
+				{{ partial "contact-address.html" . }}
+			</div>
 		</div>
 	</div>
 

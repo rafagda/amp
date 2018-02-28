@@ -1,0 +1,23 @@
+<form action="https://formspree.io/{{ .Site.Params.email }}" method="POST">
+    <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Teléfono</label>
+        <input type="text" name="phone" id="phone" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input type="text" name="email" id="email" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="subject">Asunto</label>
+        <textarea type="text" name="subject" id="subject" class="form-control" rows="10" required></textarea>
+    </div>
+    <input type="hidden" name="_next" value="{{ .Permalink }}" />
+    <input type="hidden" name="_language" value="es" />
+    <input type="hidden" name="_subject" value="¡Nuevo formulario de contacto!" />
+    <input type="text" name="_gotcha" style="display:none" />
+    <button type="submit" class="btn btn-action">Contactar</button>
+</form>
