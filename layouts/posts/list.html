@@ -1,9 +1,12 @@
+{{ define "header"}}
+<!-- empty -->
+{{ end }}
 {{ define "main" }}
-<main id="main" class="container">
+<main id="main" class="container posts">
 
 	<div class="row topspace">
-		<div class="col-sm-8 col-sm-offset-2">
 
+		<div class="col-sm-8 col-sm-offset-2">
 			{{ range .Paginator.Pages }}
 			<article class="post">
 				<header class="entry-header">
@@ -22,8 +25,8 @@
 				</div>
 			</article>
 			{{ end }}
-
 		</div>
+
 	</div>
 
 	<center class="">

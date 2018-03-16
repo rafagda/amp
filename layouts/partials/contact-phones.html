@@ -1,3 +1,5 @@
 {{ range (split .Site.Params.phone " - ")}}
-<p><i class="fa fa-phone-square fa-2"></i> {{ . }}</p>
+<p>
+    <a href="tel:{{ . }}"><i class="fa fa-phone-square fa-2"></i> {{ . }}</a>
+</p>
 {{ end }}
