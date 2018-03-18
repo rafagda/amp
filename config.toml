@@ -6,7 +6,7 @@ publishDir = "dist"
 [params]
     name = "Alaitz Martínez Latorre"
     description = "Página web de AMP Psicología"
-    email = "contacto@ampsicologia.es"
+    email = "contacto@ampsicologiamadrid.com"
     phone = "915 220 679 - 686 898 494"
     address = """Calle de Los Madrazo 28, 1º izq
     28014 Madrid (Madrid)"""
