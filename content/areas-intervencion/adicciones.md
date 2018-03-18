@@ -1,5 +1,5 @@
 +++
-title = "Adicciones. Tratamiento Psicológica en Madrid"
+title = "Adicciones. Tratamiento Psicológico en Madrid"
 showHome = true
 weight = 1
 draft = false

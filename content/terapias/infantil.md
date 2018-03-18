@@ -1,5 +1,5 @@
 +++
-title = "Infantil/Adolescentes"
+title = "Infantil / Adolescentes"
 showHome = true
 weight = 3
 draft = false

@@ -24,9 +24,10 @@ Estos son los precios de todos los **tratamientos psicológicos** que te puedo o
 - **Evaluaciones psicopedagógicas**: Bajo presupuesto.
 - **Informes periciales**: Para consultar estas tarifas, por favor contacta conmigo sin ningún compromiso
 
-*La actividad clínica de los psicólogos está exenta de I.V.A. Todos los Bonos se pueden adquirir al principio o una vez iniciado el tratamiento y no tiene
-caducidad.*
+\* *La actividad clínica de los psicólogos está exenta de I.V.A.*
+
+\* *Todos los Bonos se pueden adquirir al principio o una vez iniciado el tratamiento y no tiene caducidad.*
 
 **Psicólogo Madrid Precios**
 
-El pago de las sesiones lo puedes realizar mediante Transferencia Bancaria, antes de comenzar el tratamiento, en Efectivo, al finalizar la sesión, o por PayPal, también antes de asistir a  la Consulta.
+El pago de las sesiones lo puedes realizar mediante Transferencia Bancaria (antes de comenzar el tratamiento) en Efectivo (al finalizar la sesión) o por PayPal, también antes de asistir a la Consulta.

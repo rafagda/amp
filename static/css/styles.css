@@ -109,8 +109,10 @@ body {
   }
 }
 
-.navbar-collapse .navbar-nav>li>a {
-  padding: 20px 30px;
+@media (min-width: 1200px) {
+  .navbar-collapse .navbar-nav>li>a {
+    padding: 20px 30px;
+  }
 }
 
 .navbar-brand img {
@@ -349,7 +351,9 @@ a:hover {
   **********************************************************************/
 
 #head {
-  background: #f4f4f4 url(/images/cabecera.png) top center;
+  transition: background-image 1s ease-in-out;
+  background: #f4f4f4 url(/images/towers.png) top center;
+  background-repeat: no-repeat;
   background-size: cover;
   color: #7C7C7C;
   padding: 30px 0 35px 0;
@@ -669,6 +673,14 @@ img {
   margin: 0 20px 20px 0;
 }
 
+@media (max-width: 800px) {
+  .terapias-page .thumb {
+    float: none !important;
+    display: block;
+    text-align: center;
+  }
+}
+
 .terapias img {
   max-width: 95%;
 }
@@ -702,6 +714,14 @@ img {
 
 .areas-intervencion .thumb {
   margin: 20px 20px 20px 0;
+}
+
+@media (max-width: 800px) {
+  .areas-intervencion .thumb {
+    float: none !important;
+    display: block;
+    text-align: center;
+  }
 }
 
 /*********************************************************************
