@@ -1,4 +1,4 @@
-baseURL = "https://www.ampsicologia.es/"
+baseURL = "https://www.ampsicologiamadrid.com/"
 languageCode = "es"
 title = "AMP Psicología"
 publishDir = "dist"
