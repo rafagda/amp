@@ -22,13 +22,6 @@ publishDir = "dist"
     footerEnableContact = true
     footerEnableFollowme = true
 
-[params.disqus]
-    site = "disqus.ampsicologia.com"
-
-[params.sharethis]
-    property = "123456789012345678901234"
-    custom = true
-
 [params.google.analytics]
     trackerID = "UA-80776329-1"
 

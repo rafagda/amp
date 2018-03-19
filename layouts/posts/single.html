@@ -13,35 +13,13 @@
 					<h1 class="entry-title">
 						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
 					</h1>
-					<img src="{{ .Param "thumbnail.image" }}" alt="{{ .Param "thumbnail.alt" }}" class="img-rounded">
+					<img src="{{ .Param " thumbnail.image " }}" alt="{{ .Param " thumbnail.alt " }}" class="img-rounded">
 				</header>
 				<div class="entry-content">
 					{{ .Content }}
 				</div>
 			</article>
 		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
-			<div id="share">
-				{{ if .Params.Share }} {{ partial "sharethis.html" . }} {{ end }}
-			</div>
-		</div>
-	</div>
-	
-	<div class="clearfix"></div>
-
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
-			<div id="comments">
-				{{ if .Params.Comments }} {{ partial "disqus.html" . }} {{ end }}
-			</div>
-		</div>
-	</div>
-
-	<div class="clearfix"></div>
-
 	</div>
 
 </main>
