@@ -4,6 +4,9 @@
     {{ partial "head.html" . }}
 
 <body class="home">
+    {{ block "info" . }}
+        {{ partial "info.html" . }}
+    {{ end }}
 
     {{ block "menu" . }}
         {{ partial "menu.html" . }}

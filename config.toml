@@ -1,6 +1,6 @@
 baseURL = "https://www.ampsicologiamadrid.com/"
 languageCode = "es"
-title = "AMP Psicología"
+title = "AMPsicología"
 publishDir = "dist"
 
 [params]
@@ -29,24 +29,24 @@ publishDir = "dist"
 	title = "twitter"
 	url = "https://twitter.com/am_psicologia"
     icon = "fa-twitter-square"
+    info =true
     footer = true
-    sharethis = true
     network = "twitter"
 
 [[params.social]]
 	title = "facebook"
 	url = "https://www.facebook.com/ampsicologiamadrid"
     icon = "fa-facebook-square"
+    info =true
     footer = true
-    sharethis = true
     network = "facebook"
 
 [[params.social]]
 	title = "linkedin"
 	url = "https://es.linkedin.com/in/alaitz-mart%C3%ADnez-latorre-a8b8788a"
     icon = "fa-linkedin-square"
+    info =true
     footer = true
-    sharethis = true
     network = "linkedin"
 
 [[params.social]]
@@ -54,7 +54,6 @@ publishDir = "dist"
 	url = "mailto:contacto@ampsicologia.es"
     icon = "fa-envelope"
     footer = false
-    sharethis = true
     network = "email"
 
 [[menu.main]]
@@ -174,7 +173,7 @@ publishDir = "dist"
     weight = 4
 
 [[menu.main]]
-    name = "contaco"
+    name = "contacto"
     url = "/contacto/"
     weight = 5
 

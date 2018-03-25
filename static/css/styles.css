@@ -55,6 +55,24 @@ body {
   
   
   **********************************************************************/
+.info-sticky {
+  z-index: 1000;
+  position: fixed;
+  height: 25px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #191919;
+  padding: 3px;
+  color: #c1bdbd;
+  font-size: 12px;
+}
+
+.info-sticky .info-follow-me a {
+  font-size: 17px;
+  color: #c1bdbd;
+  margin: 1px;
+}
 
 .navbar {
   border-width: 1px 0;
@@ -69,7 +87,7 @@ body {
 
 .navbar.stick {
   position: fixed;
-  top: 0;
+  top: 25px;
   left: 0;
   opacity: .85;
 }
@@ -115,14 +133,19 @@ body {
   }
 }
 
+.navbar-brand {
+  padding: 5px;
+}
+
 .navbar-brand img {
   display: block;
+  max-width: 90%;
   margin-bottom: 5px;
 }
 
 .navbar-brand span {
   color: #5f7d8b;
-  font-size: 15px;
+  font-size: 12px;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -156,7 +179,7 @@ body {
 }
 
 .navbar-default .navbar-nav>li {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .navbar-default .navbar-nav>li>a {
