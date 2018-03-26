@@ -106,9 +106,12 @@ body {
   font-size: 12px;
 }
 
+.info-sticky a {
+  color: #c1bdbd;
+}
+
 .info-sticky .info-follow-me a {
   font-size: 17px;
-  color: #c1bdbd;
   margin: 1px;
 }
 

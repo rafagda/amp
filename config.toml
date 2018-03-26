@@ -7,7 +7,9 @@ publishDir = "dist"
     name = "Alaitz Martínez Latorre"
     description = "Página web de AMP Psicología"
     email = "contacto@ampsicologiamadrid.com"
-    phone = "915 220 679 - 686 898 494"
+    phone = "915 220 679"
+    cellphone = "686 898 494"
+    phones = "915 220 679 - 686 898 494"
     address = """Calle de Los Madrazo 28, 1º izq
     28014 Madrid (Madrid)"""
     year = 2018

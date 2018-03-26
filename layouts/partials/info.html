@@ -2,16 +2,19 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-2 col-xs-5 p-0 pl-10">
+            <div class="col-md-2 col-xs-4 p-0 pl-10">
                 <div class="widget-body">
-                    <p>{{ .Site.Params.phone }}</p>
+                    <p class="hidden-xs">
+                        <a href="tel:{{ replace .Site.Params.phone " " "" }}">{{ .Site.Params.phone }}</a> - <a href="tel:{{ replace .Site.Params.phone " " "" }}">{{ .Site.Params.cellphone }}</a>
+                    </p>
+                    <p class="visible-xs-block"><a href="tel:{{ replace .Site.Params.phone " " "" }}">{{ .Site.Params.phone }}</a></p>
                 </div>
             </div>
 
-            <div class="col-md-4 col-xs-7 p-0 pr-10">
+            <div class="col-md-4 col-xs-8 p-0 pr-10">
                 <div class="widget-body">
-                    <p class="hidden-xs">{{ .Site.Params.email }}</p>
-                    <p class="visible-xs-block text-right">{{ .Site.Params.email }}</p>
+                    <p class="hidden-xs"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+                    <p class="visible-xs-block text-right"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
                 </div>
             </div>
 

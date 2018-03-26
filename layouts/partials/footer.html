@@ -5,7 +5,9 @@
 			<div class="col-md-3 widget">
 				<h3 class="widget-title">Contacta</h3>
 				<div class="widget-body">
-					<p>{{ .Site.Params.phone }}<br>
+					<p>
+						<a href="tel:{{ replace .Site.Params.phone " " "" }}">{{ .Site.Params.phone }}</a> - <a href="tel:{{ replace .Site.Params.cellphone " " "" }}">{{ .Site.Params.cellphone }}</a>
+						<br>
 						<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>
 						<br>
 						{{ .Site.Params.address }}
