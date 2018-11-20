@@ -1,8 +1,8 @@
 <section class="row section blog topspace bottomspace">
     <header>
-        <h2 class="section-title">
+        <h3 class="section-title">
             <span>Blog</span>
-        </h2>
+        </h3>
     </header>
 
     {{ range first 2 (sort (where .Data.Pages "Section" "posts") "Date") }}
