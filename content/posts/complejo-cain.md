@@ -16,7 +16,7 @@ Este término fue acuñado por el psicólogo [Charles Baudouin](http://conscienc
 
 Posteriormente, fue también usado por Freud, que llegó a la conclusión de que estos celos irían disminuyendo con el tiempo al crearse un sentimiento de comprensión y comunidad entre ambos hermanos, fomentado al observar el hijo mayor el amor que sus padres perciben por el menor y, fundamentalmente, que estos no le dejan de lado, sino que los quieren a ambos por igual.
 
-# ¿Por qué siente tantos celos el hermano mayor?
+### ¿Por qué siente tantos celos el hermano mayor?
 
 Los **celos son una expresión de un miedo** intenso a **perder** algo o alguien amado, en este caso, se trataría del **cariño de los padres**.
 
@@ -26,13 +26,13 @@ Al recibir la noticia de que va a tener un hermanito, **el niño comienza a ser 
 
 Esto se intensifica con la llegada del bebé, ya que, a partir de ese momento, el primogénito comienza a percibir los cambios que acarrea en su vida la llegada de un nuevo miembro a la familia. De este modo, el niño se enfrenta a la **tesitura de**, por un lado, **tener un gran cariño por su hermano pequeño, y** por otro, **sentirse desplazado por él**.
 
-# ¿Tiene mi hijo complejo de Caín?
+### ¿Tiene mi hijo complejo de Caín?
 
 Puede que, llegados a este punto, te estés preguntando si tu hijo mayor sufre este tipo de complejo.
 
 Ante esta duda, queremos aclararte que, hasta cierto punto, estos celos frente a la llegada de un hermano pequeño **pueden ser normales siempre y cuando no se prolonguen demasiado en el tiempo** (existirán los primeros años de convivencia) y no lleguen al punto de hacerle daño al hijo menor cuando los padres no se encuentran presentes.
 
-# ¿Qué puedo hacer para prevenirlo?
+### ¿Qué puedo hacer para prevenirlo?
 
 Recomendamos **tratar a ambos con el mismo cariño y no hacer comparaciones** entre ellos. También, transmitirle al primogénito las **ventajas de ser el mayor** y mostrarle que será un **ejemplo para su hermano**.
 

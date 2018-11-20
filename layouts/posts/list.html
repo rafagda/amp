@@ -15,9 +15,9 @@
 							<time class="entry-date published" date="{{ .Date }}">{{ dateFormat .Site.Params.DateForm .Date }}</time>
 						</span>
 					</div>
-					<h1 class="entry-title">
+					<h3 class="entry-title">
 						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
-					</h1>
+					</h3>
 					<img src="{{ .Param "thumbnail.image" }}" alt="{{ .Param "thumbnail.alt" }}" class="img-rounded">
 				</header>
 				<div class="entry-content">

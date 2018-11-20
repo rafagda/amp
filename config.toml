@@ -1,11 +1,11 @@
 baseURL = "https://www.ampsicologiamadrid.com/"
 languageCode = "es"
-title = "AMPsicología"
+title = "AM Psicologo en Madrid. Psicología clínica."
 publishDir = "dist"
 
 [params]
     name = "Alaitz Martínez Latorre"
-    description = "Página web de AMP Psicología"
+    description = "AM Psicología Madrid, gabinete de psicología clínica para niños y adultos. Psicólogo infantil, terapia de pareja, tratamiento de depresión, ansiedad, adicciones..."
     email = "contacto@ampsicologiamadrid.com"
     phone = "915 220 679"
     cellphone = "686 898 494"
