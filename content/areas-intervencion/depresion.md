@@ -1,5 +1,5 @@
 +++
-title = "Depresion. Tratamiento Psicológico en Madrid"
+title = "Depresión – Psicóloga Especialista en Madrid"
 showHome = true
 weight = 1
 draft = false

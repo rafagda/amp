@@ -1,5 +1,5 @@
 +++
-title = "Pareja"
+title = "Terapia de Pareja – Psicóloga Especialista en Madrid"
 showHome = true
 weight = 2
 draft = false

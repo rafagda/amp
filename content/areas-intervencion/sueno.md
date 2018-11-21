@@ -1,5 +1,5 @@
 +++
-title = "Trastornos del sueño. Tratamiento Psicológico en Madrid"
+title = "Trastornos del sueño - Psicóloga Especialista en Madrid"
 showHome = true
 weight = 1
 draft = false

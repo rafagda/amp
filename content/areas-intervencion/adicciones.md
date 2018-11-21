@@ -1,5 +1,5 @@
 +++
-title = "Adicciones. Tratamiento Psicológico en Madrid"
+title = "Adicciones - Psicóloga Especialista en Madrid"
 showHome = true
 weight = 1
 draft = false

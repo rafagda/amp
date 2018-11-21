@@ -1,6 +1,6 @@
 baseURL = "https://www.ampsicologiamadrid.com/"
 languageCode = "es"
-title = "AM Psicologo en Madrid. Psicología clínica."
+title = "Psicóloga Madrid Centro – Psicóloga Madrid"
 publishDir = "dist"
 
 [params]
@@ -26,6 +26,9 @@ publishDir = "dist"
 
 [params.google.analytics]
     trackerID = "UA-80776329-1"
+
+[params.google.tagManager]
+    globalTag = "AW-778754951"
 
 [[params.social]]
 	title = "twitter"

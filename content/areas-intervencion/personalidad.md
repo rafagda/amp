@@ -1,5 +1,5 @@
 +++
-title = "Trastornos de la personalidad. Tratamiento Psicológica en Madrid"
+title = "Trastornos de la personalidad - Psicóloga Especialista en Madrid"
 showHome = true
 weight = 1
 draft = false

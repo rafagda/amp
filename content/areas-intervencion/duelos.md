@@ -1,5 +1,5 @@
 +++
-title = "Duelos y separaciones. Tratamiento Psicológico en Madrid"
+title = "Duelos y separaciones - Psicóloga Especialista en Madrid"
 showHome = true
 weight = 1
 draft = false

@@ -1,42 +1,47 @@
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="AM Psicología Madrid, gabinete de psicología clínica para niños y adultos. Psicólogo infantil, terapia de pareja, tratamiento de depresión, ansiedad, adicciones...">
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:description" content="AM Psicología Madrid, gabinete de psicología clínica para niños y adultos. Psicólogo infantil, terapia de pareja, tratamiento de depresión, ansiedad, adicciones..." />
-  	<meta name="twitter:title" content="AM Psicologo en Madrid. Psicología clínica." />
-  	<meta name="twitter:site" content="@am_psicologia" />
-  	<meta property="og:locale" content="es_ES" />
-  	<meta property="og:type" content="website" />
-  	<meta property="og:title" content="AM Psicologo en Madrid. Psicología clínica." />
-  	<meta property="og:description" content="AM Psicología Madrid, gabinete de psicología clínica para niños y adultos. Psicólogo infantil, terapia de pareja, tratamiento de depresión, ansiedad, adicciones..." />
-  	<meta property="og:url" content="https://ampsicologiamadrid.com/" />
- 	<meta property="og:site_name" content="AM Psicologo en Madrid. Psicología clínica." />
-	<script type='application/ld+json'>
-	{
-		"@context":"http:\/\/schema.org",
-		"@type":"WebSite",
-		"@id":"#website",
-		"url":"https:\/\/ampsicologiamadrid.com\/",
-		"name":"AM Psicologo en Madrid. Psicología clínica.",
-		"potentialAction":{
-			"@type":"SearchAction",
-			"target":"https:\/\/ampsicologiamadrid.com\/?s={search_term_string}",
-			"query-input":"required name=search_term_string"}}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="{{ .Site.Params.description }}" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:site" content="@am_psicologia" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="og:url" content="https://ampsicologiamadrid.com/" />
+<script type='application/ld+json'>
+{
+	"@context":"http:\/\/schema.org",
+	"@type":"WebSite",
+	"@id":"#website",
+	"url":"https:\/\/ampsicologiamadrid.com\/",
+	"name":"{{ .Title }}.",
+	"potentialAction":{
+		"@type":"SearchAction",
+		"target":"https:\/\/ampsicologiamadrid.com\/?s={search_term_string}",
+		"query-input":"required name=search_term_string"
+	}
+}
+</script>
+<!-- Global site tag (gtag.js) - Google Ads: 778754951 -->
+{{ partial "googletagmanager-global.html" . }}
+<!-- Event snippet for GRACIAS conversion page -->
+{{ partial "googletagmanager-event.html" . }}
 
-	<title>{{ .Title }}</title>
+<title>{{ .Title }}</title>
 
-	<link rel="shortcut icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}">
-	<link rel="canonical" href="https://ampsicologiamadrid.com/" />
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}">
+<link rel="canonical" href="https://ampsicologiamadrid.com/" />
 
-	<!-- Bootstrap -->
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-	<!-- Icons -->
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
+<!-- Bootstrap -->
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+<!-- Icons -->
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+<!-- Custom styles -->
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
 
-	<!--[if lt IE 9]> <script src="{{ .Site.BaseURL }}js/html5shiv.js"></script> <![endif]-->
-</head>
+<!--[if lt IE 9]> <script src="{{ .Site.BaseURL }}js/html5shiv.js"></script> <![endif]-->
