@@ -1,5 +1,5 @@
 +++
-title = "Coaching"
+title = "Coaching - Psicóloga Especialista en Madrid"
 showHome = true
 weight = 5
 draft = false

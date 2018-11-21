@@ -1,5 +1,5 @@
 +++
-title = "Estrés. Tratamiento Psicológica en Madrid"
+title = "Estrés - Psicóloga Especialista en Madrid"
 showHome = true
 weight = 1
 draft = false

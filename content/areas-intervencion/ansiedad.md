@@ -1,5 +1,5 @@
 +++
-title = "Ansiedad. Tratamiento Psicológico en Madrid"
+title = "Ansiedad - Psicóloga Especialista en Madrid"
 showHome = true
 weight = 1
 draft = false
