@@ -1,5 +1,5 @@
 +++
-title = "Obsesiones compulsiones (TOC) - Psicóloga Especialista en Madrid"
+title = "Obsesiones compulsiones (TOC)"
 showHome = true
 weight = 1
 draft = false

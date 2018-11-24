@@ -1,5 +1,5 @@
 +++
-title = "Infantil / Adolescentes - Psicóloga Especialista en Madrid"
+title = "Infantil / Adolescentes"
 showHome = true
 weight = 3
 draft = false

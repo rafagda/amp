@@ -1,5 +1,5 @@
 +++
-title = "Informes Periciales - Psicóloga Especialista en Madrid"
+title = "Informes Periciales"
 showHome = false
 weight = 6
 draft = false

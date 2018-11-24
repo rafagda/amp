@@ -417,7 +417,7 @@ a:hover {
 
 #head {
   transition: background-image 1s ease-in-out;
-  background: #f4f4f4 url(/images/towers.png) top center;
+  background: #fff url(/images/towers.png) top center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #7C7C7C;
@@ -447,10 +447,17 @@ a:hover {
   font-size: 30px;
 }
 
-#head a.btn.btn-action {
-  background-color: rgba(0, 0, 0, 0.7) !important;
+#head a.btn {
+  background-color: rgba(0, 70, 85, 0.75) !important;
   color: rgba(255, 255, 255, 0.8);
   border: none;
+}
+
+#head a.btn:hover,
+#head a.btn:focus,
+#head a.btn:active,
+#head a.btn.active {
+  background-color: rgba(0, 70, 85, 0.9) !important;
 }
 
 /*********************************************************************
@@ -489,7 +496,6 @@ img {
   transition-duration: 0.2s;
   border: 0 none;
   padding: 12px 35px;
-  text-shadow: 0 1px 0px #780d33;
 }
 
 .btn-primary {
@@ -518,6 +524,17 @@ img {
 .btn-action.active {
   color: #bd1550;
   border-color: #bd1550;
+}
+
+.btn-info {
+  background-color: rgba(0, 70, 85, 0.75);
+  color: #fff;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
+  background-color: rgba(0, 70, 85, 0.85);
 }
 
 .btn-lg {

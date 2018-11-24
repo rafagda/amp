@@ -1,5 +1,5 @@
 +++
-title = "Trastornos del sueño - Psicóloga Especialista en Madrid"
+title = "Trastornos del sueño"
 showHome = true
 weight = 1
 draft = false

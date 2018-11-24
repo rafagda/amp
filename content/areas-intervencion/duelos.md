@@ -1,5 +1,5 @@
 +++
-title = "Duelos y separaciones - Psicóloga Especialista en Madrid"
+title = "Duelos y separaciones"
 showHome = true
 weight = 1
 draft = false

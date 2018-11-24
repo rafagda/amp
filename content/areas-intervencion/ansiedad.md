@@ -1,5 +1,5 @@
 +++
-title = "Ansiedad - Psicóloga Especialista en Madrid"
+title = "Ansiedad"
 showHome = true
 weight = 1
 draft = false

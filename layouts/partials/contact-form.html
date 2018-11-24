@@ -1,4 +1,7 @@
 <form action="https://formspree.io/{{ .Site.Params.email }}" method="POST">
+    <div class="form-group text-center">
+        <a href="/contacto/" class="btn btn-block btn-info">1ª consulta gratuita</a>
+    </div>
     <div class="form-group">
         <label for="name">Nombre</label>
         <input type="text" name="name" id="name" class="form-control" required>
@@ -15,7 +18,7 @@
         <label for="subject">Asunto</label>
         <textarea type="text" name="subject" id="subject" class="form-control" rows="10" required></textarea>
     </div>
-    <input type="hidden" name="_next" value="{{ .Permalink }}" />
+    <input type="hidden" name="_next" value="{{ ref . "gracias-contacto.md" }}" />
     <input type="hidden" name="_language" value="es" />
     <input type="hidden" name="_subject" value="¡Nuevo formulario de contacto!" />
     <input type="text" name="_gotcha" style="display:none" />

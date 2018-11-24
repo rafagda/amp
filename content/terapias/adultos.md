@@ -1,5 +1,5 @@
 +++
-title = "Adultos - Psicóloga Especialista en Madrid"
+title = "Adultos"
 showHome = true
 weight = 1
 draft = false

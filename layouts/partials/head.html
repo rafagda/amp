@@ -3,12 +3,12 @@
 <meta name="description" content="{{ .Site.Params.description }}">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description" content="{{ .Site.Params.description }}" />
-<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:title" content="{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}" />
 <meta name="twitter:site" content="@am_psicologia" />
 <meta property="og:locale" content="es_ES" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}" />
+<meta property="og:site_name" content="{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}" />
 <meta property="og:description" content="{{ .Site.Params.description }}" />
 <meta property="og:url" content="https://ampsicologiamadrid.com/" />
 <script type='application/ld+json'>
@@ -17,7 +17,7 @@
 	"@type":"WebSite",
 	"@id":"#website",
 	"url":"https:\/\/ampsicologiamadrid.com\/",
-	"name":"{{ .Title }}.",
+	"name":"{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}.",
 	"potentialAction":{
 		"@type":"SearchAction",
 		"target":"https:\/\/ampsicologiamadrid.com\/?s={search_term_string}",
@@ -30,7 +30,7 @@
 <!-- Event snippet for GRACIAS conversion page -->
 {{ partial "googletagmanager-event.html" . }}
 
-<title>{{ .Title }}</title>
+<title>{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}</title>
 
 <link rel="shortcut icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}">
 <link rel="canonical" href="https://ampsicologiamadrid.com/" />

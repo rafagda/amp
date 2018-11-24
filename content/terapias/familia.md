@@ -1,5 +1,5 @@
 +++
-title = "Familia - Psicóloga Especialista en Madrid"
+title = "Familia"
 showHome = false
 weight = 4
 draft = false

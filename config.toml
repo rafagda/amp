@@ -1,9 +1,10 @@
 baseURL = "https://www.ampsicologiamadrid.com/"
 languageCode = "es"
-title = "Psicóloga Madrid Centro – Psicóloga Madrid"
+title = "Psicóloga Madrid Centro"
 publishDir = "dist"
 
 [params]
+    seoTitleSuffix = "Psicóloga Especialista en Madrid"
     name = "Alaitz Martínez Latorre"
     description = "AM Psicología Madrid, gabinete de psicología clínica para niños y adultos. Psicólogo infantil, terapia de pareja, tratamiento de depresión, ansiedad, adicciones..."
     email = "contacto@ampsicologiamadrid.com"

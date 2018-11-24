@@ -1,5 +1,5 @@
 +++
-title = "Trastornos de alimentación - Psicóloga Especialista en Madrid"
+title = "Trastornos de alimentación"
 showHome = true
 weight = 1
 draft = false
