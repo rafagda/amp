@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    {{ partial "head.html" . }}
+    {{ block "head" . }}
+        {{ partial "head.html" . }}
+    {{ end }}
 </head>
 <body class="home">
     {{ block "info" . }}

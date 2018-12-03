@@ -1,4 +1,8 @@
-
+{{ define "head" }}
+	{{ partial "head.html" . }}
+	<!-- Event snippet for GRACIAS conversion page -->
+	{{ partial "googletagmanager-event.html" . }}
+{{ end }}
 {{ define "main" }}
 <main id="main" class="container">
 
