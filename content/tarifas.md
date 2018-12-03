@@ -26,7 +26,7 @@ Estos son los precios de todos los **tratamientos psicológicos** que te puedo o
 
 \* *La actividad clínica de los psicólogos está exenta de I.V.A.*
 
-\* *Todos los Bonos se pueden adquirir al principio o una vez iniciado el tratamiento y no tiene caducidad.*
+\* *Todos los Bonos se pueden adquirir al principio o una vez iniciado el tratamiento, no tienen caducidad y no son reembolsables.*
 
 **Psicólogo Madrid Precios**
 
