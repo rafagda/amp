@@ -36,4 +36,4 @@ Ante esta duda, queremos aclararte que, hasta cierto punto, estos celos frente a
 
 Recomendamos **tratar a ambos con el mismo cariño y no hacer comparaciones** entre ellos. También, transmitirle al primogénito las **ventajas de ser el mayor** y mostrarle que será un **ejemplo para su hermano**.
 
-En caso de existir los celos, hay que evitar exagerar la situación y **dejar que el niño exprese sus sentimientos** para así poder ayudarle y, si persisten, contactar a un [experto](http://ampsicologia.es/terapia-infantil/).
+En caso de existir los celos, hay que evitar exagerar la situación y **dejar que el niño exprese sus sentimientos** para así poder ayudarle y, si persisten, contactar a un [experto](https://ampsicologiamadrid.com/terapias/infantil/).

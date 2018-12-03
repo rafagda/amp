@@ -11,7 +11,7 @@ single = "A consultar"
 pass = "A consultar"
 +++
 
-Inscrita en el Colegío Oficial de Psicólogos de Madrid en el listado de profesionales peritos, con una amplia experiencia en la realización de informes periciales dentro del ámbito del [derecho de familia](http://ampsicologia.es/informes-forenses-periciales-psicologicos/#familia), [penal](http://ampsicologia.es/informes-forenses-periciales-psicologicos/#penal), [civil](http://ampsicologia.es/informes-forenses-periciales-psicologicos/#civil), y [laboral](http://ampsicologia.es/informes-forenses-periciales-psicologicos/#laboral).
+Inscrita en el Colegío Oficial de Psicólogos de Madrid en el listado de profesionales peritos, con una amplia experiencia en la realización de informes periciales dentro del ámbito del [derecho de familia](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#familia), [penal](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#penal), [civil](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#civil), y [laboral](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#laboral).
 
 ## ¿Que es un Informe pericial?
 

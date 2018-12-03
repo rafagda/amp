@@ -26,7 +26,7 @@ Mientras que los juicios negativos son frecuentes en un estilo de comunicación 
 - la empatía
 - y el uso de la palabra como un vehículo de esperanza.
 
-La **asertividad te da** la [autoestima](http://ampsicologia.es/aprende-a-mejorar-la-autoestima/) necesaria de **defender tus puntos de vista** en una discusión, expresando **tus sentimientos en primera persona**. Es decir, sin caer en reproches.
+La **asertividad te da** la [autoestima](https://ampsicologiamadrid.com/aprende-a-mejorar-la-autoestima/) necesaria de **defender tus puntos de vista** en una discusión, expresando **tus sentimientos en primera persona**. Es decir, sin caer en reproches.
 
 ### ¿Por qué es tan importante la asertividad?
 
