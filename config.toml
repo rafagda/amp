@@ -29,7 +29,8 @@ publishDir = "dist"
     trackerID = "UA-80776329-1"
 
 [params.google.tagManager]
-    globalTag = "AW-778754951"
+    globalTag = "AW-871028697"
+    sendTo = "AW-871028697/qmBACIX58pQBENmvq58D"
 
 [[params.social]]
 	title = "twitter"
