@@ -15,20 +15,22 @@
 						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
 					</h3>
                 </header>
-
-                <h3 class="hidden-xs">{{ .Param "subtitle" }}</h3>
                 
+                <div class="hidden-xs">
+                    <h3>{{ .Param "subtitle" }}</h3>
+                </div>
+
 				<div class="pull-left thumb">
 					<img src="{{ .Param `thumbnail.image` }}" alt="{{ .Param `thumbnail.alt` }}" class="img-rounded">
                 </div>
                 
 				<div class="entry-content">
-                    <p class="visible-xs">
+                    <div class="visible-xs">
                         <strong>{{ .Param "subtitle" }}</strong>
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <strong>{{ .Param "emphasis" }}</strong>
-                    </p>
+                    </div>
 					{{ .Content }}
                 </div>
                 

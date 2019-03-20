@@ -9,17 +9,21 @@
 		<div class="col-sm-8">
 
 			<article>
+
 				<header class="entry-header">
 					<h3 class="entry-title">
 						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
 					</h3>
-				</header>
+                </header>
+                
 				<div class="pull-left thumb">
 					<img src="{{ .Param `thumbnail.image` }}" alt="{{ .Param `thumbnail.alt` }}" class="img-rounded">
-				</div>
+                </div>
+                
 				<div class="entry-content">
 					{{ .Content }}
-				</div>
+                </div>
+                
 			</article>
 
 		</div>
