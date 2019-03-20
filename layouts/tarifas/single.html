@@ -2,15 +2,52 @@
 <!-- empty -->
 {{ end }}
 {{ define "main" }}
-<main id="main" class="container tarifas">
+<main id="main" class="container tarifas-page">
 	
 	<div class="row topspace">
+		
+		<div class="col-sm-8">
 
-		<article class="col-sm-12 maincontent">
-			<h1 class="entry-title">{{ .Title }}</h1>
-			{{ .Content }}
-		</article>
+            <article>
 
-	</div>
+				<header class="entry-header">
+					<h3 class="entry-title">
+						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
+					</h3>
+                </header>
+
+                <h3 class="hidden-xs">{{ .Param "subtitle" }}</h3>
+                
+				<div class="pull-left thumb">
+					<img src="{{ .Param `thumbnail.image` }}" alt="{{ .Param `thumbnail.alt` }}" class="img-rounded">
+                </div>
+                
+				<div class="entry-content">
+                    <p class="visible-xs">
+                        <strong>{{ .Param "subtitle" }}</strong>
+                    </p>
+                    <p>
+                        <strong>{{ .Param "emphasis" }}</strong>
+                    </p>
+					{{ .Content }}
+                </div>
+                
+            </article>
+
+        </div>
+
+        <div class="col-sm-4">
+    
+            <header class="entry-header">
+                <h1 class="entry-title">Contacta</h1>
+            </header>
+    
+            <div class="entry-content">
+                {{ partial "contact-form.html" . }}
+            </div>
+    
+        </div>
+
+    </div>
 </main>
 {{ end }}

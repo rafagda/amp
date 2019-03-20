@@ -816,15 +816,27 @@ img {
   
 **********************************************************************/
 
-.tarifas {
-  margin-top: 119px;
-}
-
-@media (max-width: 800px) {
-  .tarifas {
-    margin-top: 68px;
+.tarifas-page {
+    margin-top: 119px;
   }
-}
+  
+  @media (max-width: 800px) {
+    .tarifas-page {
+      margin-top: 68px;
+    }
+  }
+  
+  .tarifas-page .thumb {
+    margin: 10px 20px 20px 0;
+  }
+  
+  @media (max-width: 800px) {
+    .tarifas-page .thumb {
+      float: none !important;
+      display: block;
+      text-align: center;
+    }
+  }
 
 /*********************************************************************
   
