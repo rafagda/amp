@@ -2,7 +2,7 @@
 type = "tarifas"
 title = "Tarifas y Precios"
 draft = false
-subtitle = "¿Cuál es el precio de una Terapia Psicológica en Madrid Centro?\n¿Cuánto cuesta ir al psicólogo en el Centro de Madrid?"
+subtitle = "¿Cuál es el precio de una Terapia Psicológica en Madrid Centro? ¿Cuánto cuesta ir al psicólogo en el Centro de Madrid?"
 emphasis = "Psicólogo barato Madrid"
 [thumbnail]
 image = "/images/alaitz-thumb.jpg"
@@ -10,6 +10,7 @@ alt = "Alaitz Martínez"
 +++
 
 Todas mis sesiones, tienen una duración de **60 minutos**, excepto las de [Terapia de Pareja](https://ampsicologiamadrid.com/terapias/pareja/), que duran **1 hora y 15 minutos**.
+
 Los **precios** son bastante **asequibles**, ya que no me gustaría que la **psicología** solo estuviera al alcance de unos pocos, por eso **reduzco los precios al máximo**, tratando de **ayudar** al mayor número de **personas** posible.
 
 <div class="table-responsive">
