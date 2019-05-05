@@ -29,8 +29,16 @@
 					</p>
 				</div>
 			</div>
-			{{ end }}
-
+            {{ end }}
+            
+            {{ if .Site.Params.footerEnableDoctoralia }}
+            <div class="col-md-6 widget">
+				<!-- <h3 class="widget-title">Doctoralia</h3> -->
+				<div class="widget-body">
+                    <a id="zl-url" class="zl-url" href="https://www.doctoralia.es/alaitz-martinez/psicologo/madrid" rel="nofollow" data-zlw-doctor="alaitz-martinez" data-zlw-type="big" data-zlw-opinion="false" data-zlw-hide-branding="true">Alaitz Martínez - Doctoralia.es</a><script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
+                </div>
+            </div>
+            {{ end }}
 		</div> <!-- /row of widgets -->
 	</div>
 </footer>

@@ -27,10 +27,10 @@ Los **precios** son bastante **asequibles**, ya que no me gustaría que la **psi
         <tbody>
             <tr>
                 <td>Sesión adulto</td>
-                <td class="text-right"><strong>37,5€</strong></td>
-                <td class="text-right">40€</td>
-                <td class="text-right">desde 50€</td>
-                <td class="text-right text-success"><strong>12,5€</strong></td>
+                <td class="text-right"><strong>45€</strong></td>
+                <td class="text-right">50€</td>
+                <td class="text-right">desde 60€</td>
+                <td class="text-right text-success"><strong>15€</strong></td>
             </tr>
             <tr>
                 <td>Sesión infantil</td>
@@ -41,16 +41,16 @@ Los **precios** son bastante **asequibles**, ya que no me gustaría que la **psi
             </tr>
             <tr>
                 <td>Sesión pareja</td>
-                <td class="text-right"><strong>57,5€</strong></td>
-                <td class="text-right">60€</td>
+                <td class="text-right"><strong>65€</strong></td>
+                <td class="text-right">70€</td>
                 <td class="text-right">desde 80€</td>
-                <td class="text-right text-success"><strong>22,5€</strong></td>
+                <td class="text-right text-success"><strong>15€</strong></td>
             </tr>
             <tr>
                 <td>Bono adulto</td>
-                <td class="text-right"><strong>150€</strong></td>
-                <td class="text-right">160€</td>
-                <td class="text-right">desde 190€</td>
+                <td class="text-right"><strong>180€</strong></td>
+                <td class="text-right">200€</td>
+                <td class="text-right">desde 220€</td>
                 <td class="text-right text-success"><strong>40€</strong></td>
             </tr>
             <tr>
@@ -62,10 +62,10 @@ Los **precios** son bastante **asequibles**, ya que no me gustaría que la **psi
             </tr>
             <tr>
                 <td>Bono pareja</td>
-                <td class="text-right"><strong>230€</strong></td>
-                <td class="text-right">240€</td>
+                <td class="text-right"><strong>260€</strong></td>
+                <td class="text-right">280€</td>
                 <td class="text-right">desde 300€</td>
-                <td class="text-right text-success"><strong>70€</strong></td>
+                <td class="text-right text-success"><strong>40€</strong></td>
             </tr>
         </tbody>
     </table>
@@ -74,13 +74,13 @@ Los **precios** son bastante **asequibles**, ya que no me gustaría que la **psi
 Estos son los precios de todos los **tratamientos psicológicos** que te puedo ofrecer, no dudes en consultarme cualquier duda que te surja:
 
 - **Primera entrevista informativa**: Gratuita
-- **Terapia adultos ([individual](https://ampsicologiamadrid.com/terapias/individual/))**: 40€. (Bono descuento de 4 sesiones: 150€, precio por sesión: 37,50€)
-- **Terapia de Pareja**: 60€. (Bono descuento de 4 sesiones: 230€. Precio por sesión 57,50€)
+- **Terapia adultos ([individual](https://ampsicologiamadrid.com/terapias/individual/))**: 50€. (Bono descuento de 4 sesiones: 180€, precio por sesión: 45€)
+- **Terapia de Pareja**: 70€. (Bono descuento de 4 sesiones: 260€. Precio por sesión 65€)
 - **Terapia y mediación familiar**: 60€. (Bono descuento de 4 sesiones: 230€. Precio por sesión 57,50€)
 - **Psicología infantil y adolescentes**: 35€. (Bono descuento de 4 sesiones: 130€. Precio por sesión 32,50€)
-- **Terapia psicológica online**: 40€. (Bono descuento de 4 sesiones: 150€. Precio por sesión 37,50€)
-- **Terapia psicológica a domicilio**: 50€. (Bono descuento de 4 sesiones: 190€. Precio por sesión 47,50€)
-- **Coaching individual personal**: 50€. (Bono descuento de 4 sesiones: 190€. Precio por sesión 37,50€)
+- **Terapia psicológica online**: 50€. (Bono descuento de 4 sesiones: 180€. Precio por sesión 45€)
+- **Terapia psicológica a domicilio**: 50€. (Bono descuento de 4 sesiones: 180€. Precio por sesión 45€)
+- **Coaching individual personal**: 50€. (Bono descuento de 4 sesiones: 180€. Precio por sesión 45€)
 - **Evaluaciones psicopedagógicas**: Bajo presupuesto.
 - **Informes periciales**: Para consultar estas tarifas, por favor contacta conmigo sin ningún compromiso
 

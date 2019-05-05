@@ -7,8 +7,8 @@ draft = false
 image = "/images/coaching.jpg"
 alt = "coaching"
 [pricing]
-single = "Una sesión 35€"
-pass = "Cuatro sesiones 130€"
+single = "Una sesión 50€"
+pass = "Cuatro sesiones 180€"
 +++
 
 **El Coaching** consiste en un proceso de **acompañamiento individual personalizado** y confidencial **para conseguir resultados**.

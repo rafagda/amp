@@ -7,8 +7,8 @@ draft = false
 image = "/images/adultos.jpg"
 alt = "adultos"
 [pricing]
-single = "Una sesión 40€"
-pass = "Cuatro sesiones 150€"
+single = "Una sesión 50€"
+pass = "Cuatro sesiones 180€"
 +++
 
 Existen **múltiples motivos** por los que cualquiera podemos **necesitar la ayuda de un psicólogo**:

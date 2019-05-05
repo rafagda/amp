@@ -6,7 +6,7 @@ alt = "Alaitz Martínez"
 draft = false
 +++
 
-Tras haberme licenciado en *Psicología* (especialidad Clínica) por la [Universidad Miguel Hernández]( https://www.umh.es/), completé mi formación con el [Máster de Psicología Clínica y de la Salud, (ISEP)](https://www.isep.es/curso/master-en-psicologia-clinica-y-de-la-salud/), acreditado por el Instituto Superior de Estudios Psicológicos, y con el [Master Internacional en Psicología Forense](http://iepa.es/master-forense-online-pxvi/), acreditado por el [European Institute of Applied Psichology (IEPA)](http://iepa.es/conocenos/).
+Tras haberme licenciado en *Psicología* (especialidad Clínica) por la [Universidad Miguel Hernández]( https://www.umh.es/), completé mi formación con el [Máster de Psicología Clínica y de la Salud (AEPCCC)](https://sociedadeuropeadepsicologia.com/), acreditado por la Asociación Española de Psicología Clínica Cognitivo Conductual, y con el [Master Internacional en Psicología Forense](http://iepa.es/master-forense-online-pxvi/), acreditado por el [European Institute of Applied Psichology (IEPA)](http://iepa.es/conocenos/).
 
 Dispongo del *Certificado para el Ejercicio de la Actividad Sanitaria* según la Ley de Economía Social 5 / 2011 disposición adicional 6ª para el ejercicio de la Actividad Sanitaria.
 

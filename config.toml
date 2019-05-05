@@ -24,6 +24,7 @@ publishDir = "dist"
 
     footerEnableContact = true
     footerEnableFollowme = true
+    footerEnableDoctoralia = true
 
 [params.google.analytics]
     trackerID = "UA-80776329-1"
@@ -47,6 +48,14 @@ publishDir = "dist"
     info =true
     footer = true
     network = "facebook"
+
+[[params.social]]
+	title = "instagram"
+	url = "https://www.instagram.com/ampsicologiamadrid"
+    icon = "fa-instagram"
+    info =true
+    footer = true
+    network = "instagram"
 
 [[params.social]]
 	title = "linkedin"
@@ -116,7 +125,7 @@ publishDir = "dist"
 
 [[menu.main]]
     parent = "areas intervención"
-    name = "adiciones"
+    name = "adicciones"
     url = "/areas-intervencion/adicciones"
     weight = 1
 
