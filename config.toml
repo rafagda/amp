@@ -11,8 +11,8 @@ publishDir = "dist"
     phone = "915 220 679"
     cellphone = "686 898 494"
     phones = "915 220 679 - 686 898 494"
-    address = """Calle de Los Madrazo 28, 1º izq
-    28014 Madrid (Madrid)"""
+    address = """Calle Alberto Alguilera 32, 1º 5
+    28015 Madrid (Madrid)"""
     year = 2018
     background = ""
     favicon = "images/favicon.gif"
