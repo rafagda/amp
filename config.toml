@@ -11,8 +11,8 @@ publishDir = "dist"
     phone = "915 220 679"
     cellphone = "686 898 494"
     phones = "915 220 679 - 686 898 494"
-    address = """Calle Alberto Alguilera 32, 1º 5
-    28015 Madrid (Madrid)"""
+    address = """Calle Quintana 28, 1º Izq.
+    28008 Madrid (Madrid)"""
     year = 2018
     background = ""
     favicon = "images/favicon.gif"
