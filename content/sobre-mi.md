@@ -36,7 +36,7 @@ Algunos cursos y seminarios
 
 ### Experiencia
 
-- Psicóloga y Psicoterapeuta privada en Consulta ubicada en: Calle de Los Madrazo, 28, 1ºIzq, Madrid Centro. Terapia psicológica integral en población adulta, infantil y adolescente, en intervención individual, de pareja y familiar.
+- Psicóloga y Psicoterapeuta privada en Consulta ubicada en: Calle Alberto Aguilera, 32, 1º 5, Madrid Centro. Terapia psicológica integral en población adulta, infantil y adolescente, en intervención individual, de pareja y familiar.
 - Psicóloga Colaboradora en [Personaliza Psicología](http://grupopersonaliza.com/)
 - Diagnóstico e intervención en población con Trastorno del Espectro Autista en el [Centro Infanta Leonor](http://apacv.org/conocenos/el-centro- infanta-leonor/)
 - Psicóloga Formadora en Reeducación y Sensibilización Vial, en diferentes autoescuelas de Madrid.
