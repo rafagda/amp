@@ -3,6 +3,9 @@ languageCode = "es"
 title = "Psicóloga Madrid Centro"
 publishDir = "dist"
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [params]
     seoTitleSuffix = "Psicóloga Especialista en Madrid"
     name = "Alaitz Martínez Latorre"
