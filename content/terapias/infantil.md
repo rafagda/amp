@@ -7,8 +7,8 @@ draft = false
 image = "/images/infantil.jpg"
 alt = "infantil"
 [pricing]
-single = "Una sesión 50€"
-pass = "Cuatro sesiones 160€"
+single = "Una sesión 60€"
+pass = "Cuatro sesiones 220€"
 +++
 
 En la infancia **es muy importante detectar características y rasgos de personalidad del niño/a** que le dificulten su bienestar presente pero también que le permitan desarrollarse y vivir en plenitud en la época adolescente-adulta.

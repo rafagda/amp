@@ -7,8 +7,8 @@ draft = false
 image = "/images/pareja.jpg"
 alt = "pareja"
 [pricing]
-single = "Una sesión 80€"
-pass = "Cuatro sesiones 280€"
+single = "Una sesión 85€"
+pass = "Cuatro sesiones 320€"
 +++
 
 Actualmente, las parejas suelen formarse a partir de una emoción que es el enamoramiento.

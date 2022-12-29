@@ -14,9 +14,9 @@ unsafe= true
     phone = "915 220 679"
     cellphone = "686 898 494"
     phones = "915 220 679 - 686 898 494"
-    address = """Calle del Aviador Zorita, 13, despacho 209
-    28020 Madrid (Madrid)"""
-    year = 2018
+    address = """C. de Velázquez, 30, 2º Dcha
+    28001 Madrid (Madrid)"""
+    year = 2023
     background = ""
     favicon = "images/favicon.gif"
     DateForm = "January 2, 2006"
