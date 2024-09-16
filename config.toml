@@ -29,12 +29,8 @@ unsafe= true
     footerEnableFollowme = true
     footerEnableDoctoralia = true
 
-[params.google.analytics]
-    trackerID = "UA-80776329-1"
-
 [params.google.tagManager]
-    globalTag = "AW-871028697"
-    sendTo = "AW-871028697/qmBACIX58pQBENmvq58D"
+    globalTag = "G-W08QTS1G1Y"
 
 [[params.social]]
 	title = "twitter"

@@ -1,8 +1,9 @@
-<!-- Global site tag (gtag.js) - Google Ads: 871028697 -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google.tagManager.globalTag }}"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', '{{ .Site.Params.google.tagManager.globalTag }}');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ .Site.Params.google.tagManager.globalTag }}');
 </script>
