@@ -6,6 +6,10 @@
     {{ end }}
 </head>"
 <body class="home">
+    {{ block "noscript" . }}
+        {{ partial "noscript.html" . }}
+    {{ end }}
+
     {{ block "info" . }}
         {{ partial "info.html" . }}
     {{ end }}

@@ -14,8 +14,8 @@ unsafe= true
     phone = "915 220 679"
     cellphone = "686 898 494"
     phones = "915 220 679 - 686 898 494"
-    address = """C. de Velázquez, 30, 2º Dcha
-    28001 Madrid (Madrid)"""
+    address = """Calle Hilarión Eslava, 27bis, piso 1º, puerta 4
+    28015 Madrid (Madrid)"""
     year = 2023
     background = ""
     favicon = "images/favicon.gif"
@@ -30,6 +30,7 @@ unsafe= true
     footerEnableDoctoralia = true
 
 [params.google.tagManager]
+    gtmTag = "GTM-TXCJLVMX"
     globalTag = "G-W08QTS1G1Y"
 
 [[params.social]]
