@@ -1,62 +1,61 @@
 +++
 title = "Informes Periciales"
+description = "Informes periciales psicológicos en Madrid. Psicóloga forense colegiada especialista en informes de custodia, violencia de género, daño psicológico y peritajes judiciales."
+keywords = ["informes periciales Madrid", "psicóloga forense Madrid", "peritaje psicológico Madrid", "informe custodia", "psicología forense", "perito psicólogo Madrid", "informe pericial judicial"]
 showHome = false
 weight = 6
 draft = false
 [thumbnail]
-image = "/images/informes.jpg"
-alt = "informes"
+image = "images/informes.jpg"
+alt = "Informes periciales psicológicos en Madrid"
 [pricing]
 single = "A consultar"
 pass = "A consultar"
 +++
 
-Inscrita en el Colegío Oficial de Psicólogos de Madrid en el listado de profesionales peritos, con una amplia experiencia en la realización de informes periciales dentro del ámbito del [derecho de familia](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#familia), [penal](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#penal), [civil](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#civil), y [laboral](https://ampsicologiamadrid.com/informes-forenses-periciales-psicologicos/#laboral).
+Como psicóloga **inscrita en el listado de profesionales peritos** del Colegio Oficial de Psicólogos de Madrid, realizo informes periciales psicológicos con amplia experiencia en diversos ámbitos del derecho.
 
-## ¿Que es un Informe pericial?
+## ¿Qué es un informe pericial?
 
-*"El informe pericial psicológico  es un documento escrito, firmado y fechado en el que el perito psicológico expone sus consideraciones y conclusiones sobre los hechos objeto de evaluación."*
+Un informe pericial psicológico es un documento técnico en el que el profesional expone sus consideraciones y conclusiones sobre los hechos objeto de evaluación, basándose en **métodos científicos** y su conocimiento especializado.
 
-Realizamos  Informes periciales Psicológicos en los siguientes ámbitos:
+## Ámbitos de actuación
 
-## Peritajes en Derechos de Familia
+### Derecho de Familia
+- Evaluaciones en procesos de separación y divorcio
+- Valoraciones de guarda y custodia
+- Revisión de medidas y régimen de visitas
+- Evaluaciones en procesos de adopción
 
-- Valoraciones en situaciones de **separaciones y divorcios**.
-- Valoraciones en situaciones **guarda y custodia**.
-- Valoraciones en situaciones **revisión de medidas**.
-- Valoraciones en situaciones **adopción**.
+### Derecho Laboral
+- Incapacidad laboral transitoria e invalidez
+- Impugnación de alta laboral
+- Valoración de accidentes laborales
+- Evaluación de mobbing y acoso laboral
 
-## Peritajes en Derechos Laboral
+### Derecho Civil
+- Responsabilidad civil y secuelas psicológicas
+- Incapacitaciones totales o parciales
+- Capacidad testamentaria y herencias
 
-- Valoraciones en situaciones de **incapacidad laboral transitoria**.
-- Valoraciones en situaciones **invalidez**.
-- Valoraciones en situaciones **impugnación de alta laboral**.
-- Valoraciones en **accidentes laborales**.
-- Valoraciones en situaciones **mobbing y acoso laboral**.
+### Derecho Penal
+- Valoración de secuelas victimológicas
+- Evaluación en delitos sexuales
+- Valoración de imputabilidad
+- Evaluación de estado mental en momentos específicos
 
-## Peritajes Civiles
+## ¿Cómo trabajamos?
 
-- Valoraciones en **responsabilidad civil**.
-- Valoraciones en **incapacitaciones totales o parciales**.
-- Valoraciones en **herencias** (capacidad y/o impugnación testamentaria)
+El proceso de elaboración del informe pericial incluye:
 
-## Peritajes Penales
+1. **Entrevista inicial**: Primera toma de contacto, explicación del proceso y resolución de dudas
+2. **Evaluación clínica**: Recogida de datos biopsicosociales relevantes
+3. **Aplicación de pruebas**: Tests, cuestionarios y escalas científicamente validadas
+4. **Elaboración del informe**: Documento técnico con conclusiones fundamentadas
+5. **Ratificación judicial**: Defensa del informe ante el juzgado cuando sea necesario
 
-- Valoraciones en **delitos contra la vida**: asesinatos y homicidios.
-- Valoración en delitos **contra la salud pública**.
-- Valoraciones en delitos **cometidos en intoxicación** aguda o bajo síndrome de abstinencia a drogas o alcohol.
-- Valoraciones en **delitos sexuales**: abusos sexuales, violaciones.
-- Valoración de **secuelas victimológicas**.
+## Solicitud del informe
 
-## ¿Quien pude demandar este tipo de informes?
+Los informes periciales pueden ser solicitados por el juez o por las partes implicadas en el proceso (peritación privada o de parte).
 
-Los Informe Periciales puede ser solicitados o **a un perito inscrito en la lista del Colegio Profesional**, o por el **Juez al equipo de peritos psicólogos** adscritos al juzgado (psicólogos forenses) en cuyo caso suele designarse por sorteo.
-
-El Juez puede solicitar el peritaje por decisión propia o a petición de una o de las dos partes. Cuando son las partes las que contratan al perito, se trata de  una peritación privada, también llamada de parte. 
-
-Los pasos que seguimos para la elaboración de este tipo de Informes son los siguientes:
-
-- **Entrevista previa con el demandante**, para una primera toma de contacto, explicación de cómo se desarrollaría nuestro trabajo, tarifas, y cualquier tipo de duda que pueda surgir por ambas partes.
-- **Entrevista clínica con el demandante**, en la que se empiezan a recoger datos relevantes biopsicosociales, y se detecta la sintomatología de la persona evaluada.
-- Pase de **cuestionarios, tests, escalas de medición…** con el fin de aportar datos científicos en el informe que se elaborara a continuación. Seleccionaremos las pruebas más actuales y que mejor se adapten al caso que estamos tratando en cada momento.
-- **Ratificación en el juicio**. El psicólogo autor del Informe, leerá ante el juez, los letrados y la fiscalía, el contenido del mismo y ampliará o explicará lo que le sea exigido.
+Cada caso se estudia de forma individualizada para adaptar la evaluación a las necesidades específicas del proceso judicial.

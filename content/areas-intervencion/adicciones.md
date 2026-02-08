@@ -1,17 +1,33 @@
 +++
 title = "Adicciones"
+description = "Tratamiento de adicciones en Madrid. Supera adicción al alcohol, drogas, juego, compras, internet. Psicóloga especialista en adicciones con terapia personalizada y efectiva."
+keywords = ["adicciones Madrid", "tratamiento adicciones", "psicólogo adicciones Madrid", "alcoholismo tratamiento Madrid", "ludopatía Madrid", "adicción drogas", "terapia adicciones Madrid"]
 showHome = true
-weight = 1
+weight = 4
 draft = false
 [thumbnail]
-image = "/images/adicciones.jpg"
-alt = "adicciones"
+image = "images/adicciones.jpg"
+alt = "Tratamiento de adicciones en Madrid"
 +++
 
-Una **adicción** es una **enfermedad** física y emocional. En el sentido tradicional es una dependencia o necesidad hacia una sustancia, actividad o relación debido a la satisfacción que esta causa a la persona.
+Una **adicción** es una enfermedad física y emocional que genera una dependencia hacia una sustancia, actividad o comportamiento. A diferencia de un simple hábito, la adicción trae consigo graves consecuencias para la persona.
 
-A diferencia de los simples hábitos o influencias consumistas, las adicciones son «dependencias» que traen consigo graves consecuencias al adicto.
+## ¿Qué caracteriza a una adicción?
 
-Estas consecuencias afectan negativamente la vida personal y social del individuo y su salud (física y mental), así como limita la capacidad de funcionar de manera efectiva. Es adicta la persona que cree que no puede vivir sin la influencia de cierta sustancia, por lo cual la consume en forma permanente y compulsiva.
+La adicción afecta negativamente la vida personal, social y la salud física y mental de quien la padece. **Limita la capacidad de funcionar de manera efectiva** en el día a día, y la persona siente que no puede vivir sin aquello de lo que depende.
 
-El adicto no controla su **adicción**, sino que vive en función de ésta: este es el eje y el condicionante de toda su rutina; si trata de salir de esta rutina, se ve afectado por problemas de ansiedad y, por lo general, vuelve a caer en el consumo, aunque puede dejar de ser adicto después de pasar por un adecuado tratamiento.
+Lo más característico es que **la adicción controla a la persona**, no al revés. Toda su rutina gira en torno a ella, y los intentos de dejarla suelen generar ansiedad intensa, llevando frecuentemente a recaídas.
+
+## Tipos de adicciones
+
+Trabajamos con adicciones a:
+
+- Sustancias (alcohol, drogas, medicamentos)
+- Comportamientos (juego, compras, internet, redes sociales)
+- Relaciones de dependencia emocional
+
+## ¿Cómo podemos ayudarte?
+
+La adicción puede superarse con un **tratamiento psicológico adecuado**. Te acompañamos en el proceso de recuperación, trabajando las causas subyacentes, desarrollando estrategias de afrontamiento y previniendo recaídas.
+
+No estás solo/a. Con apoyo profesional y compromiso personal, es posible liberarse de la adicción y recuperar el control sobre tu vida.

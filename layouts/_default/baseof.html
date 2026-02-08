@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    {{ block "head" . }}
-        {{ partial "head.html" . }}
-    {{ end }}
-</head>"
-<body class="home">
-    {{ block "noscript" . }}
-        {{ partial "noscript.html" . }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Comprehensive SEO -->
+    {{ partial "seo.html" . }}
+
+    <title>{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ .Site.BaseURL }}images/amp.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/amp.svg" type="image/svg+xml">
+
+    <!-- Resource Hints for Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://platform.docplanner.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts - Inter and DM Sans with font-display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Swiper CSS for Carousel - async loading -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
+    <!-- Tailwind CSS via Hugo Pipes -->
+    {{ $css := resources.Get "css/main.css" }}
+    {{ $css = $css | css.PostCSS }}
+    {{ if hugo.IsProduction }}
+        {{ $css = $css | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+    {{ else }}
+        <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{ end }}
 
-    {{ block "info" . }}
-        {{ partial "info.html" . }}
-    {{ end }}
+    <!-- Google Tag Manager -->
+    {{ partial "googletagmanager-global.html" . }}
 
-    {{ block "menu" . }}
-        {{ partial "menu.html" . }}
-    {{ end }}
+    {{ block "head" . }}{{ end }}
+</head>
+<body class="font-sans text-slate-700 bg-slate-50">
+    {{ partial "noscript.html" . }}
 
     {{ block "header" . }}
         {{ partial "header.html" . }}
@@ -30,11 +60,20 @@
         {{ partial "footer.html" . }}
     {{ end }}
 
-    {{ block "underfooter" . }}
-        {{ partial "underfooter.html" . }}
+    <!-- Swiper JS for Carousel - deferred loading -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JavaScript - deferred loading -->
+    {{ $js := resources.Get "js/main.js" }}
+    {{ if $js }}
+        {{ if hugo.IsProduction }}
+            {{ $js = $js | minify | fingerprint }}
+            <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+        {{ else }}
+            <script defer src="{{ $js.Permalink }}"></script>
+        {{ end }}
     {{ end }}
 
-    {{ partial "scripts.html" . }}
+    {{ block "scripts" . }}{{ end }}
 </body>
-
 </html>

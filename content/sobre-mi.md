@@ -1,49 +1,39 @@
 +++
 type = "sobre-mi"
-title = "Sobre mi"
+title = "Sobre mí"
+description = "Alaitz Martínez Latorre, psicóloga sanitaria colegiada en Madrid con más de 15 años de experiencia. Especialista en terapia individual, de pareja, familiar e infantil. Primera consulta gratuita."
+keywords = ["psicóloga Madrid", "Alaitz Martínez", "psicóloga sanitaria Madrid", "experiencia psicología", "terapia Madrid centro", "psicóloga colegiada Madrid"]
 image = "/images/sobre-mi.png"
-alt = "Alaitz Martínez"
+alt = "Alaitz Martínez Latorre - Psicóloga Sanitaria Madrid"
 draft = false
 +++
 
-Tras haberme licenciado en *Psicología* (especialidad Clínica) por la [Universidad Miguel Hernández]( https://www.umh.es/), completé mi formación con el [Máster de Psicología Clínica y de la Salud (AEPCCC)](https://sociedadeuropeadepsicologia.com/), acreditado por la Asociación Española de Psicología Clínica Cognitivo Conductual, y con el [Master Internacional en Psicología Forense](http://iepa.es/master-forense-online-pxvi/), acreditado por el [European Institute of Applied Psichology (IEPA)](http://iepa.es/conocenos/).
+Hola, soy **Alaitz Martínez Latorre**, psicóloga sanitaria colegiada con más de 15 años de experiencia ayudando a personas como tú a superar sus dificultades emocionales y alcanzar el bienestar que merecen.
 
-Dispongo del *Certificado para el Ejercicio de la Actividad Sanitaria* según la Ley de Economía Social 5 / 2011 disposición adicional 6ª para el ejercicio de la Actividad Sanitaria.
+## Mi formación
 
-El *tratamiento psicológico* que llevo a cabo es totalmente *integrativo*, no dejo de lado ningún modelo psicoterapéutico, sino que trato de adaptar mi trabajo a la *situación* de cada
-*paciente*, haciendo especial hincapié en la *Terapias Contextuales* o de *Tercera Generación*, tales como: La *Terapia de Aceptación y Compromiso (ACT)*, *Psicoterapia Analítico-Funcional
-(FAP)*, técnicas de *Mindfulness* …
+Me licencié en **Psicología** por la Universidad Miguel Hernández, especializándome en Psicología Clínica. Posteriormente completé mi formación con el **Máster en Psicología Clínica y de la Salud** (AEPCCC) y el **Máster Internacional en Psicología Forense** (IEPA).
 
-Trato de crear un *contexto* terapéutico *orientado al cambio*, en el que mi relación con cada paciente, me ayude a conceptualizar *cada caso individualmente*, desde un punto de partida fundamental: que el paciente entienda y experimente la relación, a veces contradictoria, entre *“lo que quiere”*, *“lo que hace”* y *“lo que consigue”*. Este análisis funcional del caso permite adaptarse a las características del problema de cada paciente y así proponer conjuntamente *soluciones flexibles y personalizadas*.
+Cuento con el **Certificado para el Ejercicio de la Actividad Sanitaria**, lo que me habilita oficialmente para ejercer como psicóloga sanitaria en España.
 
-### Formación
+A lo largo de estos años he continuado formándome en diferentes enfoques terapéuticos, especialmente en **Terapias Contextuales o de Tercera Generación**, como la Terapia de Aceptación y Compromiso (ACT), Psicoterapia Analítico-Funcional (FAP) y técnicas de Mindfulness.
 
-Algunos cursos y seminarios
+## Mi enfoque terapéutico
 
-- “Especialista en Terapias Contextuales o de Tercera Generación” Madrid Institute os contextual Psichology (MICPSY)
-- “Curso Online de Terapia de Aceptación y Compromiso (ACT)” ACT Instituto
-- “Gestión de las emociones” NASCOR Formación
-- “Gestión del Estrés en el Trabajo” ESVENTIA Consultores
-- “Apoyando a las emociones desde la Terapia Gestalt” Universidad Miguel Hernández
-- “Aprender a cuidar: Formación para el cuidador familiar” Universidad Miguel Hernández
-- “Congreso Internacional de Menores Infractores y Violencia Juvenil” Asociación Praxis
-- “Técnicas de relajación y coaching en mediación familiar” SaludTerapia
-- “Intervención Psicológica en Emergencias y Catástrofes” Universidad Miguel Hernández
-- “Congreso Nacional de Estudiantes de Psicología” Universidad Miguel Hernández
-- “Antroposcopio: La otra mirada” Universidad Miguel Hernández
-- “Formación Práctica en Autismo para Psicólogos” Universidad Miguel Hernández
-- “TDAH en la Infancia y Adolescencia: Retos y Posibilidades” CEFIRE
+Mi forma de trabajar es **integradora y flexible**. No me limito a un único modelo, sino que adapto mi intervención a las necesidades específicas de cada persona. Creo firmemente que no hay dos casos iguales, y por eso cada tratamiento es único y personalizado.
 
-### Experiencia
+Mi objetivo es crear un **espacio seguro** donde puedas explorar la relación entre lo que quieres conseguir, lo que haces en tu día a día, y los resultados que obtienes. A través de este análisis conjunto, trabajaremos para encontrar soluciones flexibles y efectivas que se ajusten a tu situación particular.
 
-- Psicóloga y Psicoterapeuta privada en Consulta ubicada en Madrid Centro: Calle Hilarión Eslava, 27bis, piso 1º, puerta 4 28015 Madrid (Madrid). Terapia psicológica integral en población adulta, infantil y adolescente, en intervención individual, de pareja y familiar.
-- Psicóloga Colaboradora en [Personaliza Psicología](http://grupopersonaliza.com/)
-- Diagnóstico e intervención en población con Trastorno del Espectro Autista en el [Centro Infanta Leonor](http://apacv.org/conocenos/el-centro- infanta-leonor/)
-- Psicóloga Formadora en Reeducación y Sensibilización Vial, en diferentes autoescuelas de Madrid.
-- Intervención y apoyo psicológico a mujeres y parejas en la [Unidad de Reproducción Asistida de la Clínica Vistahermosa Alicante](http://urvistahermosa.com/es/sobre-nosotros/)
-- Equipo de atención a las mujeres: Ayuntamiento de Alicante
-- Intervención con Menores en distintos Centros de “Fundación Diagrama”
-- Taller de Habilidades Sociales para menores infractores y en riesgo de exclusión social: Ayuntamiento de Alicante
-- Taller de Violencia de Género: Ayuntamiento de Alicante
-- Psicóloga. Ayuntamiento de Alicante, Departamento de Servicios Sociales
-- Psicóloga Consultora de RRHH ADECCO
+## Mi experiencia profesional
+
+He trabajado con personas de todas las edades: adultos, adolescentes y niños, tanto en terapia individual como de pareja y familiar. También cuento con experiencia en psicología forense, realización de informes periciales y atención en diferentes contextos: reproducción asistida, violencia de género, menores en riesgo, y programas de reeducación vial.
+
+Actualmente ejerco en mi consulta privada en **Madrid Centro** (Calle Hilarión Eslava), donde combino la atención presencial con la terapia online, para poder adaptarme a las necesidades de cada persona.
+
+## ¿Por qué elegirme?
+
+Entiendo que dar el paso de buscar ayuda psicológica no siempre es fácil. Mi compromiso es ofrecerte un **espacio de confianza** donde puedas expresarte libremente, sin juicios, y trabajar a tu ritmo en los cambios que deseas lograr.
+
+Creo en la importancia de la relación terapéutica como motor del cambio. No se trata solo de técnicas, sino de construir juntos un camino hacia tu bienestar emocional.
+
+Si sientes que puedo ayudarte, no dudes en contactarme. Estaré encantada de conocerte y acompañarte en este proceso.

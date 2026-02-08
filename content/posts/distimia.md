@@ -1,38 +1,46 @@
 +++
-date = 2017-01-23T16:21:57+01:00
+date = 2023-08-26T10:00:00+01:00
 author = "Alaitz Martínez Latorre"
-title = "Qué es la \"distimia\" y cómo se trata"
+title = "Qué es la distimia y cómo se trata"
+description = "Distimia o trastorno depresivo persistente: la depresión crónica y silenciosa. Síntomas, diagnóstico y tratamiento psicológico para superar esta forma de depresión prolongada."
+keywords = ["distimia", "trastorno depresivo persistente", "depresión crónica", "síntomas distimia", "tratamiento distimia", "depresión prolongada", "terapia distimia"]
+tags = ["distimia", "depresión", "salud mental", "tratamiento", "depresión crónica"]
+categories = ["Trastornos"]
 share = true
 draft = false
 [thumbnail]
-image = "/images/distimia.jpg"
-alt = "distimia"
+image = "images/distimia.jpg"
+alt = "Distimia - Trastorno depresivo persistente"
 +++
 
-# ¿Qué es la distimia?
+La **distimia**, también conocida como trastorno depresivo persistente, es una forma de depresión crónica que afecta a muchas personas. Aunque sus síntomas son menos intensos que los de una depresión mayor, su carácter persistente la convierte en un trastorno muy incapacitante.
 
-Cuando sentimos que nuestro malestar va más allá de una época y **nada parece animarnos** puede ser que padezcamos distimia. Se trata de un trastorno del estado de ánimo, está caracterizado por sentirse deprimido de manera crónica, sin embargo, los rasgos de este ánimo depresivo no llegan a ser tan graves como los de una depresión.
+## ¿Qué caracteriza a la distimia?
 
-Dentro de los **tipos de depresiones**, esta podría considerarse de carácter más leve que los episodios depresivos, pero tiende igualmente a ser una enfermedad persistente y que dura periodos de tiempo mayores de dos años, siendo muy incapacitante para quienes la padecen; la distimia recibe también el nombre de depresión crónica por este motivo.
+A diferencia de la depresión mayor, la distimia se caracteriza por un **estado de ánimo deprimido que persiste durante al menos dos años**. Las personas que la padecen describen sentirse "de mal humor", "desanimadas" o con una tristeza constante que, aunque no es extrema, colorea negativamente su día a día.
 
-# Síntomas
+Este trastorno puede comenzar en la adolescencia o en la edad adulta, y muchas veces quienes lo sufren llegan a pensar que "así es su forma de ser", sin darse cuenta de que están padeciendo una enfermedad tratable.
 
-Para realizar un diagnóstico de distimia los profesionales de la salud mental prestan atención a varios criterios, el más importante de ellos es que se presente un **ánimo deprimido e irritable continuo**; los pacientes suelen definirlo como que están \"de mal humor\", \"desanimados\" o \"melancólicos\". Además, otros indicadores son una pérdida de interés por las actividades que antes nos causaban placer, sentimientos de culpa, baja autoestima y mala autopercepción.
+## Síntomas principales
 
-Esta enfermedad también se manifiesta de manera física mediante alteraciones del sueño y del apetito, el cual puede disminuir o decrecer, dolores de cabeza recurrentes y **malestar físico** generalizado acompañado de bajos niveles de energía.
+**Estado de ánimo bajo persistente**: La tristeza o irritabilidad está presente la mayor parte del día, casi todos los días. No hay grandes variaciones, sino una sensación constante de melancolía.
 
-# Causas
+**Pérdida de interés**: Las actividades que antes resultaban placenteras dejan de motivar. Todo parece requerir un esfuerzo desproporcionado.
 
-Existen numerosos factores que pueden desencadenar un [episodio distímico](https://medlineplus.gov/spanish/ency/article/000918.htm). Una de las causas puede ser un desajuste a nivel de la **química cerebral**. Nuestro cerebro se comunica entre sí mediante neurotransmisores que influyen en nuestro estado de ánimo. Si estas sustancias se alteran nuestro humor se verá afectado.
+**Baja autoestima y autocrítica**: Sentimientos constantes de inutilidad, culpa excesiva y una visión muy negativa de uno mismo.
 
-También encontramos como causa una **predisposición genética** a padecer esta enfermedad; es más probable caer en depresión si es algo que cursa en nuestra familia, ya que es genéticamente transmisible.
+**Síntomas físicos**: Alteraciones del sueño y del apetito, dolores de cabeza recurrentes, cansancio constante y sensación generalizada de falta de energía.
 
-Como tercera causa están los factores relacionados con los **acontecimientos vitales**; si has vivido eventos dolorosos o vives en un entorno infeliz esto puede desencadenar que sufras distimia. Además, ser mujer es otro factor de riesgo, ya que son más propensas a padecer esta enfermedad.
+## ¿Qué causa la distimia?
 
-# Tratamiento para la distimia
+Las causas de la distimia son múltiples. Existe un componente de **predisposición genética**: si hay antecedentes familiares de depresión, el riesgo aumenta. También influyen los **factores biológicos**, como alteraciones en los neurotransmisores cerebrales que regulan el estado de ánimo.
 
-Tratar la depresión, incluso en su forma más leve como esta, es muy importante para evitar que el trastorno perdure en el tiempo y además adquiera gravedad. Para tratar esta afección existen dos métodos principales: **la medicación y la psicoterapia**, pudiéndose combinar ambos para lograr aún mejores resultados.
+Los **acontecimientos vitales estresantes**, como experiencias traumáticas o un entorno familiar conflictivo, pueden desencadenar o perpetuar este trastorno.
 
-La medicación, como tratamiento para el trastorno distimico, consistirá en el uso de [antidepresivos](http://www.webconsultas.com/salud-al-dia/depresion/farmacos-antidepresivos-9751) cuyo objetivo es regular la química del cerebro solucionando posibles desajustes que estén afectando al ánimo; suele dar muy buenos resultandos y reducir el malestar de los pacientes.
+## Tratamiento efectivo
 
-Por otro lado, la psicoterapia también es beneficiosa para esta condición, ya que enseñará al paciente pautas de actuación y pensamiento para aliviar la tristeza.
+Afortunadamente, la distimia tiene tratamiento. La **psicoterapia** es fundamental para identificar y modificar los patrones de pensamiento negativos, desarrollar estrategias de afrontamiento y recuperar la capacidad de disfrutar de la vida.
+
+En algunos casos, puede combinarse con **tratamiento farmacológico** para regular los neurotransmisores y aliviar los síntomas.
+
+Si llevas tiempo sintiéndote así, es importante que sepas que no tienes que vivir con este malestar constante. Con ayuda profesional, es posible recuperar el bienestar emocional.

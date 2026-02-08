@@ -1,74 +1,80 @@
 +++
 type = "tarifas"
-title = "Tarifas y Precios"
+title = "Tarifas"
+description = "Tarifas de psicología en Madrid. Precios transparentes para terapia individual, pareja, infantil y familiar. Primera consulta gratuita. Consulta nuestras ofertas y bonos."
+keywords = ["tarifas psicólogo Madrid", "precio terapia Madrid", "cuánto cuesta psicólogo Madrid", "precio sesión psicólogo", "tarifas terapia pareja", "precio psicólogo infantil", "primera consulta gratis Madrid"]
 draft = false
-subtitle = "¿Cuál es el precio de una Terapia Psicológica en Madrid Centro? ¿Cuánto cuesta ir al psicólogo en el Centro de Madrid?"
-emphasis = "Psicólogo barato Madrid"
+subtitle = "Información clara y transparente sobre los precios de los servicios psicológicos"
 [thumbnail]
-image = "/images/alaitz-thumb.jpg"
-alt = "Alaitz Martínez"
+image = "/images/tarifas.jpg"
+alt = "Tarifas de psicología en Madrid"
 +++
 
-Todas mis sesiones, tienen una duración de **50-60 minutos**, excepto las de [Terapia de Pareja](https://ampsicologiamadrid.com/terapias/pareja/), que duran **1 hora y 15 minutos**.
+La inversión en tu bienestar emocional es una de las más importantes que puedes hacer. A continuación encontrarás información clara sobre las tarifas de los diferentes servicios.
 
-Los **precios** son bastante **asequibles**, ya que no me gustaría que la **psicología** solo estuviera al alcance de unos pocos, por eso **reduzco los precios al máximo**, tratando de **ayudar** al mayor número de **personas** posible.
+## Tarifas de servicios
 
-<div class="table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Servicio</th>
-                <th class="text-right">Precio sin bono</th>
-                <th class="text-right">Precio con bono</th>
-                <th class="text-right">Ahorro con bono</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sesión adulto</td>
-                <td class="text-right">60€</td>
-                <td class="text-right"><strong>55€</strong></td>
-                <td class="text-right text-success"><strong>5€</strong></td>
-            </tr>
-            <tr>
-                <td>Sesión online</td>
-                <td class="text-right">60€</td>
-                <td class="text-right"><strong>55€</strong></td>
-                <td class="text-right text-success"><strong>5€</strong></td>
-            </tr>
-            <tr>
-                <td>Sesión infantil</td>
-                <td class="text-right">55€</td>
-                <td class="text-right"><strong>50€</strong></td>
-                <td class="text-right text-success"><strong>5€</strong></td>
-            </tr>
-            <tr>
-                <td>Sesión pareja</td>
-                <td class="text-right">80€</td>
-                <td class="text-right"><strong>75€</strong></td>
-                <td class="text-right text-success"><strong>5€</strong></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+### 🎁 Primera consulta: GRATUITA
 
-Estos son los precios de todos los **tratamientos psicológicos** que te puedo ofrecer, no dudes en consultarme cualquier duda que te surja:
+Es una entrevista informativa donde podremos conocernos, valorar tu situación y resolver todas tus dudas sobre el proceso terapéutico. **Sin compromiso.**
 
-- **Primera entrevista informativa**: Gratuita
-- **Terapia adultos ([individual](https://ampsicologiamadrid.com/terapias/individual/))**: 60€. (Bono descuento de 4 sesiones: 220€, precio por sesión: 55€)
-- **Terapia de Pareja**: 80€. (Bono descuento de 4 sesiones: 300€. Precio por sesión 75€)
-- **Terapia y mediación familiar**: Consultar sin compromiso.
-- **Psicología infantil y adolescentes**: 55€. (Bono descuento de 4 sesiones: 200€. Precio por sesión 50€)
-- **Terapia psicológica online**: 60€. (Bono descuento de 4 sesiones: 220€. Precio por sesión 55€)
-- **Terapia psicológica a domicilio**: 75€. (Bono descuento de 4 sesiones: 280€. Precio por sesión 70€)
-- **Coaching individual personal**: 60€. (Bono descuento de 4 sesiones: 220€. Precio por sesión 55€)
-- **Evaluaciones psicopedagógicas**: Consultar sin compromiso.
-- **Informes periciales**: Consultar sin compromiso.
+---
 
-\* *La actividad clínica de los psicólogos está exenta de I.V.A.*
+### Terapia individual adultos
+- **Sesión individual**: 60€
+- **Bono 4 sesiones**: 220€ (55€ por sesión)
+- **Duración**: 50-60 minutos
 
-\* *Todos los Bonos se pueden adquirir al principio o una vez iniciado el tratamiento, no tienen caducidad y no son reembolsables.*
+### Terapia infantil y adolescentes
+- **Sesión individual**: 55€
+- **Bono 4 sesiones**: 200€ (50€ por sesión)
+- **Duración**: 50-60 minutos
 
-**Psicólogo Madrid Precios**
+### Terapia de pareja
+- **Sesión**: 80€
+- **Bono 4 sesiones**: 300€ (75€ por sesión)
+- **Duración**: 75 minutos
 
-El pago de las sesiones lo puedes realizar mediante Transferencia Bancaria (antes de comenzar el tratamiento) en Efectivo (al finalizar la sesión) o por PayPal, también antes de asistir a la Consulta.
+### Terapia online
+- **Sesión individual**: 60€
+- **Bono 4 sesiones**: 220€ (55€ por sesión)
+- **Duración**: 50-60 minutos
+
+### Terapia a domicilio
+- **Sesión**: 75€
+- **Bono 4 sesiones**: 280€ (70€ por sesión)
+- **Duración**: 50-60 minutos
+
+### Otros servicios
+- **Terapia y mediación familiar**: A consultar
+- **Evaluaciones psicopedagógicas**: A consultar
+- **Informes periciales**: A consultar
+- **Coaching personal**: 60€ por sesión
+
+## Información sobre los bonos
+
+Los bonos de sesiones ofrecen un **ahorro** y te permiten comprometerte con tu proceso terapéutico:
+
+- Puedes adquirirlos al inicio o durante el tratamiento
+- No tienen fecha de caducidad
+- No son reembolsables
+- Representan un ahorro de 5€ por sesión
+
+## Formas de pago
+
+Aceptamos las siguientes formas de pago para tu comodidad:
+
+- **Efectivo**: Al finalizar cada sesión
+- **Transferencia bancaria**: Antes de la sesión
+- **Bizum**: Antes de la sesión
+- **PayPal**: Antes de la sesión
+
+## Información importante
+
+- Todos los servicios están **exentos de IVA**, según la legislación vigente para actividades sanitarias.
+- Si necesitas factura, se emitirá sin problema tras cada sesión o al adquirir un bono.
+- En caso de no poder asistir a una sesión, te pido que me avises con al menos **24 horas de antelación** para poder reprogramarla.
+
+## ¿Tienes dudas?
+
+Si tienes alguna pregunta sobre las tarifas o deseas más información sobre algún servicio específico, no dudes en contactarme. Estoy aquí para ayudarte.

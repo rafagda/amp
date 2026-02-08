@@ -1,19 +1,431 @@
-<main id="main" class="container">
+<!-- Hero Section with Carousel -->
+<section class="relative overflow-hidden" style="min-height: 550px; top: 80px; margin-bottom: 5rem;">
+    <!-- Carousel Background -->
+    <div class="absolute inset-0 z-0">
+        <div class="swiper hero-swiper h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Alaitz -->
+                <div class="swiper-slide">
+                    {{ $alaitz := resources.Get "images/alaitz.png" }}
+                    {{ if $alaitz }}
+                        {{ $optimized := $alaitz.Resize "1920x webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Alaitz Martínez Latorre - Psicóloga" loading="eager">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/alaitz.png" alt="Alaitz Martínez Latorre - Psicóloga" loading="eager">
+                    {{ end }}
+                </div>
 
-    {{ if .Site.Params.showSubheader }}
-        {{ partial "subheader.html" . }}
-    {{ end }}
+                <!-- Slide 2: Torres -->
+                <div class="swiper-slide">
+                    {{ $towers := resources.Get "images/towers.png" }}
+                    {{ if $towers }}
+                        {{ $optimized := $towers.Resize "1920x webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="AM Psicología Madrid" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/towers.png" alt="AM Psicología Madrid" loading="lazy">
+                    {{ end }}
+                </div>
 
-    {{ if .Site.Params.showTerapias }}
-        {{ partial "therapies.html" . }}
-    {{ end }}
+                <!-- Slide 3: Desk -->
+                <div class="swiper-slide">
+                    {{ $desk := resources.Get "images/desk.png" }}
+                    {{ if $desk }}
+                        {{ $optimized := $desk.Resize "1920x webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Espacio de trabajo" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/desk.png" alt="Espacio de trabajo" loading="lazy">
+                    {{ end }}
+                </div>
+            </div>
 
-    {{ if .Site.Params.showNosAdaptamos }}
-        {{ partial "adapt.html" . }}
-    {{ end }}
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
 
-    {{ if .Site.Params.showBlog }}
-        {{ partial "blog.html" . }}
-    {{ end }}
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
 
-</main>
+        <!-- Overlay gradient -->
+        <div class="hero-overlay"></div>
+
+        <!-- Pause/Play button -->
+        <button id="pauseButton" class="pause-button" aria-label="Pausar carrusel">
+            <svg id="playIcon" class="hidden" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pauseIcon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Decorative floating elements -->
+    <div class="absolute top-20 right-10 w-48 h-48 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float pointer-events-none z-[1]"></div>
+    <div class="absolute bottom-20 left-10 w-64 h-64 bg-accent-300 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-float pointer-events-none z-[1]" style="animation-delay: 2s;"></div>
+
+    <!-- Hero Content -->
+    <div class="container mx-auto px-4 lg:px-8 hero-content relative z-10 flex items-center" style="min-height: 550px;">
+        <div class="max-w-4xl mx-auto text-center py-8">
+            <span class="inline-block px-4 py-2 badge text-slate-700 rounded-full text-sm font-semibold mb-4" data-animate>
+                Bienvenido a un espacio de confianza
+            </span>
+
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-4 leading-tight" data-animate>
+                {{ .Site.Params.professional.title }}<br>
+                <span class="text-accent-500">{{ .Site.Params.professional.location }}</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-800 font-medium mb-8 max-w-2xl mx-auto leading-relaxed" data-animate>
+                Terapia personalizada para adultos, parejas, niños y familias.<br class="hidden md:block">
+                {{ .Site.Params.taglines.heroSubtitle }}
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" data-animate>
+                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth inline-flex items-center shadow-depth-lg">
+                    {{ .Site.Params.cta.primary }}
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+                <a href="{{ .Site.BaseURL }}sobre-mi/" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-md">
+                    {{ .Site.Params.cta.secondary }}
+                </a>
+            </div>
+
+            <!-- Trust indicators -->
+            <div class="inline-flex trust-indicators flex-wrap justify-center gap-6 text-sm" data-animate>
+                <div class="flex items-center text-slate-800 font-semibold px-4 py-2 glass-effect rounded-full shadow-depth-sm">
+                    <svg class="w-5 h-5 text-accent-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    {{ .Site.Params.professional.experienceBadge }}
+                </div>
+                <div class="flex items-center text-slate-800 font-semibold px-4 py-2 glass-effect rounded-full shadow-depth-sm">
+                    <svg class="w-5 h-5 text-accent-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                    {{ .Site.Params.professional.patientsBadge }}
+                </div>
+                <div class="flex items-center text-slate-800 font-semibold px-4 py-2 glass-effect rounded-full shadow-depth-sm">
+                    <svg class="w-5 h-5 text-accent-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    {{ .Site.Params.professional.location }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section Preview -->
+<section id="servicios" class="py-12 bg-white textured-bg">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center mb-12" data-animate>
+            <span class="inline-block px-4 py-1.5 bg-accent-100 text-accent-800 font-semibold uppercase tracking-wide text-xs rounded-full">{{ .Site.Params.sections.services.tagline }}</span>
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mt-2 mb-4">
+                {{ .Site.Params.sections.services.title }}
+            </h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                {{ .Site.Params.sections.services.subtitle }}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card: Terapia Individual -->
+            <div class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated shadow-depth-md border-glow" data-animate>
+                <div class="h-48 overflow-hidden image-hover-zoom">
+                    {{ $adultos := resources.Get "images/adultos.jpg" }}
+                    {{ if $adultos }}
+                        {{ $optimized := $adultos.Fill "800x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Terapia Individual" class="w-full h-full object-cover" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/adultos.jpg" alt="Terapia Individual" class="w-full h-full object-cover" loading="lazy">
+                    {{ end }}
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia Individual</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Terapia personalizada para adultos que buscan superar ansiedad, depresión, estrés o cualquier desafío emocional.
+                    </p>
+                    <a href="{{ .Site.BaseURL }}terapias/adultos/" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold">
+                        {{ .Site.Params.cta.seeMore }}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card: Terapia de Pareja -->
+            <div class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated shadow-depth-md border-glow" data-animate>
+                <div class="h-48 overflow-hidden image-hover-zoom">
+                    {{ $pareja := resources.Get "images/pareja.jpg" }}
+                    {{ if $pareja }}
+                        {{ $optimized := $pareja.Fill "800x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Terapia de Pareja" class="w-full h-full object-cover" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/pareja.jpg" alt="Terapia de Pareja" class="w-full h-full object-cover" loading="lazy">
+                    {{ end }}
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia de Pareja</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Ayudo a las parejas a mejorar su comunicación, resolver conflictos y fortalecer su relación.
+                    </p>
+                    <a href="{{ .Site.BaseURL }}terapias/pareja/" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold">
+                        {{ .Site.Params.cta.seeMore }}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card: Terapia Infantil -->
+            <div class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated shadow-depth-md border-glow" data-animate>
+                <div class="h-48 overflow-hidden image-hover-zoom">
+                    {{ $infantil := resources.Get "images/infantil.jpg" }}
+                    {{ if $infantil }}
+                        {{ $optimized := $infantil.Fill "800x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Terapia Infantil" class="w-full h-full object-cover" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/infantil.jpg" alt="Terapia Infantil" class="w-full h-full object-cover" loading="lazy">
+                    {{ end }}
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia Infantil</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Apoyo especializado para niños y adolescentes en su desarrollo emocional y conductual.
+                    </p>
+                    <a href="{{ .Site.BaseURL }}terapias/infantil/" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold">
+                        {{ .Site.Params.cta.seeMore }}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card: Terapia Familiar -->
+            <div class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated shadow-depth-md border-glow" data-animate>
+                <div class="h-48 overflow-hidden image-hover-zoom">
+                    {{ $familia := resources.Get "images/familia.jpg" }}
+                    {{ if $familia }}
+                        {{ $optimized := $familia.Fill "800x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Terapia Familiar" class="w-full h-full object-cover" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/familia.jpg" alt="Terapia Familiar" class="w-full h-full object-cover" loading="lazy">
+                    {{ end }}
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia Familiar</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Trabajo con familias para mejorar la dinámica familiar y resolver conflictos intergeneracionales.
+                    </p>
+                    <a href="{{ .Site.BaseURL }}terapias/familia/" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold">
+                        {{ .Site.Params.cta.seeMore }}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card: Coaching -->
+            <div class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated shadow-depth-md border-glow" data-animate>
+                <div class="h-48 overflow-hidden image-hover-zoom">
+                    {{ $coaching := resources.Get "images/coaching.jpg" }}
+                    {{ if $coaching }}
+                        {{ $optimized := $coaching.Fill "800x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Coaching" class="w-full h-full object-cover" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/coaching.jpg" alt="Coaching" class="w-full h-full object-cover" loading="lazy">
+                    {{ end }}
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Coaching</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Coaching personal y profesional para alcanzar tus objetivos y potenciar tu desarrollo.
+                    </p>
+                    <a href="{{ .Site.BaseURL }}terapias/coaching/" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold">
+                        {{ .Site.Params.cta.seeMore }}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card: Informes -->
+            <div class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated shadow-depth-md border-glow" data-animate>
+                <div class="h-48 overflow-hidden image-hover-zoom">
+                    {{ $informes := resources.Get "images/informes.jpg" }}
+                    {{ if $informes }}
+                        {{ $optimized := $informes.Fill "800x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="Informes Psicológicos" class="w-full h-full object-cover" loading="lazy">
+                    {{ else }}
+                        <img src="{{ .Site.BaseURL }}images/informes.jpg" alt="Informes Psicológicos" class="w-full h-full object-cover" loading="lazy">
+                    {{ end }}
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Informes Psicológicos</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Elaboración de informes psicológicos para procesos legales, educativos o clínicos.
+                    </p>
+                    <a href="{{ .Site.BaseURL }}terapias/informes/" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold">
+                        {{ .Site.Params.cta.seeMore }}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12" data-animate>
+            <a href="{{ .Site.BaseURL }}contacto/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+                {{ .Site.Params.cta.requestConsultation }}
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-12 bg-slate-50 gradient-depth-primary textured-bg">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div data-animate class="flex items-center perspective-card">
+                {{ $sobremi := resources.Get "images/sobre-mi.jpg" }}
+                {{ if $sobremi }}
+                    {{ $optimized := $sobremi.Resize "800x webp q85" }}
+                    <img src="{{ $optimized.RelPermalink }}" alt="Alaitz Martínez Latorre" class="rounded-2xl shadow-depth-xl w-full object-cover" style="max-height: 500px;" loading="lazy">
+                {{ else }}
+                    <img src="{{ .Site.BaseURL }}images/sobre-mi.jpg" alt="Alaitz Martínez Latorre" class="rounded-2xl shadow-depth-xl w-full object-cover" style="max-height: 500px;" loading="lazy">
+                {{ end }}
+            </div>
+            <div data-animate>
+                <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-800 font-semibold uppercase tracking-wide text-xs rounded-full">{{ .Site.Params.sections.about.tagline }}</span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mt-2 mb-4">
+                    {{ .Site.Params.name }}
+                </h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed">
+                    <p>
+                        {{ .Site.Params.taglines.aboutIntro }}
+                    </p>
+                    <p>
+                        {{ .Site.Params.taglines.aboutEnhanced }}
+                    </p>
+                    <p>
+                        {{ .Site.Params.taglines.aboutWork }}
+                    </p>
+                </div>
+                <div class="mt-8">
+                    <a href="{{ .Site.BaseURL }}sobre-mi/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+                        {{ .Site.Params.cta.learnMoreAbout }}
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-12 bg-gradient-to-br from-primary-600 to-primary-800 text-white ambient-light">
+    <div class="container mx-auto px-4 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto" data-animate>
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-shadow-strong">
+                {{ .Site.Params.ctaQuestions.contactTitle }}
+            </h2>
+            <p class="text-lg text-slate-200 mb-6 leading-relaxed">
+                {{ .Site.Params.taglines.ctaFinal }}
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth inline-flex items-center shadow-depth-xl">
+                    {{ .Site.Params.cta.primary }}
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+                <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+                    {{ .Site.Params.cta.call }}: {{ .Site.Params.phone }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ if .Site.Params.showBlog }}
+<!-- Blog Section -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center mb-12" data-animate>
+            <span class="inline-block px-4 py-1.5 bg-accent-100 text-accent-800 font-semibold uppercase tracking-wide text-xs rounded-full">{{ .Site.Params.sections.blog.tagline }}</span>
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mt-2 mb-4">
+                {{ .Site.Params.sections.blog.title }}
+            </h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                {{ .Site.Params.sections.blog.subtitle }}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+            <article class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated card-shine shadow-depth-md border-glow" data-animate>
+                {{ if .Params.thumbnail.image }}
+                <div class="h-48 overflow-hidden image-hover-zoom">
+                    {{ $image := resources.Get .Params.thumbnail.image }}
+                    {{ if $image }}
+                        {{ $optimized := $image.Fill "800x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover" loading="lazy">
+                    {{ else }}
+                        <img src="{{ $.Site.BaseURL }}{{ .Params.thumbnail.image }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover" loading="lazy">
+                    {{ end }}
+                </div>
+                {{ end }}
+                <div class="p-6">
+                    <time class="text-sm text-slate-500">{{ .Date.Day }} de {{ index (slice "enero" "febrero" "marzo" "abril" "mayo" "junio" "julio" "agosto" "septiembre" "octubre" "noviembre" "diciembre") (sub .Date.Month 1) }} de {{ .Date.Year }}</time>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mt-2 mb-3">
+                        <a href="{{ .Permalink }}" class="hover:text-accent-500 transition-colors">{{ .Title }}</a>
+                    </h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed line-clamp-3">
+                        {{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary }}{{ end }}
+                    </p>
+                    <!-- Tags -->
+                    {{ if .Params.tags }}
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {{ range first 3 .Params.tags }}
+                        <span class="text-xs px-2 py-1 bg-accent-100 text-accent-700 rounded-full">
+                            {{ . }}
+                        </span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                    <a href="{{ .Permalink }}" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold">
+                        {{ $.Site.Params.cta.readMore }}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+
+        <div class="text-center mt-12" data-animate>
+            <a href="{{ .Site.BaseURL }}posts/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+                {{ .Site.Params.cta.viewAll }}
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }}

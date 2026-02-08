@@ -1,39 +1,137 @@
-{{ define "header"}}
-<!-- empty -->
-{{ end }}
 {{ define "main" }}
-<main id="main" class="container posts">
+<!-- Page Header -->
+<section class="pt-32 pb-12 bg-gradient-to-br from-primary-50 to-slate-100">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Breadcrumb -->
+            {{ partial "breadcrumb.html" . }}
 
-	<div class="row topspace">
+            <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-3 mt-2">
+                {{ .Site.Params.pages.blog.title }}
+            </h1>
+            <p class="text-lg text-slate-600">
+                {{ .Site.Params.pages.blog.subtitle }}
+            </p>
+        </div>
+    </div>
+</section>
 
-		<div class="col-sm-8 col-sm-offset-2">
-			{{ range .Paginator.Pages }}
-			<article class="post">
-				<header class="entry-header">
-					<div class="entry-meta">
-						<span class="posted-on">
-							<time class="entry-date published" date="{{ .Date }}">{{ dateFormat .Site.Params.DateForm .Date }}</time>
-						</span>
-					</div>
-					<h3 class="entry-title">
-						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
-					</h3>
-					<img src="{{ .Param "thumbnail.image" }}" alt="{{ .Param "thumbnail.alt" }}" class="img-rounded">
-				</header>
-				<div class="entry-content">
-					{{ .Content }}
-				</div>
-			</article>
-			{{ end }}
-		</div>
+<!-- Blog Posts Grid -->
+<section class="py-12">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{ range .Paginator.Pages }}
+                <article class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated card-shine shadow-depth-md border-glow" data-animate>
+                    {{ if .Params.thumbnail.image }}
+                    <div class="h-48 overflow-hidden image-hover-zoom">
+                        {{ $image := resources.Get .Params.thumbnail.image }}
+                        {{ if $image }}
+                            {{ $optimized := $image.Fill "800x400 webp q85" }}
+                            <img src="{{ $optimized.RelPermalink }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover" loading="lazy">
+                        {{ else }}
+                            <img src="{{ .Params.thumbnail.image }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover" loading="lazy">
+                        {{ end }}
+                    </div>
+                    {{ end }}
 
-	</div>
+                    <div class="p-6">
+                        <time class="text-sm text-slate-500" datetime="{{ .Date.Format "2006-01-02" }}">
+                            {{ .Date.Day }} de {{ index (slice "enero" "febrero" "marzo" "abril" "mayo" "junio" "julio" "agosto" "septiembre" "octubre" "noviembre" "diciembre") (sub .Date.Month 1) }} de {{ .Date.Year }}
+                        </time>
 
-	<center class="">
-		<ul class="pagination">
-			{{ template "_internal/pagination.html" . }}
-		</ul>
-	</center>
+                        <h3 class="text-xl font-display font-bold text-slate-800 mt-2 mb-3">
+                            <a href="{{ .Permalink }}" class="hover:text-accent-500 transition-colors">
+                                {{ .Title }}
+                            </a>
+                        </h3>
 
-</main>
+                        {{ if .Description }}
+                        <p class="text-slate-600 mb-4 leading-relaxed line-clamp-3">
+                            {{ .Description }}
+                        </p>
+                        {{ else if .Params.description }}
+                        <p class="text-slate-600 mb-4 leading-relaxed line-clamp-3">
+                            {{ .Params.description }}
+                        </p>
+                        {{ end }}
+
+                        <!-- Tags -->
+                        {{ if .Params.tags }}
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            {{ range first 3 .Params.tags }}
+                            <span class="text-xs px-2 py-1 bg-accent-100 text-accent-700 rounded-full">
+                                {{ . }}
+                            </span>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+
+                        <a href="{{ .Permalink }}" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold text-sm">
+                            {{ $.Site.Params.cta.readMore }}
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+
+            <!-- Pagination -->
+            {{ if gt .Paginator.TotalPages 1 }}
+            <div class="mt-12 flex justify-center">
+                <nav class="flex items-center space-x-2">
+                    {{ if .Paginator.HasPrev }}
+                    <a href="{{ .Paginator.Prev.URL }}" class="px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </a>
+                    {{ end }}
+
+                    {{ range .Paginator.Pagers }}
+                    <a href="{{ .URL }}" class="px-4 py-2 {{ if eq . $.Paginator }}bg-primary-500 text-white{{ else }}bg-white border border-slate-300 text-slate-700 hover:bg-slate-50{{ end }} rounded-lg transition-colors">
+                        {{ .PageNumber }}
+                    </a>
+                    {{ end }}
+
+                    {{ if .Paginator.HasNext }}
+                    <a href="{{ .Paginator.Next.URL }}" class="px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    {{ end }}
+                </nav>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-12 bg-slate-50 gradient-depth textured-bg">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
+                {{ .Site.Params.ctaQuestions.contactTitle }}
+            </h2>
+            <p class="text-xl text-slate-600 mb-8">
+                {{ .Site.Params.taglines.ctaFinal }}
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-primary-500 hover:bg-primary-600 btn-glow btn-depth inline-flex items-center justify-center shadow-depth-lg">
+                    {{ .Site.Params.cta.primary }}
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+                <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-glow btn-depth shadow-depth-md">
+                    {{ .Site.Params.cta.call }}: {{ .Site.Params.phone }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}

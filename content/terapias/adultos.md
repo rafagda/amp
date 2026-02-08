@@ -1,36 +1,34 @@
 +++
 title = "Adultos"
+description = "Terapia psicológica para adultos en Madrid. Tratamiento de ansiedad, depresión, estrés, adicciones y problemas emocionales. Primera consulta gratuita. Psicóloga sanitaria con más de 15 años de experiencia."
+keywords = ["terapia adultos Madrid", "psicólogo adultos Madrid", "terapia individual Madrid", "ansiedad adultos", "depresión tratamiento", "estrés laboral", "psicóloga adultos Madrid centro"]
 showHome = true
 weight = 1
 draft = false
 [thumbnail]
-image = "/images/adultos.jpg"
-alt = "adultos"
+image = "images/adultos.jpg"
+alt = "Terapia psicológica para adultos en Madrid"
 [pricing]
 single = "Una sesión 65€"
 pass = "Cuatro sesiones 240€"
 +++
 
-Existen **múltiples motivos** por los que cualquiera podemos **necesitar la ayuda de un psicólogo**:
+La vida adulta es una etapa llena de retos y cambios que, en ocasiones, pueden generarnos malestar emocional. **Todos podemos necesitar la ayuda de un psicólogo** en algún momento de nuestras vidas.
 
-Una pérdida familiar, problemas de pareja, una mala época en el trabajo, estrés, ansiedad, depresión, adicciones, trastornos del sueño,… son sólo algunos **ejemplos**.
+## ¿Cuándo puede ayudarte la terapia?
 
-## ¿Estás atravesando una época difícil?
+Una pérdida familiar, problemas de pareja, dificultades laborales, ansiedad, depresión, estrés, adicciones o trastornos del sueño son algunos de los **motivos más frecuentes** por los que las personas acuden a consulta.
 
-La ayuda de un psicólogo te ayudará a superarlo y a recuperar la felicidad.
+Pero no solo se trata de superar momentos difíciles. Cada vez más personas buscan **mejorar su bienestar personal** y desarrollar todo su potencial a través de la terapia psicológica.
 
-**Todos necesitamos cambiar** algunos aspectos de nuestra manera de ser o pensar, ya sea porque nos genera malestar o sufrimiento, porque nos hace sentir infelices o porque nos bloquea en determinados temas y pensamos que somos así o que la gente no cambia.
+## ¿Cómo trabajamos?
 
-En la actualidad, cada vez más, está más presente y adquiere más fuerza esta idea de la **mejora personal, por medio de la terapia psicológica**.
+Conocernos a nosotros mismos es fundamental. Te acompañamos en un proceso de **autoconocimiento y cambio** en el que tomarás conciencia de cómo piensas, sientes y actúas, identificando aquello que deseas mantener y lo que necesitas transformar.
 
-## Conocernos a nosotros mismos es fundamental.
+Trabajamos las problemáticas y trastornos psicológicos más importantes de la psicología actual, siempre desde un enfoque **profesional, actualizado y basado en la evidencia científica**.
 
-Tomar conciencia de cómo somos, cómo pensamos, cómo actuamos, qué queremos, dónde nos equivocamos, qué tenemos que seguir siendo y qué tenemos que cambiar, es o debería ser el objetivo de cualquier persona del siglo XXI.
+## Formato de las sesiones
 
-La etapa adulta es, obviamente, la más larga de la vida y, por lo tanto, es en la que, por probabilidad, **se nos pueden manifestar más momentos de bienestar y sufrimiento** y algunos de los cuales pueden convertirse en un trastorno o problemática grave, provocando un gran deterioro de nuestra felicidad y creando un riesgo de convertirse en crónicos.
+La **evaluación y el tratamiento** se acuerdan de forma personalizada según tus necesidades. Las sesiones suelen ser **semanales o quincenales** y tienen una duración de 50 minutos.
 
-En nuestros centros de psicología y salud **trabajamos las problemáticas y trastornos psicológicos más importantes** y característicos de la psicología y psiquiatría.
-
-Para nosotros es lógicamente muy importante ponernos en manos de un profesional o equipo en salud mental para **minimizar, mejorar o prevenir dificultades y trastornos emocionales, para así tener una buena calidad de vida**.
-
-Se acuerda la **evaluación y el tratamiento psicológico** de acuerdo con los criterios y recomendaciones del profesional. Suelen ser sesiones *semanales o quincenales*.
+Ponerse en manos de un profesional de la salud mental es el primer paso para mejorar tu calidad de vida y bienestar emocional.

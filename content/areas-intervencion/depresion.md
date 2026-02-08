@@ -1,27 +1,29 @@
 +++
 title = "Depresión"
+description = "Tratamiento de depresión en Madrid. Terapia psicológica efectiva para superar la depresión, tristeza y desmotivación. Psicóloga especialista en trastornos del estado de ánimo."
+keywords = ["depresión Madrid", "tratamiento depresión", "psicólogo depresión Madrid", "terapia depresión", "superar depresión", "depresión crónica tratamiento", "psicóloga depresión Madrid centro"]
 showHome = true
-weight = 1
+weight = 2
 draft = false
 [thumbnail]
-image = "/images/depresion.jpg"
-alt = "depresion"
+image = "images/depresion.jpg"
+alt = "Tratamiento de depresión en Madrid"
 +++
 
-La **depresión** se puede describir como el hecho de sentirse triste, melancólico, infeliz, abatido o derrumbado. La mayoría de nosotros se siente de esta manera de vez en cuando durante períodos cortos
+La **depresión** es mucho más que sentirse triste ocasionalmente. Es un trastorno del estado de ánimo que afecta profundamente a cómo pensamos, sentimos y funcionamos en nuestra vida diaria.
 
-La **depresión** clínica es un trastorno del estado anímico en el cual los sentimientos de tristeza, pérdida, ira o frustración interfieren con la vida diaria durante un período de algunas semanas o más. A menudo puede deberse a comportamientos aprendidos en el hogar o a su entorno, por un hecho estresante o infeliz en la vida, un proceso de pérdida o duelo, etc. Frecuentemente se trata de una combinación de estos factores, de la que no se es consciente, por lo que con la psicoterapia tratare de ayudar al paciente a conocerse mejor y cambiar sus malas formas de pensar, sentir y actuar.
+## ¿Cuándo buscar ayuda?
 
-# Tipos y síntomas de depresión
+Hablamos de depresión clínica cuando los sentimientos de tristeza, pérdida, ira o frustración **interfieren con la vida diaria durante semanas o más**. Puede originarse por situaciones estresantes, pérdidas, duelos o ser resultado de patrones aprendidos. Frecuentemente es una combinación de factores de los que no somos conscientes.
 
-## Episodio depresivo mayor/menor
+## Tipos de depresión
 
-Debemos pensar en él ante la aparición de síntomas como tristeza vital, pesimismo, ansiedad, irritabilidad, apatía, embotamiento afectivo, empeoramiento matutino, disminución marcada del interés y de la capacidad de disfrutar, sentimientos de inutilidad e ideación de culpa, baja autoestima, pensamientos recurrentes de muerte, pérdida de apetito, disminución de peso, alteraciones del sueño, etc.
+**Episodio depresivo mayor**: Presencia de tristeza profunda, pérdida de interés, alteraciones del sueño y apetito, sentimientos de culpa, baja autoestima y pensamientos recurrentes negativos.
 
-## Trastorno distímico
+**Trastorno distímico**: Depresión crónica con síntomas menos intensos pero persistentes durante años. Puedes sentirte bien algunos días, pero los síntomas reaparecen constantemente.
 
-El Trastorno Distímico o Distimia es un tipo de depresión crónica, en la que los síntomas se manifiestan de forma permanente durante un periodo de tiempo prolongado. A veces puede llegar a sentirse bien durante días, incluso semanas, pero enseguida vuelven a reaparecer los síntomas, estando la mayor parte del tiempo cansado y deprimido. Suele iniciarse en la edad adulta.
+**Depresión subclínica**: Puede pasar inadvertida porque predominan síntomas como irritabilidad, apatía o alteraciones del sueño, sin tristeza evidente.
 
-## Depresión subclínica
+## ¿Cómo podemos ayudarte?
 
-Es aquella depresión que puede pasar prácticamente inadvertida porque no se detecta la presencia de ánimo deprimido, ni la incapacidad para disfrutar de las cosas, y sí otros síntomas de los descritos (pesimismo, ansiedad, irritabilidad, apatía, embotamiento afectivo pérdida de apetito, disminución de peso, alteraciones del sueño, etc.
+A través de la **psicoterapia** te ayudaremos a conocerte mejor, identificar patrones de pensamiento negativos y desarrollar nuevas formas de pensar, sentir y actuar. La depresión tiene tratamiento y es posible recuperar el bienestar emocional.

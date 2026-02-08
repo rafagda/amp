@@ -1,22 +1,91 @@
-{{ define "header"}}
-<!-- empty -->
-{{ end }}
 {{ define "main" }}
-<main id="main" class="container sobre-mi">
+<!-- Page Header -->
+<section class="pt-32 pb-12 bg-gradient-to-br from-primary-50 to-slate-100">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Breadcrumb -->
+            {{ partial "breadcrumb.html" . }}
 
-	<div class="row topspace">
-		
-		<aside class="col-sm-4 sidebar sidebar-right hidden-xs hidden-sm">
-			<div class="nav text-right nav-side">
-				<img src="{{ .Params.image }}" alt="{{ .Params.alt}}">
-			</div>
-		</aside>
+            <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-3 mt-2">
+                {{ .Title }}
+            </h1>
+            <p class="text-lg text-slate-600">
+                {{ .Description | default "Conoce más sobre mi formación, experiencia y enfoque terapéutico" }}
+            </p>
+        </div>
+    </div>
+</section>
 
-		<article class="col-sm-8 maincontent">
-			<h1 class="entry-title">{{ .Title }}</h1>
-			{{ .Content }}
-		</article>
+<!-- Main Content -->
+<section class="py-12">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Sidebar with Image -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-24">
+                    {{ if .Params.image }}
+                        {{ $image := resources.Get .Params.image }}
+                        {{ if $image }}
+                            {{ $optimized := $image.Resize "600x webp q85" }}
+                            <img src="{{ $optimized.RelPermalink }}" alt="{{ .Params.alt | default .Title }}" class="rounded-2xl shadow-xl mb-6">
+                        {{ else }}
+                            <img src="{{ .Params.image }}" alt="{{ .Params.alt | default .Title }}" class="rounded-2xl shadow-xl mb-6">
+                        {{ end }}
+                    {{ end }}
 
-	</div>
-</main>
+                    <!-- Quick Info Card -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-depth-md glass-effect">
+                        <h3 class="font-display font-bold text-slate-800 text-lg mb-4">Datos Profesionales</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <span class="text-slate-600">{{ .Site.Params.professional.experienceText }}</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-slate-600">{{ .Site.Params.professional.credentials }}</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-slate-600">{{ .Site.Params.professional.location }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <article class="lg:col-span-2">
+                <div class="prose prose-slate max-w-none">
+                    {{ .Content }}
+                </div>
+
+                <!-- CTA Section -->
+                <div class="mt-12 p-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl text-white text-center shadow-depth-lg ambient-light">
+                    <h3 class="text-2xl font-display font-bold mb-4">{{ .Site.Params.ctaQuestions.aboutTitle }}</h3>
+                    <p class="text-slate-200 mb-6">
+                        {{ .Site.Params.ctaQuestions.aboutSubtitle }}
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-primary-500 hover:bg-primary-600 btn-glow btn-depth inline-flex items-center justify-center shadow-depth-lg">
+                            {{ .Site.Params.cta.primary }}
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-glow btn-depth shadow-depth-md">
+                            {{ .Site.Params.cta.callNow }}
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 {{ end }}

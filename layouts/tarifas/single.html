@@ -1,55 +1,102 @@
-{{ define "header"}}
-<!-- empty -->
-{{ end }}
 {{ define "main" }}
-<main id="main" class="container tarifas-page">
-	
-	<div class="row topspace">
-		
-		<div class="col-sm-8">
+<!-- Page Header -->
+<section class="pt-32 pb-12 bg-gradient-to-br from-primary-50 to-slate-100">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Breadcrumb -->
+            {{ partial "breadcrumb.html" . }}
 
-            <article>
+            <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-3 mt-2">
+                {{ .Title }}
+            </h1>
+            {{ if .Params.subtitle }}
+            <p class="text-lg text-slate-600">
+                {{ .Params.subtitle }}
+            </p>
+            {{ end }}
+        </div>
+    </div>
+</section>
 
-				<header class="entry-header">
-					<h3 class="entry-title">
-						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
-					</h3>
-                </header>
-                
-                <div class="hidden-xs">
-                    <h3>{{ .Param "subtitle" }}</h3>
+<!-- Main Content -->
+<section class="py-12">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content Area -->
+            <article class="lg:col-span-2">
+                {{ if .Params.thumbnail.image }}
+                <div class="mb-6 rounded-2xl overflow-hidden shadow-xl" style="height: 400px;">
+                    {{ $image := resources.Get .Params.thumbnail.image }}
+                    {{ if $image }}
+                        {{ $optimized := $image.Resize "x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover object-center">
+                    {{ else }}
+                        <img src="{{ .Params.thumbnail.image }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover object-center">
+                    {{ end }}
                 </div>
+                {{ end }}
 
-				<div class="pull-left thumb">
-					<img src="{{ .Param `thumbnail.image` }}" alt="{{ .Param `thumbnail.alt` }}" class="img-rounded">
-                </div>
-                
-				<div class="entry-content">
-                    <p class="visible-xs">
-                        <strong>{{ .Param "subtitle" }}</strong>
+                {{ if .Params.emphasis }}
+                <div class="bg-accent-50 border-l-4 border-accent-500 rounded-lg p-6 mb-8">
+                    <p class="text-lg font-semibold text-slate-800">
+                        {{ .Params.emphasis }}
                     </p>
-                    <p>
-                        <strong>{{ .Param "emphasis" }}</strong>
-                    </p>
-					{{ .Content }}
                 </div>
-                
+                {{ end }}
+
+                <div class="prose prose-slate prose-lg max-w-none">
+                    {{ .Content }}
+                </div>
+
+                <!-- CTA Section -->
+                <div class="mt-12 p-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl text-white text-center shadow-depth-lg ambient-light">
+                    <h3 class="text-2xl font-display font-bold mb-4">{{ .Site.Params.ctaQuestions.pricingTitle }}</h3>
+                    <p class="text-slate-200 mb-6">
+                        {{ .Site.Params.ctaQuestions.pricingSubtitle }}
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-primary-500 hover:bg-primary-600 btn-glow btn-depth inline-flex items-center justify-center shadow-depth-lg">
+                            {{ .Site.Params.cta.primary }}
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-glow btn-depth text-center shadow-depth-md">
+                            {{ .Site.Params.cta.call }}: {{ .Site.Params.phone }}
+                        </a>
+                    </div>
+                </div>
             </article>
 
-        </div>
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-24 space-y-6">
+                    <!-- Contact Card -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-depth-md border-glow">
+                        <h3 class="font-display font-bold text-slate-800 text-lg mb-4">{{ .Site.Params.sidebar.contactCardTitle }}</h3>
+                        <p class="text-slate-600 text-sm mb-6">
+                            {{ .Site.Params.sidebar.contactCardText }}
+                        </p>
+                        {{ partial "contact-form.html" . }}
+                    </div>
 
-        <div class="col-sm-4">
-    
-            <header class="entry-header">
-                <h1 class="entry-title">Contacta</h1>
-            </header>
-    
-            <div class="entry-content">
-                {{ partial "contact-form.html" . }}
-            </div>
-    
+                    <!-- Info Card -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-depth-md">
+                        <h3 class="font-display font-bold text-slate-800 text-lg mb-4">{{ .Site.Params.sidebar.infoTitle }}</h3>
+                        <ul class="space-y-3 text-sm">
+                            {{ range .Site.Params.features.items }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-slate-600">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </aside>
         </div>
-
     </div>
-</main>
+</section>
 {{ end }}
