@@ -155,17 +155,15 @@ Plantillas en `archetypes/` que definen la estructura de frontmatter para nuevo 
 ### Assets Estáticos
 
 **Imágenes** (`static/images/` y `assets/images/`)
-- `static/images/` - Imágenes servidas directamente (referenciadas en markdown, ~33 archivos)
+- `static/images/` - 3 archivos servidos directamente (logo SVG, imagen OG, imagen structured data)
 - `assets/images/` - Imágenes procesadas por Hugo (usadas en templates con resources.Get)
 - **Optimización automática:** Carrusel convierte PNGs a WebP (quality 85, 1920px width)
-- **Procesamiento Hugo:** 16 imágenes procesadas automáticamente
-- Algunas imágenes están duplicadas entre ambas carpetas por necesidad técnica
-- **Tamaño total:** ~21MB (optimizado con WebP reduce a ~4MB en carrusel)
+- **Procesamiento Hugo:** 56 imágenes procesadas automáticamente
 
 **Otros archivos:**
 - `static/robots.txt` - Configuración SEO optimizada para robots
 - `static/.htaccess` - Configuración de redirección HTTPS
-- **PENDIENTE:** `static/images/og-image.jpg` - Imagen Open Graph (1200x630px) para redes sociales
+- `static/images/og-image.jpg` - Imagen Open Graph (1200x630px) para redes sociales
 
 **Assets compilados:**
 - `assets/css/main.css` - CSS principal (Tailwind CSS)
@@ -247,10 +245,12 @@ Implementado en todas las páginas:
 
 1. **Organization** (@type: Organization)
    - Nombre: AM Psicología Madrid
-   - Logo, URL, redes sociales
+   - Logo, URL, redes sociales (sameAs como array JSON válido)
+   - Dirección completa con PostalAddress
    - ContactPoint con teléfono y área de servicio
 
-2. **LocalBusiness** (@type: LocalBusiness, MedicalBusiness, Psychologist)
+2. **LocalBusiness** (@type: LocalBusiness, additionalType: MedicalBusiness, Psychologist)
+   - Tipo único `LocalBusiness` con `additionalType` para tipos secundarios (evita problemas de validación con arrays de @type)
    - Dirección completa con PostalAddress
    - GeoCoordinates (latitud/longitud)
    - Horarios de apertura (Lunes-Viernes 9:00-20:00)
@@ -262,7 +262,7 @@ Implementado en todas las páginas:
    - Alaitz Martínez Latorre
    - jobTitle: Psicóloga Sanitaria
    - alumniOf: Universidad Miguel Hernández
-   - memberOf: Colegio Oficial de Psicólogos de Madrid
+   - memberOf: "Colegio Oficial de Psicólogos de Madrid" (string simple, no objeto tipado, para evitar warnings de Google)
    - knowsAbout: [Psicología Clínica, Terapia de Pareja, etc.]
 
 4. **WebSite** (@type: WebSite)
@@ -408,11 +408,9 @@ hugo --cleanDestinationDir --ignoreCache
 
 **Estadísticas de build actual:**
 - 114 páginas generadas (42 páginas principales + 72 páginas de taxonomía)
-- 36 archivos estáticos
-- 37 imágenes procesadas (PNGs → WebP)
-- 189 archivos totales en dist/
-- Tamaño total: ~22MB
-- Tiempo de build: ~10 segundos
+- 5 archivos estáticos
+- 56 imágenes procesadas (PNGs → WebP)
+- Tiempo de build: ~4.5 segundos
 
 **Archivos críticos generados:**
 - `index.html` (67KB) - Homepage
@@ -455,17 +453,17 @@ hugo --cleanDestinationDir --ignoreCache
 
 6. **SEO completo:** 28 páginas optimizadas con meta descriptions, keywords y structured data
 
-7. **Structured Data:** Validar con https://search.google.com/test/rich-results después de deployment
+7. **Structured Data:** Validado con https://search.google.com/test/rich-results (febrero 2026)
 
 8. **Sitemap:** Generado automáticamente en `/sitemap.xml`, enlazado desde robots.txt
 
-9. **Imagen Open Graph:** PENDIENTE - Crear `/static/images/og-image.jpg` (1200x630px) para compartir en redes sociales
+9. **Imagen Open Graph:** Creada en `/static/images/og-image.jpg` (1200x630px) con logo, título, servicios y datos de contacto
 
 10. **Carrusel:** 3 slides con Ken Burns effect (12s animation loop), autoplay con pausa/play
 
 11. **Scroll animations:** Intersection Observer con `data-animate` en elementos (threshold: 0.15)
 
-12. **Carrusel móvil:** Alineación `object-position: left top` en móvil, `center top` en desktop
+12. **Carrusel móvil:** Alineación `object-position: 30% top` en móvil (segunda columna de la imagen), `center top` en desktop
 
 13. **Breadcrumbs:** Implementados en todas las páginas de contenido (posts, terapias, áreas de intervención, tags, categorías)
 
@@ -563,13 +561,13 @@ hugo --cleanDestinationDir --ignoreCache
 
 ### Fix Alineación Carrusel Móvil
 
-**Problema:** En móvil, las imágenes del carrusel mostraban el centro, pero lo importante está a la izquierda
-**Solución:** CSS media query con `object-position: left top` en móvil y `center top` en desktop
+**Problema:** En móvil, las imágenes del carrusel mostraban una zona poco representativa
+**Solución:** CSS media query con `object-position: 30% top` en móvil (segunda columna de la imagen) y `center top` en desktop
 
 **Archivo:** `/Users/dev/Workspace/amp/assets/css/main.css`
 ```css
 .hero-swiper .swiper-slide img {
-  object-position: left top; /* móvil */
+  object-position: 30% top; /* móvil - segunda columna */
 }
 @media (min-width: 768px) {
   .hero-swiper .swiper-slide img {
@@ -605,30 +603,37 @@ hugo --cleanDestinationDir --ignoreCache
 
 **Archivo:** `/Users/dev/Workspace/amp/layouts/_default/baseof.html`
 
-## Post-Deployment: Próximos Pasos SEO
+### Fix Structured Data - Rich Results Test (Febrero 2026)
 
-### Acciones Inmediatas
+**Problema 1:** "Unparsable structured data > Duplicate unique property"
+**Causa raíz:** Propiedad `@type` duplicada en el bloque LocalBusiness (una como string y otra como array)
+**Solución:** Unificada en una sola declaración `@type: "LocalBusiness"` con `additionalType` para tipos secundarios
 
-1. **Crear imagen Open Graph**
-   - Crear `/static/images/og-image.jpg` (1200x630px)
-   - Incluir logo + "Psicóloga Madrid Centro" + mensaje clave
-   - Usar para compartir en redes sociales
+**Problema 2:** `sameAs` generaba JSON inválido
+**Causa raíz:** Template Hugo concatenaba todas las URLs en una sola cadena con comas (`"url1,url2,"`) en vez de elementos separados del array
+**Solución:** Reescrito el loop con control de comas para generar array JSON válido (`["url1","url2"]`)
 
-2. **Google Search Console**
-   - Enviar sitemap: https://www.ampsicologiamadrid.com/sitemap.xml
-   - Solicitar re-indexación de todas las páginas
-   - Verificar cobertura de indexación
+**Problema 3:** Organization missing field `address`
+**Causa raíz:** El bloque Organization no incluía dirección
+**Solución:** Añadido `address` con PostalAddress completo al bloque Organization
 
-3. **Validar Structured Data**
-   - Rich Results Test: https://search.google.com/test/rich-results
-   - Schema Markup Validator: https://validator.schema.org/
-   - Verificar Organization, LocalBusiness, Article schemas
+**Problema 4:** Warnings en `memberOf` (missing telephone, priceRange, address, image)
+**Causa raíz:** `memberOf` usaba `@type: "ProfessionalService"` que hereda de `LocalBusiness` y requiere esos campos
+**Solución:** Cambiado a string simple `"Colegio Oficial de Psicólogos de Madrid"` (no necesita ser objeto tipado)
 
-4. **Google My Business**
-   - Verificar consistencia NAP (Name, Address, Phone)
-   - Actualizar horarios y servicios
-   - Añadir categorías: Psicólogo, Psicóloga infantil, Terapeuta de pareja
-   - Solicitar reseñas a pacientes satisfechos
+**Archivo:** `/Users/dev/Workspace/amp/layouts/partials/seo.html`
+
+## Post-Deployment: Pasos SEO
+
+### Acciones Inmediatas (Completadas Febrero 2026)
+
+1. ~~**Crear imagen Open Graph**~~ ✅ Creada `/static/images/og-image.jpg` (1200x630px)
+
+2. ~~**Google Search Console**~~ ✅ Sitemap enviado, re-indexación solicitada
+
+3. ~~**Validar Structured Data**~~ ✅ Validado con Rich Results Test (corregidos: @type duplicado, sameAs malformado, address en Organization, memberOf simplificado)
+
+4. ~~**Google My Business**~~ ✅ NAP verificado, horarios y servicios actualizados
 
 ### Optimizaciones Adicionales Opcionales
 
@@ -818,8 +823,9 @@ assets/images/         # 30 imágenes procesables (JPG, PNG)
 ├── hero/             # 3 imágenes del carrusel
 └── general/          # sobre-mi, tarifas, alaitz-thumb
 
-static/images/        # Solo 2 archivos especiales
+static/images/        # Solo 3 archivos especiales
 ├── amp.svg          # Logo (SVG no necesita procesamiento)
+├── og-image.jpg     # Imagen Open Graph (1200x630px) para redes sociales
 └── sobre-mi.png     # Imagen para SEO/structured data
 ```
 
@@ -880,6 +886,6 @@ alt = "Descripción de la imagen"
 
 **Mantenimiento:**
 - ✅ Sistema de imágenes simplificado
-- ✅ Solo 2 archivos en static/images/
+- ✅ Solo 3 archivos en static/images/ (logo SVG, OG image, sobre-mi para structured data)
 - ✅ Todas las imágenes procesables en assets/
 - ✅ Formato consistente en todos los layouts

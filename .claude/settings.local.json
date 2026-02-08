@@ -33,7 +33,9 @@
       "Bash(else echo \"✗ JS validation fix NOT found\")",
       "Bash(tee:*)",
       "Bash(for file in content/posts/*.md)",
-      "Bash(do sed -i '' 's|image = \"\"/images/|image = \"\"images/|g' \"$file\")"
+      "Bash(do sed -i '' 's|image = \"\"/images/|image = \"\"images/|g' \"$file\")",
+      "Bash(python3:*)",
+      "Bash(/tmp/imgenv/bin/pip install:*)"
     ]
   }
 }

@@ -63,9 +63,15 @@
         "width": 250,
         "height": 60
       },
-      "sameAs": [
-        "{{ range .Site.Params.social }}{{ if .footer }}{{ .url }},{{ end }}{{ end }}"
-      ],
+      "sameAs": [{{ $first := true }}{{ range .Site.Params.social }}{{ if .footer }}{{ if not $first }},{{ end }}"{{ .url }}"{{ $first = false }}{{ end }}{{ end }}],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Hilarión Eslava, 27bis, piso 1º, puerta 4",
+        "addressLocality": "Madrid",
+        "addressRegion": "Madrid",
+        "postalCode": "28015",
+        "addressCountry": "ES"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+34-{{ replace .Site.Params.phone " " "-" }}",
@@ -76,6 +82,7 @@
     },
     {
       "@type": "LocalBusiness",
+      "additionalType": ["https://schema.org/MedicalBusiness", "https://schema.org/Psychologist"],
       "@id": "{{ .Site.BaseURL }}#localbusiness",
       "name": "AM Psicología Madrid",
       "image": "{{ .Site.BaseURL }}images/sobre-mi.png",
@@ -107,7 +114,6 @@
       "priceRange": "€€",
       "paymentAccepted": "Cash, Credit Card, Bizum",
       "currenciesAccepted": "EUR",
-      "@type": ["LocalBusiness", "MedicalBusiness", "Psychologist"],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -122,18 +128,13 @@
       "description": "Psicóloga sanitaria colegiada con más de 15 años de experiencia en terapia individual, de pareja, familiar e infantil",
       "url": "{{ .Site.BaseURL }}sobre-mi/",
       "image": "{{ .Site.BaseURL }}images/sobre-mi.png",
-      "sameAs": [
-        "{{ range .Site.Params.social }}{{ if .footer }}{{ .url }},{{ end }}{{ end }}"
-      ],
+      "sameAs": [{{ $first := true }}{{ range .Site.Params.social }}{{ if .footer }}{{ if not $first }},{{ end }}"{{ .url }}"{{ $first = false }}{{ end }}{{ end }}],
       "worksFor": {
         "@id": "{{ .Site.BaseURL }}#organization"
       },
       "alumniOf": "Universidad Miguel Hernández",
       "knowsAbout": ["Psicología Clínica", "Terapia de Pareja", "Psicología Infantil", "Terapia Familiar", "Ansiedad", "Depresión", "Adicciones"],
-      "memberOf": {
-        "@type": "ProfessionalService",
-        "name": "Colegio Oficial de Psicólogos de Madrid"
-      }
+      "memberOf": "Colegio Oficial de Psicólogos de Madrid"
     },
     {
       "@type": "WebSite",
