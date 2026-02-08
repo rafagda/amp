@@ -1,0 +1,62 @@
+{{/*
+  Responsive Image Partial
+  Usage: {{ partial "responsive-image.html" (dict "src" "images/photo.jpg" "alt" "Description" "class" "custom-class" "sizes" "(min-width: 1024px) 800px, 100vw") }}
+
+  Parameters:
+  - src: Image path relative to static/ or assets/
+  - alt: Alt text for accessibility
+  - class: Optional CSS classes
+  - sizes: Optional sizes attribute (default: 100vw)
+  - loading: Optional loading attribute (default: lazy)
+  - width: Optional fixed width
+  - height: Optional fixed height
+*/}}
+
+{{ $src := .src }}
+{{ $alt := .alt | default "" }}
+{{ $class := .class | default "" }}
+{{ $sizes := .sizes | default "100vw" }}
+{{ $loading := .loading | default "lazy" }}
+
+{{/* Try to get image from assets first, then fall back to static */}}
+{{ $image := "" }}
+{{ $imageResource := resources.Get $src }}
+
+{{ if $imageResource }}
+  {{/* Image found in assets/ - process it */}}
+  {{ $image = $imageResource }}
+
+  {{/* Generate responsive variants */}}
+  {{ $small := $image.Resize "640x webp q85" }}
+  {{ $medium := $image.Resize "1024x webp q85" }}
+  {{ $large := $image.Resize "1920x webp q85" }}
+  {{ $fallback := $image.Resize "1920x jpg q85" }}
+
+  <picture>
+    <source
+      type="image/webp"
+      srcset="{{ $small.RelPermalink }} 640w,
+              {{ $medium.RelPermalink }} 1024w,
+              {{ $large.RelPermalink }} 1920w"
+      sizes="{{ $sizes }}"
+    >
+    <img
+      src="{{ $fallback.RelPermalink }}"
+      alt="{{ $alt }}"
+      class="{{ $class }}"
+      loading="{{ $loading }}"
+      {{ with .width }}width="{{ . }}"{{ end }}
+      {{ with .height }}height="{{ . }}"{{ end }}
+    >
+  </picture>
+{{ else }}
+  {{/* Fallback to static image if not found in assets */}}
+  <img
+    src="{{ relURL $src }}"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="{{ $loading }}"
+    {{ with .width }}width="{{ . }}"{{ end }}
+    {{ with .height }}height="{{ . }}"{{ end }}
+  >
+{{ end }}

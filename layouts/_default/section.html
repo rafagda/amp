@@ -1,0 +1,104 @@
+{{ define "main" }}
+<!-- Page Header -->
+<section class="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-slate-100">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+                {{ .Title }}
+            </h1>
+            {{ if .Description }}
+            <p class="text-xl text-slate-600">
+                {{ .Description }}
+            </p>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Section Content Grid -->
+<section class="py-20">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            {{ if .Pages }}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{ range .Pages }}
+                <article class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated card-shine shadow-depth-md border-glow" data-animate>
+                    {{ if .Params.thumbnail.image }}
+                    <div class="h-48 overflow-hidden image-hover-zoom">
+                        {{ $image := resources.Get .Params.thumbnail.image }}
+                        {{ if $image }}
+                            {{ $optimized := $image.Fill "800x400 webp q85" }}
+                            <img src="{{ $optimized.RelPermalink }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover" loading="lazy">
+                        {{ else }}
+                            <img src="{{ .Params.thumbnail.image }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover" loading="lazy">
+                        {{ end }}
+                    </div>
+                    {{ end }}
+
+                    <div class="p-6">
+                        {{ if .Date }}
+                        <time class="text-sm text-slate-500" datetime="{{ .Date.Format "2006-01-02" }}">
+                            {{ .Date.Day }} de {{ index (slice "enero" "febrero" "marzo" "abril" "mayo" "junio" "julio" "agosto" "septiembre" "octubre" "noviembre" "diciembre") (sub .Date.Month 1) }} de {{ .Date.Year }}
+                        </time>
+                        {{ end }}
+
+                        <h2 class="text-xl font-display font-bold text-slate-800 mt-2 mb-3">
+                            <a href="{{ .Permalink }}" class="hover:text-accent-500 transition-colors">
+                                {{ .Title }}
+                            </a>
+                        </h2>
+
+                        {{ if .Description }}
+                        <p class="text-slate-600 mb-4 leading-relaxed line-clamp-3">
+                            {{ .Description }}
+                        </p>
+                        {{ else if .Params.description }}
+                        <p class="text-slate-600 mb-4 leading-relaxed line-clamp-3">
+                            {{ .Params.description }}
+                        </p>
+                        {{ end }}
+
+                        <a href="{{ .Permalink }}" class="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold text-sm">
+                            Leer más
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+            {{ else }}
+            <div class="text-center py-12">
+                <p class="text-slate-600 text-lg">No hay contenido disponible en esta sección.</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-slate-50 gradient-depth textured-bg">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
+                ¿Necesitas ayuda profesional?
+            </h2>
+            <p class="text-xl text-slate-600 mb-8">
+                Primera consulta gratuita. Estamos aquí para ayudarte.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-primary-500 hover:bg-primary-600 btn-glow btn-depth inline-flex items-center justify-center shadow-depth-lg">
+                    Solicitar cita
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+                <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-glow btn-depth shadow-depth-md">
+                    Llamar: {{ .Site.Params.phone }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

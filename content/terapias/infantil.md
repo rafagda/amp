@@ -1,40 +1,42 @@
 +++
 title = "Infantil / Adolescentes"
+description = "Psicólogo infantil y adolescentes en Madrid. Tratamiento de problemas de conducta, ansiedad infantil, acoso escolar, TDAH, dificultades emocionales. Primera consulta gratuita."
+keywords = ["psicólogo infantil Madrid", "psicóloga niños Madrid", "terapia adolescentes Madrid", "psicología infantil Madrid", "ansiedad infantil", "TDAH Madrid", "acoso escolar tratamiento", "psicólogo infantil Madrid centro"]
 showHome = true
 weight = 3
 draft = false
 [thumbnail]
-image = "/images/infantil.jpg"
-alt = "infantil"
+image = "images/infantil.jpg"
+alt = "Psicología infantil y adolescentes en Madrid"
 [pricing]
 single = "Una sesión 60€"
 pass = "Cuatro sesiones 220€"
 +++
 
-En la infancia **es muy importante detectar características y rasgos de personalidad del niño/a** que le dificulten su bienestar presente pero también que le permitan desarrollarse y vivir en plenitud en la época adolescente-adulta.
+La infancia y la adolescencia son etapas fundamentales en el desarrollo de la personalidad. **Detectar y trabajar las dificultades a tiempo** puede prevenir problemas futuros y ayudar al niño o adolescente a desarrollar recursos emocionales sanos.
 
-**Conviene concienciar e insistir** en la mejora de habilidades, la estimulación de capacidades y el trabajo en las dificultades del niño **para ayudarle a adquirir una buena autoestima y también recursos vitales, seguros de vida de todo tipo de sufrimientos emocionales posteriores**.
+## ¿Cuándo puede necesitar ayuda tu hijo/a?
 
-**Trataremos**:
+Es importante estar atentos a señales que puedan indicar malestar emocional o dificultades en el desarrollo. Intervenir a tiempo ayudará a tu hijo/a a **adquirir una buena autoestima** y las herramientas necesarias para afrontar los retos de la vida.
 
-- los trastornos del desarrollo
-- déficit de atención
-- hiperactividad
-- problemas y conflictos escolares
-- rendimiento escolar
-- agresividad
-- trastornos de conducta
-- fobias
-- tristeza
-- ansiedad
-- tics
-- somatizaciones
-- problemas con la alimentación
-- trastornos del sueño
-- trastornos del espectro autista
-- problemas hijo-padres
-- ayuda en separaciones de los padres
-- luto
-- conflictos…
+## ¿Qué problemas trabajamos?
 
-La evaluación y el tratamiento se realiza valorando por parte del profesional, qué es importante en cada caso y motivo de consulta, **estableciendo una evaluación y tratamiento individualizado en que se decidirá si de debe trabajar más con el niño/a, con los padres o de forma combinada**. Las f*recuencias de sesiones son entre semanal y tres semanas*.
+Ofrecemos tratamiento especializado para:
+
+- Trastornos del desarrollo y del espectro autista
+- Déficit de atención e hiperactividad (TDAH)
+- Problemas de conducta y agresividad
+- Ansiedad, fobias y miedos
+- Tristeza y bajo estado de ánimo
+- Dificultades escolares y de rendimiento académico
+- Problemas de alimentación y sueño
+- Tics y somatizaciones
+- Conflictos familiares y adaptación a cambios
+- Duelo y pérdidas
+- Apoyo en procesos de separación de los padres
+
+## ¿Cómo trabajamos?
+
+Realizamos una **evaluación individualizada** para determinar el mejor abordaje en cada caso. Según las necesidades, el tratamiento puede centrarse en el niño/a, en orientación a los padres, o en un trabajo combinado.
+
+Las sesiones tienen una frecuencia entre semanal y cada tres semanas, adaptándose al ritmo y necesidades de cada familia.

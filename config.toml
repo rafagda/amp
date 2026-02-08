@@ -1,24 +1,62 @@
 baseURL = "https://www.ampsicologiamadrid.com/"
-languageCode = "es"
+languageCode = "es-ES"
+defaultContentLanguage = "es"
 title = "Psicóloga Madrid Centro"
 publishDir = "dist"
+enableRobotsTXT = true
+canonifyURLs = true
 
 [markup.goldmark.renderer]
 unsafe= true
+
+[build]
+writeStats = true
+
+# Image processing configuration
+[imaging]
+quality = 85
+resampleFilter = "Lanczos"
+anchor = "Smart"
+
+[imaging.exif]
+disableDate = false
+disableLatLong = true
+includeFields = ""
+excludeFields = ""
+
+# Sitemap configuration for SEO
+[sitemap]
+changefreq = "weekly"
+priority = 0.8
+filename = "sitemap.xml"
+
+# Taxonomies for SEO
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "static"
+target = "static"
 
 [params]
     seoTitleSuffix = "Psicóloga Especialista en Madrid"
     name = "Alaitz Martínez Latorre"
     description = "AM Psicología Madrid, gabinete de psicología clínica para niños y adultos. Psicólogo infantil, terapia de pareja, tratamiento de depresión, ansiedad, adicciones..."
     email = "contacto@ampsicologiamadrid.com"
-    phone = "915 220 679"
+    phone = "686 898 494"
     cellphone = "686 898 494"
-    phones = "915 220 679 - 686 898 494"
+    phones = "686 898 494"
+    collegiateNumber = "M-29373"
     address = """Calle Hilarión Eslava, 27bis, piso 1º, puerta 4
     28015 Madrid (Madrid)"""
     year = 2023
     background = ""
-    favicon = "images/favicon.gif"
+    favicon = "images/favicon.ico"
     DateForm = "January 2, 2006"
 
     showSubheader = true
@@ -28,6 +66,145 @@ unsafe= true
     footerEnableContact = true
     footerEnableFollowme = true
     footerEnableDoctoralia = true
+
+[params.schedule]
+    weekdays = "Lunes - Viernes"
+    weekdaysHours = "9:00 - 20:00"
+    saturday = "Sábados"
+    saturdayHours = "Cerrado"
+    sunday = "Domingos"
+    sundayHours = "Cerrado"
+
+# Información Profesional
+[params.professional]
+    title = "Psicóloga Especialista en"
+    location = "Madrid Centro"
+    credentials = "Psicóloga Sanitaria Colegiada"
+    experienceYears = "15"
+    experienceText = "Más de 15 años de experiencia ayudando a personas como tú"
+    experienceBadge = "+15 años"
+    patientsCount = "500"
+    patientsBadge = "+500 pacientes"
+
+# CTAs y Botones
+[params.cta]
+    primary = "Solicita tu Cita"
+    secondary = "Conoce Más"
+    contact = "Contacta Conmigo"
+    call = "Llámame"
+    callNow = "Llámame ahora"
+    requestConsultation = "Solicitar Consulta"
+    sendMessage = "Enviar Mensaje"
+    readMore = "Leer más"
+    viewAll = "Ver todos los artículos"
+    viewMore = "Ver más artículos"
+    learnMoreAbout = "Conoce más sobre mí"
+    seeMore = "Saber más"
+
+# Ofertas y Promociones
+[params.offers]
+    firstConsultation = "Primera consulta gratuita"
+    firstConsultationEmoji = "🎁 Primera consulta gratuita"
+
+# Taglines Principales
+[params.taglines]
+    heroSubtitle = "Más de 15 años de experiencia ayudando a personas como tú"
+    ctaFinal = "No esperes más para dar el primer paso hacia tu bienestar. Estoy aquí para acompañarte en tu proceso de cambio."
+    aboutIntro = "Soy psicóloga sanitaria colegiada con más de 15 años de experiencia ayudando a personas, parejas y familias a superar sus dificultades emocionales y mejorar su bienestar."
+    aboutEnhanced = "Mi enfoque terapéutico es integrador, combinando diferentes técnicas según las necesidades específicas de cada paciente. Creo firmemente en la importancia de crear un espacio seguro y de confianza donde puedas expresarte libremente."
+    aboutWork = "Trabajo con adultos, adolescentes y niños, abordando una amplia variedad de problemáticas como ansiedad, depresión, problemas de pareja, dificultades familiares, adicciones y trastornos de la personalidad."
+
+# Preguntas CTA por Sección
+[params.ctaQuestions]
+    therapyTitle = "¿Te interesa esta terapia?"
+    therapySubtitle = "Contacta conmigo para valorar tu caso de forma personalizada"
+    areaTitle = "¿Necesitas ayuda con esto?"
+    areaSubtitle = "Puedo ayudarte a superar estas dificultades de forma profesional y empática"
+    pricingTitle = "¿Listo para comenzar?"
+    pricingSubtitle = "Solicita tu primera consulta gratuita"
+    aboutTitle = "¿Quieres empezar tu terapia?"
+    aboutSubtitle = "Estoy aquí para ayudarte a alcanzar tu bienestar emocional"
+    blogTitle = "¿Te ha resultado útil este artículo?"
+    blogSubtitle = "Si necesitas ayuda profesional, estoy aquí para apoyarte"
+    contactTitle = "¿Necesitas ayuda profesional?"
+    contactSubtitle = "No esperes más para dar el primer paso hacia tu bienestar"
+    ctaFinalTitle = "¿Listo para dar el primer paso?"
+
+# Secciones Homepage
+[params.sections.services]
+    tagline = "Servicios"
+    title = "¿Cómo puedo ayudarte?"
+    subtitle = "Ofrezco diferentes tipos de terapia adaptados a tus necesidades específicas"
+
+[params.sections.about]
+    tagline = "Sobre Mí"
+    title = "Tu bienestar es mi prioridad"
+
+[params.sections.blog]
+    tagline = "Blog"
+    title = "Artículos recientes"
+    subtitle = "Reflexiones y recursos sobre salud mental y bienestar emocional"
+
+# Páginas
+[params.pages.contact]
+    title = "Contacta Conmigo"
+    subtitle = "Estoy aquí para ayudarte. Solicita tu primera consulta gratuita"
+    formTitle = "Envíame un mensaje"
+    formSubtitle = "Rellena el formulario y me pondré en contacto contigo lo antes posible"
+    phoneTitle = "Teléfono"
+    emailTitle = "Email"
+    addressTitle = "Dirección"
+    scheduleTitle = "Horario"
+
+[params.pages.blog]
+    title = "Blog"
+    subtitle = "Artículos sobre psicología, bienestar emocional y salud mental"
+    author = "Escrito por"
+    share = "Compartir:"
+    relatedPosts = "Artículos relacionados"
+
+# Formulario de Contacto
+[params.contactForm]
+    nameLabel = "Nombre"
+    phoneLabel = "Teléfono"
+    emailLabel = "Email"
+    messageLabel = "Mensaje"
+    namePlaceholder = "Tu nombre completo"
+    phonePlaceholder = "Ej: 612 345 678"
+    emailPlaceholder = "tu@email.com"
+    messagePlaceholder = "Cuéntame cómo puedo ayudarte..."
+    submitButton = "Enviar Mensaje"
+    successTitle = "✅ ¡Mensaje enviado correctamente!"
+    successText = "Me pondré en contacto contigo lo antes posible."
+    privacyText = "Al enviar este formulario, aceptas nuestra política de privacidad. Tus datos serán tratados con total confidencialidad."
+    privacyLink = "política de privacidad"
+
+# Sidebar Templates
+[params.sidebar]
+    contactTitle = "¿Tienes dudas?"
+    contactText = "Rellena el formulario y me pondré en contacto contigo"
+    otherTherapies = "Otras Terapias"
+    otherAreas = "Otras Áreas"
+    infoTitle = "Información"
+    contactCardTitle = "Contacta"
+    contactCardText = "Rellena el formulario y te responderé lo antes posible"
+
+# Features/Beneficios
+[params.features]
+    items = [
+        "Primera consulta gratuita",
+        "Sesiones presenciales y online",
+        "Horario flexible"
+    ]
+
+# SEO
+[params.seo]
+    siteDescription = "Gabinete de psicología clínica especializado en terapia individual, de pareja, familiar e infantil"
+    keywords = "psicóloga Madrid, psicólogo Madrid centro, terapia psicológica Madrid, psicóloga sanitaria Madrid, terapia pareja Madrid, psicólogo infantil Madrid, ansiedad Madrid, depresión tratamiento Madrid, psicología clínica Madrid, terapia online Madrid"
+    author = "Alaitz Martínez Latorre"
+    twitterCreator = "@am_psicologia"
+    ogImage = "/images/og-image.jpg"
+    locale = "es_ES"
 
 [params.google.tagManager]
     gtmTag = "GTM-TXCJLVMX"
@@ -119,66 +296,66 @@ unsafe= true
     weight = 6
 
 [[menu.main]]
-    name = "areas intervención"
+    name = "áreas intervención"
     url = "#"
     weight = 3
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "adicciones"
     url = "/areas-intervencion/adicciones"
     weight = 1
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "ansiedad"
     url = "/areas-intervencion/ansiedad"
     weight = 2
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "depresion"
     url = "/areas-intervencion/depresion"
     weight = 3
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "duelos"
     url = "/areas-intervencion/duelos"
     weight = 4
 
 [[menu.main]]
-    parent = "areas intervención"
-    name = "estres"
+    parent = "áreas intervención"
+    name = "estrés"
     url = "/areas-intervencion/estres"
     weight = 5
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "fobias"
     url = "/areas-intervencion/fobias"
     weight = 6
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "obsesiones"
     url = "/areas-intervencion/obsesiones"
     weight = 7
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "alimentacion"
     url = "/areas-intervencion/alimentacion"
     weight = 8
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "personalidad"
     url = "/areas-intervencion/personalidad"
     weight = 9
 
 [[menu.main]]
-    parent = "areas intervención"
+    parent = "áreas intervención"
     name = "sueño"
     url = "/areas-intervencion/sueno"
     weight = 10

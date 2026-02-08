@@ -1,43 +1,43 @@
 +++
 title = "Terapia de Pareja"
+description = "Terapia de pareja en Madrid Centro. Resuelve conflictos, mejora la comunicación y fortalece tu relación. Psicóloga especialista en terapia de pareja con más de 15 años de experiencia. Primera consulta gratuita."
+keywords = ["terapia pareja Madrid", "psicólogo pareja Madrid", "terapia matrimonial Madrid", "problemas pareja", "crisis pareja Madrid", "mejorar relación pareja", "terapia parejas Madrid centro"]
 showHome = true
 weight = 2
 draft = false
 [thumbnail]
-image = "/images/pareja.jpg"
-alt = "pareja"
+image = "images/pareja.jpg"
+alt = "Terapia de pareja en Madrid"
 [pricing]
 single = "Una sesión 85€"
 pass = "Cuatro sesiones 320€"
 +++
 
-Actualmente, las parejas suelen formarse a partir de una emoción que es el enamoramiento.
+Las relaciones de pareja pueden ser una fuente de bienestar y felicidad, pero también pueden atravesar momentos de crisis que generen malestar en ambos miembros.
 
-El objetivo principal de la pareja es hacerse la vida agradable pero la emoción del enamoramiento puede ser pasajera y **es necesaria para la continuidad positiva de la pareja una base de intimidad, compromiso, entrega, comunicación, resolución de conflictos y apoyo mutuo** para llevar la relación de una manera agradable y sana.
+## ¿Cuándo acudir a terapia de pareja?
 
-La **pareja** puede ser una **fuente de bienestar** o convertirse en una fuente **de conflictos** y malestar, si no se trata en el momento adecuado.
+El enamoramiento inicial puede transformarse con el tiempo. Para mantener una **relación sana y satisfactoria**, es necesario cultivar la intimidad, el compromiso, la comunicación y el apoyo mutuo.
 
-Podríamos agrupar los **conflictos que** normalmente **suelen tratarse en terapia de pareja**, los más frecuentes suelen ser por:
+Los **conflictos más frecuentes** en las parejas suelen estar relacionados con:
 
-- el poder y las responsabilidades
-- la pasión y la sexualidad
-- la intimidad
-- la diferenciación con la familia de origen
-- la comunicación
+- La comunicación y resolución de conflictos
+- La distribución del poder y las responsabilidades
+- La intimidad y la sexualidad
+- Las diferencias con las familias de origen
 
-**También** generan conflictos los **cambios a nivel vital** como:
+También surgen dificultades ante **cambios vitales importantes** como enfermedades, problemas económicos, la llegada de los hijos, su independización o la jubilación.
 
-- las enfermedades
-- los problemas económicos
-- la paternidad o maternidad
-- la independización de los hijos
-- la jubilación
-- etc
+## ¿Cómo trabajamos?
 
-La forma de terapia de pareja es básicamente cognitivo-conductual y sistémica, **terapias con evidencia probada de eficacia**, el tratamiento suele consistir - básicamente en:
+Utilizamos **enfoques cognitivo-conductual y sistémico**, terapias con evidencia científica probada. El tratamiento incluye:
 
-- entrenamiento en habilidades de comunicación y resolución de conflictos
-- aumentar los intercambios de conductas positivas
-- introducir cambios en las expectativas
-- atribuciones e ideas irracionales
-- cambiar el patrón de reciprocidad negativa introduciendo conductas positivas
+- Entrenamiento en habilidades de comunicación
+- Resolución efectiva de conflictos
+- Incremento de conductas positivas entre la pareja
+- Modificación de expectativas y creencias irracionales
+- Fortalecimiento del vínculo emocional
+
+## Formato de las sesiones
+
+Las sesiones tienen una duración de 60 minutos y la frecuencia se acuerda según las necesidades de cada pareja. Buscamos crear un espacio seguro donde ambos podáis expresaros y trabajar juntos hacia una relación más satisfactoria.

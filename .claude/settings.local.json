@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo version:*)",
+      "Bash(npm --version:*)",
+      "Bash(npm install:*)",
+      "Bash(hugo server:*)",
+      "Bash(hugo:*)",
+      "Bash(ls:*)",
+      "Bash(for img in /Users/dev/Workspace/amp/assets/images/*.jpg /Users/dev/Workspace/amp/assets/images/*.png)",
+      "Bash(do [ -f \"$img\" ])",
+      "Bash(for img in /Users/dev/Workspace/amp/static/images/*.jpg /Users/dev/Workspace/amp/static/images/*.png)",
+      "Bash(sips:*)",
+      "Bash(grep:*)",
+      "Bash(xargs:*)",
+      "Bash(find:*)",
+      "Bash(wc:*)",
+      "WebFetch(domain:ampsicologiamadrid.com)",
+      "WebFetch(domain:platform.docplanner.com)",
+      "Bash(while read img)",
+      "Bash(do if ! grep -rq \"$img\" /Users/dev/Workspace/amp/content/ /Users/dev/Workspace/amp/layouts/)",
+      "Bash(then echo \"UNUSED: $img\" fi done)",
+      "Bash(for file in /Users/dev/Workspace/amp/content/posts/*.md)",
+      "Bash(do basename \"$file\")",
+      "Bash(done)",
+      "Bash(head:*)",
+      "Bash(if grep -q \"pointer-events:none\" /Users/dev/Workspace/amp/dist/css/main.min.0e9859475e982adf834cbeb9ddd4df250a306f66ba812401b0d15ec143bd8892.css)",
+      "Bash(then echo \"✓ CSS pointer-events fix is present in built files\")",
+      "Bash(else echo \"✗ CSS pointer-events fix NOT found\")",
+      "Bash(fi)",
+      "Bash(if grep -q \"!isValid\" /Users/dev/Workspace/amp/dist/js/main.min.2a213bf2aa767b5593f8d663afe8c857d006de57a55fb680b4c9b4d8bd5161cd.js)",
+      "Bash(then echo \"✓ JS validation fix is present in built files\")",
+      "Bash(else echo \"✗ JS validation fix NOT found\")",
+      "Bash(tee:*)",
+      "Bash(for file in content/posts/*.md)",
+      "Bash(do sed -i '' 's|image = \"\"/images/|image = \"\"images/|g' \"$file\")"
+    ]
+  }
+}

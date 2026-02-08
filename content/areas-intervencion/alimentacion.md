@@ -1,47 +1,33 @@
 +++
 title = "Trastornos de alimentación"
+description = "Tratamiento de trastornos alimentarios en Madrid. Terapia para anorexia, bulimia, atracones y TCA. Psicóloga especialista en trastornos de la conducta alimentaria."
+keywords = ["trastornos alimentarios Madrid", "anorexia tratamiento Madrid", "bulimia Madrid", "TCA Madrid", "atracones tratamiento", "psicólogo alimentación Madrid", "trastorno conducta alimentaria"]
 showHome = true
-weight = 1
+weight = 8
 draft = false
 [thumbnail]
-image = "/images/alimentacion.jpg"
-alt = "alimentacion"
+image = "images/alimentacion.jpg"
+alt = "Tratamiento de trastornos alimentarios en Madrid"
 +++
 
-Los **trastornos de la alimentación** son enfermedades crónicas y progresivas que se
-manifiestan a través de la conducta alimentaria.
+Los **trastornos de la alimentación** son enfermedades complejas que se manifiestan a través de la conducta alimentaria, pero que engloban factores psicológicos y emocionales profundos, especialmente relacionados con la **imagen corporal y la autoestima**.
 
-Sin embargo, engloban una gama muy compleja de factores psicológicos y emocionales entre
-los que prevalece una alteración o **distorsión de la auto-imagen corporal**.
+## ¿Qué caracteriza estos trastornos?
 
-Hay un gran **temor a subir de peso** y la **autoestima** está supeditada a la percepción
-de una buena imagen corporal.
+Prevalece una alteración o distorsión de la imagen corporal, un miedo intenso a subir de peso y una autoestima que depende completamente de la percepción física. La relación con la comida se vuelve problemática y genera gran sufrimiento.
 
-Existen varios tipos de trastornos, aunque los más comunes son la anorexia nerviosa y la
-bulimia nerviosa.
+## Principales trastornos
 
-# Anorexia nerviosa
+**Anorexia nerviosa**: Miedo intenso a la obesidad que lleva a una restricción alimentaria severa, con pérdida significativa de peso (mínimo 15% del peso corporal).
 
-Miedo intenso a ser obeso. Se manifiesta por una bajada por lo menos del 15% de su peso
-corporal.
+**Bulimia nerviosa**: Episodios de ingesta excesiva seguidos de conductas compensatorias (vómitos, laxantes, ejercicio excesivo). El peso suele mantenerse, haciéndola menos reconocible.
 
-# Bulimia nerviosa
+**Trastorno por atracón**: Ingesta desproporcionada de alimentos como compensación emocional, con consecuencias como obesidad, diabetes e hipertensión.
 
-Tendencia a comer demasiado para después purgarse o vomitar todo. Generalmente está
-cerca de su peso corporal, por lo que es menos reconocible.
+**Ortorexia**: Obsesión por la alimentación "saludable" que paradójicamente lleva a una mala nutrición al evitar grupos de alimentos esenciales.
 
-# Comer compulsivamente
+**Vigorexia**: Adicción al ejercicio con una visión distorsionada del propio cuerpo, viéndose siempre débil o insuficiente.
 
-Ingesta desproporcional de alimentos como forma de compensa emocional. Tiene serias
-consecuencias como obesidad, diabetes, hipertensión y enfermedades cardíacas.
+## ¿Cómo podemos ayudarte?
 
-# Ortorexia
-
-Obsesión por lo que el paciente considera una “buena alimentación” y que, por el contrario, lo
-lleva a evitar grasas, proteínas y vitaminas básicas para el organismo. Paradójicamente su afán
-por “comer sano” lo lleva a una mala nutrición, anemias, etc.
-
-# Vigorexia
-
-Adicción al ejercicio a la que se suma una visión distorsionada de sí mismos, al verse débiles y
-enclenques.
+Abordamos estos trastornos de forma integral, trabajando la **relación con la comida, la imagen corporal y los aspectos emocionales** subyacentes. La recuperación es posible con el apoyo adecuado.

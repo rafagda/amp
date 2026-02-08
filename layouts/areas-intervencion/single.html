@@ -1,42 +1,100 @@
-{{ define "header"}}
-<!-- empty -->
-{{ end }}
 {{ define "main" }}
-<main id="main" class="container areas-intervencion">
+<!-- Page Header -->
+<section class="pt-32 pb-12 bg-gradient-to-br from-primary-50 to-slate-100">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Breadcrumb -->
+            {{ partial "breadcrumb.html" . }}
 
-	<div class="row topspace">
+            <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-3 mt-2">
+                {{ .Title }}
+            </h1>
+            {{ if .Description }}
+            <p class="text-lg text-slate-600">
+                {{ .Description }}
+            </p>
+            {{ end }}
+        </div>
+    </div>
+</section>
 
-		<div class="col-sm-8">
+<!-- Main Content -->
+<section class="py-12">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content Area -->
+            <article class="lg:col-span-2">
+                {{ if .Params.thumbnail.image }}
+                <div class="mb-6 rounded-2xl overflow-hidden shadow-xl" style="height: 400px;">
+                    {{ $image := resources.Get .Params.thumbnail.image }}
+                    {{ if $image }}
+                        {{ $optimized := $image.Resize "x400 webp q85" }}
+                        <img src="{{ $optimized.RelPermalink }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover object-center">
+                    {{ else }}
+                        <img src="{{ .Params.thumbnail.image }}" alt="{{ .Params.thumbnail.alt | default .Title }}" class="w-full h-full object-cover object-center">
+                    {{ end }}
+                </div>
+                {{ end }}
 
-			<article class="post">
-				<header class="entry-header">
-					<h3 class="entry-title">
-						<a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
-					</h3>
-				</header>
-				<div class="pull-left thumb">
-					<img src="{{ .Param `thumbnail.image` }}" alt="{{ .Param `thumbnail.alt` }}" class="img-rounded">
-				</div>
-				<div class="entry-content">
-					{{ .Content }}
-				</div>
-			</article>
+                <div class="prose prose-slate prose-lg max-w-none">
+                    {{ .Content }}
+                </div>
 
-		</div>
+                <!-- CTA Section -->
+                <div class="mt-12 p-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl text-white shadow-depth-lg ambient-light">
+                    <h3 class="text-2xl font-display font-bold mb-4">{{ .Site.Params.ctaQuestions.areaTitle }}</h3>
+                    <p class="text-slate-200 mb-6">
+                        {{ .Site.Params.ctaQuestions.areaSubtitle }}
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-primary-500 hover:bg-primary-600 btn-glow btn-depth inline-flex items-center justify-center shadow-depth-lg">
+                            {{ .Site.Params.cta.primary }}
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-glow btn-depth text-center shadow-depth-md">
+                            {{ .Site.Params.cta.call }}: {{ .Site.Params.phone }}
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-		<div class="col-sm-4">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-24 space-y-6">
+                    <!-- Contact Card -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-depth-md border-glow">
+                        <h3 class="font-display font-bold text-slate-800 text-lg mb-4">{{ .Site.Params.sidebar.contactTitle }}</h3>
+                        <p class="text-slate-600 text-sm mb-6">
+                            {{ .Site.Params.sidebar.contactText }}
+                        </p>
+                        {{ partial "contact-form.html" . }}
+                    </div>
 
-			<header class="entry-header">
-				<h1 class="entry-title">Contacta</h1>
-			</header>
-
-			<div class="entry-content">
-				{{ partial "contact-form.html" . }}
-			</div>
-
-		</div>
-
-	</div>
-
-</main>
+                    <!-- Other Areas Card -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-depth-md">
+                        <h3 class="font-display font-bold text-slate-800 text-lg mb-4">{{ .Site.Params.sidebar.otherAreas }}</h3>
+                        <ul class="space-y-3 text-sm">
+                            {{ range .Site.Menus.main }}
+                                {{ if eq .Name "áreas intervención" }}
+                                    {{ range .Children }}
+                                        <li>
+                                            <a href="{{ .URL }}" class="text-slate-700 hover:text-accent-600 font-medium transition-colors flex items-center">
+                                                <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                                </svg>
+                                                {{ .Name | title }}
+                                            </a>
+                                        </li>
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
 {{ end }}

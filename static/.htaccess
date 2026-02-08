@@ -1,4 +1,10 @@
 RewriteEngine On
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} ^ampsicologiamadrid\.com$ [NC]
+RewriteRule ^(.*)$ https://www.ampsicologiamadrid.com/$1 [L,R=301]
+
+# Force HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
