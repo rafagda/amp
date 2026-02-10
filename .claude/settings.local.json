@@ -35,7 +35,9 @@
       "Bash(for file in content/posts/*.md)",
       "Bash(do sed -i '' 's|image = \"\"/images/|image = \"\"images/|g' \"$file\")",
       "Bash(python3:*)",
-      "Bash(/tmp/imgenv/bin/pip install:*)"
+      "Bash(/tmp/imgenv/bin/pip install:*)",
+      "Bash(while read f)",
+      "Bash(do sed -i '' 's/ btn-glow//g' \"$f\")"
     ]
   }
 }

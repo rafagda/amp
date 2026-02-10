@@ -383,36 +383,20 @@
 
 /* Efectos de Hover Mejorados para CTAs */
 .cta-enhanced {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cta-enhanced::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition:
-        width 0.6s ease,
-        height 0.6s ease;
-}
-
-.cta-enhanced:hover::before {
-    width: 300px;
-    height: 300px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cta-enhanced:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow:
-        0 20px 25px -5px rgba(96, 125, 139, 0.3),
-        0 10px 10px -5px rgba(96, 125, 139, 0.15);
+        0 10px 15px -3px rgba(96, 125, 139, 0.2),
+        0 4px 6px -4px rgba(96, 125, 139, 0.1);
+}
+
+.cta-enhanced:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 /* Sombras Internas para Profundidad */
@@ -454,6 +438,7 @@
 /* Efecto de Luz Ambiental */
 .ambient-light {
     position: relative;
+    overflow: hidden;
 }
 
 .ambient-light::before {
@@ -642,36 +627,9 @@
     background-position: 100% 0%;
 }
 
-/* Overlay sutil con brillo en botones */
-.btn-glow {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-glow::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
-    transition: left 0.5s ease;
-}
-
-.btn-glow:hover::before {
-    left: 100%;
-}
-
-/* Efecto de profundidad en hover para botones */
+/* Borde interno sutil para profundidad en botones */
 .btn-depth {
     position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-depth::after {
@@ -683,14 +641,6 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -1px 0 rgba(0, 0, 0, 0.1);
     pointer-events: none;
-}
-
-.btn-depth:hover {
-    transform: translateY(-2px);
-}
-
-.btn-depth:active {
-    transform: translateY(0);
 }
 
 /* Gradiente animado para botones especiales */

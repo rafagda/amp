@@ -82,13 +82,13 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" data-animate>
-                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth inline-flex items-center shadow-depth-lg">
+                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-depth inline-flex items-center shadow-depth-lg">
                     {{ .Site.Params.cta.primary }}
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </a>
-                <a href="{{ .Site.BaseURL }}sobre-mi/" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-md">
+                <a href="{{ .Site.BaseURL }}sobre-mi/" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-depth shadow-depth-md">
                     {{ .Site.Params.cta.secondary }}
                 </a>
             </div>
@@ -144,7 +144,9 @@
                     {{ end }}
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia Individual</h3>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">
+                        <a href="{{ .Site.BaseURL }}terapias/adultos/" class="hover:text-accent-500 transition-colors">Terapia Individual</a>
+                    </h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">
                         Terapia personalizada para adultos que buscan superar ansiedad, depresión, estrés o cualquier desafío emocional.
                     </p>
@@ -169,7 +171,9 @@
                     {{ end }}
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia de Pareja</h3>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">
+                        <a href="{{ .Site.BaseURL }}terapias/pareja/" class="hover:text-accent-500 transition-colors">Terapia de Pareja</a>
+                    </h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">
                         Ayudo a las parejas a mejorar su comunicación, resolver conflictos y fortalecer su relación.
                     </p>
@@ -194,7 +198,9 @@
                     {{ end }}
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia Infantil</h3>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">
+                        <a href="{{ .Site.BaseURL }}terapias/infantil/" class="hover:text-accent-500 transition-colors">Terapia Infantil</a>
+                    </h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">
                         Apoyo especializado para niños y adolescentes en su desarrollo emocional y conductual.
                     </p>
@@ -219,7 +225,9 @@
                     {{ end }}
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Terapia Familiar</h3>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">
+                        <a href="{{ .Site.BaseURL }}terapias/familia/" class="hover:text-accent-500 transition-colors">Terapia Familiar</a>
+                    </h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">
                         Trabajo con familias para mejorar la dinámica familiar y resolver conflictos intergeneracionales.
                     </p>
@@ -244,7 +252,9 @@
                     {{ end }}
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Coaching</h3>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">
+                        <a href="{{ .Site.BaseURL }}terapias/coaching/" class="hover:text-accent-500 transition-colors">Coaching</a>
+                    </h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">
                         Coaching personal y profesional para alcanzar tus objetivos y potenciar tu desarrollo.
                     </p>
@@ -269,7 +279,9 @@
                     {{ end }}
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">Informes Psicológicos</h3>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3">
+                        <a href="{{ .Site.BaseURL }}terapias/informes/" class="hover:text-accent-500 transition-colors">Informes Psicológicos</a>
+                    </h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">
                         Elaboración de informes psicológicos para procesos legales, educativos o clínicos.
                     </p>
@@ -284,7 +296,7 @@
         </div>
 
         <div class="text-center mt-12" data-animate>
-            <a href="{{ .Site.BaseURL }}contacto/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+            <a href="{{ .Site.BaseURL }}contacto/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-depth shadow-depth-lg">
                 {{ .Site.Params.cta.requestConsultation }}
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -324,7 +336,7 @@
                     </p>
                 </div>
                 <div class="mt-8">
-                    <a href="{{ .Site.BaseURL }}sobre-mi/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+                    <a href="{{ .Site.BaseURL }}sobre-mi/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-depth shadow-depth-lg">
                         {{ .Site.Params.cta.learnMoreAbout }}
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -347,13 +359,13 @@
                 {{ .Site.Params.taglines.ctaFinal }}
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth inline-flex items-center shadow-depth-xl">
+                <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-depth inline-flex items-center shadow-depth-xl">
                     {{ .Site.Params.cta.primary }}
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </a>
-                <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+                <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-depth shadow-depth-lg">
                     {{ .Site.Params.cta.call }}: {{ .Site.Params.phone }}
                 </a>
             </div>
@@ -419,7 +431,7 @@
         </div>
 
         <div class="text-center mt-12" data-animate>
-            <a href="{{ .Site.BaseURL }}posts/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-glow btn-depth shadow-depth-lg">
+            <a href="{{ .Site.BaseURL }}posts/" class="inline-flex items-center px-8 py-3.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full cta-enhanced btn-depth shadow-depth-lg">
                 {{ .Site.Params.cta.viewAll }}
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

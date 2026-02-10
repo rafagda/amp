@@ -47,13 +47,13 @@
                         {{ .Site.Params.ctaQuestions.areaSubtitle }}
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-primary-500 hover:bg-primary-600 btn-glow btn-depth inline-flex items-center justify-center shadow-depth-lg">
+                        <a href="{{ .Site.BaseURL }}contacto/" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-primary-500 hover:bg-primary-600 btn-depth inline-flex items-center justify-center shadow-depth-lg">
                             {{ .Site.Params.cta.primary }}
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>
                         </a>
-                        <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-glow btn-depth text-center shadow-depth-md">
+                        <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-depth text-center shadow-depth-md">
                             {{ .Site.Params.cta.call }}: {{ .Site.Params.phone }}
                         </a>
                     </div>

@@ -326,10 +326,11 @@ Implementado en todas las páginas:
 - Fuentes: DM Sans (display) + Inter (body)
 
 **Efectos visuales:**
-- Cards con hover effects y border glow
+- Cards con hover effects
 - Imágenes con zoom en hover (`image-hover-zoom`)
 - Degradados y sombras de profundidad (`shadow-depth-*`)
 - Animaciones de entrada con `data-animate`
+- CTAs: `cta-enhanced` (translateY + box-shadow en hover/active) + `btn-depth` (borde interno sutil)
 
 **Colores principales:**
 - Primary: Tonos azules (`primary-50` a `primary-900`)
@@ -870,6 +871,35 @@ alt = "Descripción de la imagen"
 - Tarifas
 - Blog (tarjetas en home y listado)
 
+### Simplificación de Efectos CSS en Botones
+
+**Eliminado `btn-glow`:** Efecto de barrido de luz (sweep) eliminado completamente de `main.css` y de todos los layouts (16 archivos). El efecto usaba un pseudo-elemento `::before` con gradiente animado que añadía complejidad innecesaria.
+
+**Simplificado `cta-enhanced`:** Eliminado efecto ripple (pseudo-elemento `::before` con círculo expandible). Ahora solo usa transiciones simples de `transform` y `box-shadow`. Añadido estado `:active` (transform reset + sin sombra) para mejor feedback táctil.
+
+**Simplificado `btn-depth`:** Eliminadas transiciones hover/active de transform (ahora manejadas por `cta-enhanced`). Solo conserva el pseudo-elemento `::after` para el borde interno sutil de profundidad visual.
+
+**Movido `overflow: hidden`:** De `.cta-enhanced` a `.ambient-light` (donde realmente se necesita para contener el pseudo-elemento de luz).
+
+**Archivos CSS modificados:** `assets/css/main.css`
+**Layouts actualizados (eliminado `btn-glow`):** header, home, contact-form, posts (list/single), terapias, areas-intervencion, sobre-mi, tarifas, section, taxonomy, term, tags (list/terms), categories (list/terms)
+
+### Enlaces en Tarjetas de Servicios del Homepage
+
+**Añadidos enlaces en títulos de tarjetas de terapia** en `layouts/partials/home.html`:
+- Los 6 `<h3>` de las tarjetas de servicios ahora envuelven el texto en `<a>` con enlace a la página correspondiente
+- Efecto hover: `hover:text-accent-500 transition-colors`
+- Mejora SEO: internal linking adicional desde homepage a páginas de servicio
+- Mejora UX: los usuarios pueden hacer clic directamente en el título (además del botón "Saber más")
+
+**Tarjetas enlazadas:**
+- Terapia Individual → `/terapias/adultos/`
+- Terapia de Pareja → `/terapias/pareja/`
+- Terapia Infantil → `/terapias/infantil/`
+- Terapia Familiar → `/terapias/familia/`
+- Coaching → `/terapias/coaching/`
+- Informes Psicológicos → `/terapias/informes/`
+
 ### Resumen de Mejoras Febrero 2026
 
 **UI/UX:**
@@ -877,15 +907,19 @@ alt = "Descripción de la imagen"
 - ✅ Diseño más compacto y coherente
 - ✅ Imágenes uniformes y optimizadas
 - ✅ Mejor experiencia de navegación
+- ✅ Títulos de tarjetas de servicios clickables en homepage
+- ✅ Efectos de botones simplificados y con mejor feedback táctil
 
 **Performance:**
 - ✅ 56 imágenes procesadas automáticamente
 - ✅ Consolidación en assets/ para mejor optimización
 - ✅ Tamaños consistentes y predecibles
 - ✅ Build time: ~5 segundos
+- ✅ CSS más ligero (eliminadas ~60 líneas de efectos innecesarios)
 
 **Mantenimiento:**
 - ✅ Sistema de imágenes simplificado
 - ✅ Solo 3 archivos en static/images/ (logo SVG, OG image, sobre-mi para structured data)
 - ✅ Todas las imágenes procesables en assets/
 - ✅ Formato consistente en todos los layouts
+- ✅ Clases CSS de botones simplificadas: `cta-enhanced btn-depth` (sin `btn-glow`)
