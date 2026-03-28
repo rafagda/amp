@@ -1,0 +1,27 @@
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="flex items-center justify-center space-x-2 text-sm text-slate-600 mb-4">
+    <!-- Home -->
+    <a href="{{ .Site.BaseURL }}" class="hover:text-accent-500 transition-colors">Inicio</a>
+
+    {{ if and .Section (not .IsSection) }}
+    <!-- Section (only if page has a section and is NOT the section list page itself) -->
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <a href="{{ .Site.BaseURL }}{{ .Section }}/" class="hover:text-accent-500 transition-colors">
+        {{ if eq .Section "posts" }}Blog{{ else if eq .Section "terapias" }}Terapias{{ else if eq .Section "areas-intervencion" }}Áreas de Intervención{{ else }}{{ .Section | humanize }}{{ end }}
+    </a>
+    {{ end }}
+
+    <!-- Current Page -->
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <span class="text-slate-800 font-semibold" aria-current="page">
+        {{ if .IsSection }}
+            {{ if eq .Section "posts" }}Blog{{ else if eq .Section "terapias" }}Terapias{{ else if eq .Section "areas-intervencion" }}Áreas de Intervención{{ else }}{{ .Title }}{{ end }}
+        {{ else }}
+            {{ .Title }}
+        {{ end }}
+    </span>
+</nav>

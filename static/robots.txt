@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /404.html
+
+# Crawl-delay removed for better indexing
+# Sitemap
+Sitemap: https://www.ampsicologiamadrid.com/sitemap.xml
