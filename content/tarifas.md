@@ -21,23 +21,23 @@ Es una entrevista informativa donde podremos conocernos, valorar tu situación y
 ---
 
 ### Terapia individual adultos
-- **Sesión individual**: 60€
-- **Bono 4 sesiones**: 220€ (55€ por sesión)
+- **Sesión individual**: 65€
+- **Bono 4 sesiones**: 240€ (60€ por sesión)
 - **Duración**: 50-60 minutos
 
 ### Terapia infantil y adolescentes
-- **Sesión individual**: 55€
-- **Bono 4 sesiones**: 200€ (50€ por sesión)
+- **Sesión individual**: 60€
+- **Bono 4 sesiones**: 220€ (55€ por sesión)
 - **Duración**: 50-60 minutos
 
 ### Terapia de pareja
-- **Sesión**: 80€
-- **Bono 4 sesiones**: 300€ (75€ por sesión)
+- **Sesión**: 85€
+- **Bono 4 sesiones**: 320€ (80€ por sesión)
 - **Duración**: 75 minutos
 
 ### Terapia online
-- **Sesión individual**: 60€
-- **Bono 4 sesiones**: 220€ (55€ por sesión)
+- **Sesión individual**: 65€
+- **Bono 4 sesiones**: 240€ (60€ por sesión)
 - **Duración**: 50-60 minutos
 
 ### Terapia a domicilio
@@ -49,7 +49,7 @@ Es una entrevista informativa donde podremos conocernos, valorar tu situación y
 - **Terapia y mediación familiar**: A consultar
 - **Evaluaciones psicopedagógicas**: A consultar
 - **Informes periciales**: A consultar
-- **Coaching personal**: 60€ por sesión
+- **Coaching personal**: 65€ por sesión
 
 ## Información sobre los bonos
 
@@ -58,7 +58,7 @@ Los bonos de sesiones ofrecen un **ahorro** y te permiten comprometerte con tu p
 - Puedes adquirirlos al inicio o durante el tratamiento
 - No tienen fecha de caducidad
 - No son reembolsables
-- Representan un ahorro de 5€ por sesión
+- Representan un ahorro de 5€ por sesión respecto al precio individual
 
 ## Formas de pago
 
