@@ -22,11 +22,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: "0.155.2"
           extended: true
 
       - name: Build
-        run: hugo --cleanDestinationDir --ignoreCache
+        run: hugo --minify --cleanDestinationDir --ignoreCache
 
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4

@@ -7,7 +7,7 @@
     <!-- Comprehensive SEO -->
     {{ partial "seo.html" . }}
 
-    <title>{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.name }} - AM Psicología{{ else }}{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}{{ end }}</title>
 
     <!-- Favicon -->
     <link rel="icon" href="{{ .Site.BaseURL }}images/amp.svg" type="image/svg+xml">
@@ -16,7 +16,6 @@
     <!-- Resource Hints for Performance -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://platform.docplanner.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,9 +25,20 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Swiper CSS for Carousel - async loading -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+    {{ if .IsHome }}
+    <!-- Swiper CSS (self-hosted, solo homepage) -->
+    {{ $swiperCSS := resources.Get "vendor/swiper/swiper-bundle.min.css" }}
+    {{ if $swiperCSS }}
+        {{ if hugo.IsProduction }}{{ $swiperCSS = $swiperCSS | fingerprint }}{{ end }}
+        <link rel="stylesheet" href="{{ $swiperCSS.RelPermalink }}">
+    {{ end }}
+
+    <!-- Preload primera imagen del carrusel (LCP) -->
+    {{ with resources.Get "images/alaitz.jpg" }}
+        {{ $hero := .Resize "1920x webp q85" }}
+        <link rel="preload" as="image" href="{{ $hero.RelPermalink }}" type="image/webp">
+    {{ end }}
+    {{ end }}
 
     <!-- Tailwind CSS via Hugo Pipes -->
     {{ $css := resources.Get "css/main.css" }}
@@ -40,7 +50,7 @@
         <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{ end }}
 
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (consent-gated) -->
     {{ partial "googletagmanager-global.html" . }}
 
     {{ block "head" . }}{{ end }}
@@ -60,8 +70,17 @@
         {{ partial "footer.html" . }}
     {{ end }}
 
-    <!-- Swiper JS for Carousel - deferred loading -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Banner de consentimiento de cookies -->
+    {{ partial "cookie-consent.html" . }}
+
+    {{ if .IsHome }}
+    <!-- Swiper JS (self-hosted, solo homepage) -->
+    {{ $swiperJS := resources.Get "vendor/swiper/swiper-bundle.min.js" }}
+    {{ if $swiperJS }}
+        {{ if hugo.IsProduction }}{{ $swiperJS = $swiperJS | fingerprint }}{{ end }}
+        <script defer src="{{ $swiperJS.RelPermalink }}"></script>
+    {{ end }}
+    {{ end }}
 
     <!-- Custom JavaScript - deferred loading -->
     {{ $js := resources.Get "js/main.js" }}

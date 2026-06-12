@@ -32,6 +32,12 @@ Este sitio web puede utilizar servicios de terceros que recopilan información c
 - **Doctoralia/Docplanner:** Para gestión de citas y valoraciones
 - **Redes sociales:** Si se comparten contenidos en redes sociales
 
+## Consentimiento mediante banner
+
+Al acceder por primera vez a este sitio web se muestra un **banner de cookies** que le permite aceptar o rechazar las cookies de análisis. Las cookies de Google Analytics **solo se instalan si usted las acepta expresamente**. Si las rechaza, no se instala ninguna cookie de seguimiento.
+
+Puede **retirar o modificar su consentimiento en cualquier momento** borrando los datos de navegación de este sitio en su navegador (lo que hará que el banner vuelva a mostrarse en su próxima visita), o mediante la configuración del navegador descrita más abajo.
+
 ## Gestión de cookies
 
 Puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador:
@@ -69,9 +75,11 @@ A continuación se detallan las cookies que pueden utilizarse en este sitio web:
 
 | Cookie | Proveedor | Finalidad | Duración |
 |--------|-----------|-----------|----------|
-| _ga | Google Analytics | Distinguir usuarios | 2 años |
-| _gid | Google Analytics | Distinguir usuarios | 24 horas |
-| _gat | Google Analytics | Limitar porcentaje de solicitudes | 1 minuto |
+| _ga | Google Analytics | Distinguir usuarios (solo con consentimiento) | 2 años |
+| _ga_* | Google Analytics | Mantener el estado de la sesión (solo con consentimiento) | 2 años |
+| _gcl_au | Google Ads | Medición de conversiones (solo con consentimiento) | 3 meses |
+
+Además, este sitio guarda en el almacenamiento local de su navegador la preferencia de consentimiento (`amp-cookie-consent`), que no es una cookie de seguimiento y sirve únicamente para recordar su elección.
 
 ## Actualización de la política de cookies
 
@@ -88,4 +96,4 @@ Para cualquier duda sobre el uso de cookies en este sitio web, puede contactar c
 
 ---
 
-**Última actualización:** Febrero de 2026
+**Última actualización:** Junio de 2026
