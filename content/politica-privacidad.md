@@ -40,7 +40,7 @@ Los datos personales proporcionados se tratarán con las siguientes finalidades:
 
 La base legal para el tratamiento de sus datos es:
 
-- El **consentimiento del usuario** al facilitarnos sus datos a través del formulario de contacto
+- El **consentimiento expreso del usuario**, otorgado al marcar la casilla de aceptación del formulario de contacto
 - La **ejecución de un contrato** cuando se inicia la relación terapéutica
 - El **cumplimiento de obligaciones legales** en materia sanitaria y de historia clínica
 - El **interés vital del interesado** en lo que respecta a los datos de salud
@@ -52,9 +52,16 @@ Los datos personales proporcionados se conservarán:
 - **Datos de contacto:** Durante el tiempo necesario para gestionar la solicitud de información
 - **Datos clínicos:** Se conservarán durante el tiempo establecido por la legislación sanitaria vigente (mínimo 5 años desde la última asistencia)
 
-## 7. Destinatarios
+## 7. Destinatarios y encargados del tratamiento
 
 Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal o cuando sea necesario para la prestación del servicio (por ejemplo, compañías de seguros si el paciente utiliza un seguro médico).
+
+Para el funcionamiento del sitio web se utilizan los siguientes proveedores, que actúan como encargados del tratamiento:
+
+- **Formspree, Inc. (EE. UU.):** gestiona el envío de los mensajes del formulario de contacto. La transferencia internacional de datos se ampara en las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea. Puede consultar su política de privacidad en [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy/).
+- **Google LLC (EE. UU.):** presta el servicio de analítica web (Google Analytics), únicamente si usted acepta las cookies de análisis. La transferencia se ampara en el Marco de Privacidad de Datos UE-EE. UU. y Cláusulas Contractuales Tipo.
+
+Le recomendamos no incluir información sensible sobre su salud en el mensaje del formulario de contacto; estos detalles pueden tratarse directamente en la primera consulta.
 
 ## 8. Derechos del usuario
 
@@ -96,4 +103,4 @@ Es importante que nos comunique cualquier modificación en sus datos personales 
 
 ---
 
-**Última actualización:** Febrero de 2026
+**Última actualización:** Junio de 2026

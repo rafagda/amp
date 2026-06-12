@@ -51,30 +51,48 @@ document.addEventListener('DOMContentLoaded', function() {
     let closeTimeout;
 
     if (button && menu) {
-      // Desktop: hover with delay
-      if (window.innerWidth >= 768) {
-        dropdown.addEventListener('mouseenter', () => {
-          // Clear any pending close timeout
-          if (closeTimeout) {
-            clearTimeout(closeTimeout);
-          }
-          menu.classList.remove('hidden');
-          menu.classList.add('animate-fade-in-up');
-        });
+      const isDesktop = () => window.matchMedia('(min-width: 768px)').matches;
 
-        dropdown.addEventListener('mouseleave', () => {
-          // Add small delay before closing to allow mouse movement
-          closeTimeout = setTimeout(() => {
-            menu.classList.add('hidden');
-          }, 150);
-        });
-      } else {
-        // Mobile: click
-        button.addEventListener('click', (e) => {
+      const openMenu = () => {
+        if (closeTimeout) clearTimeout(closeTimeout);
+        menu.classList.remove('hidden');
+        menu.classList.add('animate-fade-in-up');
+        button.setAttribute('aria-expanded', 'true');
+      };
+
+      const closeMenu = () => {
+        menu.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+      };
+
+      button.setAttribute('aria-haspopup', 'true');
+      button.setAttribute('aria-expanded', 'false');
+
+      // Desktop: hover with delay (evaluated per-event so resize/rotation works)
+      dropdown.addEventListener('mouseenter', () => { if (isDesktop()) openMenu(); });
+      dropdown.addEventListener('mouseleave', () => {
+        if (isDesktop()) closeTimeout = setTimeout(closeMenu, 150);
+      });
+
+      // Mobile: click toggle
+      button.addEventListener('click', (e) => {
+        if (!isDesktop()) {
           e.preventDefault();
-          menu.classList.toggle('hidden');
-        });
-      }
+          if (menu.classList.contains('hidden')) openMenu(); else closeMenu();
+        }
+      });
+
+      // Keyboard accessibility
+      dropdown.addEventListener('focusin', () => { if (isDesktop()) openMenu(); });
+      dropdown.addEventListener('focusout', (e) => {
+        if (isDesktop() && !dropdown.contains(e.relatedTarget)) closeMenu();
+      });
+      dropdown.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          closeMenu();
+          button.focus();
+        }
+      });
     }
   });
 
@@ -83,19 +101,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
   const header = document.getElementById('header');
   if (header) {
-    let lastScroll = 0;
-
     window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      if (currentScroll > 100) {
+      if (window.pageYOffset > 100) {
         header.classList.add('shadow-md');
       } else {
         header.classList.remove('shadow-md');
       }
-
-      lastScroll = currentScroll;
-    });
+    }, { passive: true });
   }
 
   // ============================================
@@ -276,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         backToTop.classList.add('hidden');
       }
-    });
+    }, { passive: true });
 
     backToTop.addEventListener('click', () => {
       window.scrollTo({
@@ -285,11 +297,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-
-  // ============================================
-  // CONSOLE MESSAGE
-  // ============================================
-  console.log('%c✨ AM Psicología Madrid', 'font-size: 20px; color: #4e5f7e; font-weight: bold;');
-  console.log('%cNuevo diseño 2026', 'font-size: 14px; color: #8b7461;');
 
 });

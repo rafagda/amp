@@ -6,34 +6,52 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1: Alaitz -->
                 <div class="swiper-slide">
-                    {{ $alaitz := resources.Get "images/alaitz.png" }}
+                    {{ $alaitz := resources.Get "images/alaitz.jpg" }}
                     {{ if $alaitz }}
+                        {{ $sm := $alaitz.Resize "640x webp q85" }}
+                        {{ $md := $alaitz.Resize "1280x webp q85" }}
                         {{ $optimized := $alaitz.Resize "1920x webp q85" }}
-                        <img src="{{ $optimized.RelPermalink }}" alt="Alaitz Martínez Latorre - Psicóloga" loading="eager">
+                        <img src="{{ $optimized.RelPermalink }}"
+                             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $optimized.RelPermalink }} 1920w"
+                             sizes="100vw"
+                             width="{{ $optimized.Width }}" height="{{ $optimized.Height }}"
+                             alt="Alaitz Martínez Latorre - Psicóloga" loading="eager" fetchpriority="high">
                     {{ else }}
-                        <img src="{{ .Site.BaseURL }}images/alaitz.png" alt="Alaitz Martínez Latorre - Psicóloga" loading="eager">
+                        <img src="{{ .Site.BaseURL }}images/alaitz.jpg" alt="Alaitz Martínez Latorre - Psicóloga" loading="eager">
                     {{ end }}
                 </div>
 
                 <!-- Slide 2: Torres -->
                 <div class="swiper-slide">
-                    {{ $towers := resources.Get "images/towers.png" }}
+                    {{ $towers := resources.Get "images/towers.jpg" }}
                     {{ if $towers }}
+                        {{ $sm := $towers.Resize "640x webp q85" }}
+                        {{ $md := $towers.Resize "1280x webp q85" }}
                         {{ $optimized := $towers.Resize "1920x webp q85" }}
-                        <img src="{{ $optimized.RelPermalink }}" alt="AM Psicología Madrid" loading="lazy">
+                        <img src="{{ $optimized.RelPermalink }}"
+                             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $optimized.RelPermalink }} 1920w"
+                             sizes="100vw"
+                             width="{{ $optimized.Width }}" height="{{ $optimized.Height }}"
+                             alt="AM Psicología Madrid" loading="lazy">
                     {{ else }}
-                        <img src="{{ .Site.BaseURL }}images/towers.png" alt="AM Psicología Madrid" loading="lazy">
+                        <img src="{{ .Site.BaseURL }}images/towers.jpg" alt="AM Psicología Madrid" loading="lazy">
                     {{ end }}
                 </div>
 
                 <!-- Slide 3: Desk -->
                 <div class="swiper-slide">
-                    {{ $desk := resources.Get "images/desk.png" }}
+                    {{ $desk := resources.Get "images/desk.jpg" }}
                     {{ if $desk }}
+                        {{ $sm := $desk.Resize "640x webp q85" }}
+                        {{ $md := $desk.Resize "1280x webp q85" }}
                         {{ $optimized := $desk.Resize "1920x webp q85" }}
-                        <img src="{{ $optimized.RelPermalink }}" alt="Espacio de trabajo" loading="lazy">
+                        <img src="{{ $optimized.RelPermalink }}"
+                             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $optimized.RelPermalink }} 1920w"
+                             sizes="100vw"
+                             width="{{ $optimized.Width }}" height="{{ $optimized.Height }}"
+                             alt="Espacio de trabajo" loading="lazy">
                     {{ else }}
-                        <img src="{{ .Site.BaseURL }}images/desk.png" alt="Espacio de trabajo" loading="lazy">
+                        <img src="{{ .Site.BaseURL }}images/desk.jpg" alt="Espacio de trabajo" loading="lazy">
                     {{ end }}
                 </div>
             </div>

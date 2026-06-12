@@ -9,9 +9,6 @@ canonifyURLs = true
 [markup.goldmark.renderer]
 unsafe= true
 
-[build]
-writeStats = true
-
 # Image processing configuration
 [imaging]
 quality = 85
@@ -43,6 +40,11 @@ target = "assets"
 source = "static"
 target = "static"
 
+# Swiper self-hosted desde node_modules (servido vía Hugo Pipes con fingerprint)
+[[module.mounts]]
+source = "node_modules/swiper"
+target = "assets/vendor/swiper"
+
 [params]
     seoTitleSuffix = "Psicóloga Especialista en Madrid"
     name = "Alaitz Martínez Latorre"
@@ -56,7 +58,6 @@ target = "static"
     28015 Madrid (Madrid)"""
     year = 2023
     background = ""
-    favicon = "images/favicon.ico"
     DateForm = "January 2, 2006"
 
     showSubheader = true
@@ -244,7 +245,7 @@ target = "static"
 
 [[params.social]]
 	title = "email"
-	url = "mailto:contacto@ampsicologia.es"
+	url = "mailto:contacto@ampsicologiamadrid.com"
     icon = "fa-envelope"
     footer = false
     network = "email"

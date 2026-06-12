@@ -74,6 +74,20 @@
     <input type="hidden" name="_subject" value="Nuevo contacto desde ampsicologiamadrid.com" />
     <input type="text" name="_gotcha" style="display:none" />
 
+    <!-- Consentimiento RGPD (obligatorio para datos de salud - Art. 9) -->
+    <div class="flex items-start gap-3">
+        <input
+            type="checkbox"
+            name="privacy_consent"
+            id="privacy_consent"
+            required
+            class="mt-1 h-4 w-4 rounded border-slate-300 text-accent-500 focus:ring-accent-500"
+        >
+        <label for="privacy_consent" class="text-sm text-slate-600">
+            He leído y acepto la <a href="/politica-privacidad/" class="underline text-accent-700 hover:text-accent-800">política de privacidad</a> y consiento el tratamiento de mis datos para responder a mi consulta. <span class="text-red-500">*</span>
+        </label>
+    </div>
+
     <!-- Submit Button -->
     <button
         type="submit"
@@ -85,14 +99,4 @@
         </svg>
     </button>
 
-    <!-- Success Message -->
-    <div class="success-message hidden bg-green-50 border-2 border-green-200 rounded-lg p-4 text-center">
-        <p class="text-green-800 font-semibold">{{ .Site.Params.contactForm.successTitle }}</p>
-        <p class="text-green-700 text-sm mt-1">{{ .Site.Params.contactForm.successText }}</p>
-    </div>
-
-    <!-- Privacy Notice -->
-    <p class="text-xs text-slate-500 text-center">
-        {{ .Site.Params.contactForm.privacyText }}
-    </p>
 </form>
