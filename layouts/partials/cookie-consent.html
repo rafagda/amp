@@ -22,13 +22,27 @@
 <script>
 (function() {
     var KEY = 'amp-cookie-consent';
+    // La AEPD recomienda renovar el consentimiento como máximo cada 24 meses; usamos 12.
+    var MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
     var banner = document.getElementById('cookie-banner');
-    if (!banner || localStorage.getItem(KEY)) return;
+    if (!banner) return;
 
-    banner.classList.remove('hidden');
+    function readConsent() {
+        var raw = localStorage.getItem(KEY);
+        if (!raw) return null;
+        var parts = raw.split('|');
+        var value = parts[0];
+        var ts = parseInt(parts[1], 10);
+        // Valores antiguos sin timestamp o caducados: se piden de nuevo
+        if ((value !== 'accepted' && value !== 'rejected') || !ts || Date.now() - ts > MAX_AGE_MS) {
+            localStorage.removeItem(KEY);
+            return null;
+        }
+        return value;
+    }
 
     function choose(value) {
-        localStorage.setItem(KEY, value);
+        localStorage.setItem(KEY, value + '|' + Date.now());
         banner.classList.add('hidden');
         if (value === 'accepted' && window.ampLoadGoogleTags) {
             window.ampLoadGoogleTags();
@@ -37,5 +51,18 @@
 
     document.getElementById('cookie-accept').addEventListener('click', function() { choose('accepted'); });
     document.getElementById('cookie-reject').addEventListener('click', function() { choose('rejected'); });
+
+    // Permite retirar/cambiar el consentimiento (enlace "Configurar cookies" del footer)
+    var settingsLink = document.getElementById('cookie-settings');
+    if (settingsLink) {
+        settingsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem(KEY);
+            banner.classList.remove('hidden');
+            banner.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        });
+    }
+
+    if (!readConsent()) banner.classList.remove('hidden');
 })();
 </script>

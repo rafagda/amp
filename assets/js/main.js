@@ -17,26 +17,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  if (mobileMenuClose && mobileMenu) {
-    mobileMenuClose.addEventListener('click', function() {
-      mobileMenu.classList.add('translate-x-full');
-      setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300);
-      document.body.style.overflow = 'auto';
-    });
+  function closeMobileMenu() {
+    if (!mobileMenu || mobileMenu.classList.contains('hidden')) return;
+    mobileMenu.classList.add('translate-x-full');
+    setTimeout(() => {
+      mobileMenu.classList.add('hidden');
+    }, 300);
+    document.body.style.overflow = 'auto';
   }
 
-  // Close mobile menu on outside click
+  if (mobileMenuClose && mobileMenu) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+  }
+
   if (mobileMenu) {
+    // Close on outside click
     mobileMenu.addEventListener('click', function(e) {
-      if (e.target === mobileMenu) {
-        mobileMenu.classList.add('translate-x-full');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-        }, 300);
-        document.body.style.overflow = 'auto';
-      }
+      if (e.target === mobileMenu) closeMobileMenu();
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMobileMenu();
+    });
+
+    // Restore body scroll if viewport grows to desktop with the menu open
+    window.matchMedia('(min-width: 768px)').addEventListener('change', function(e) {
+      if (e.matches) closeMobileMenu();
     });
   }
 
@@ -176,35 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
         el: '.swiper-pagination',
         clickable: true,
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
     });
-
-    // Pause/Play button functionality
-    const pauseButton = document.getElementById('pauseButton');
-    const playIcon = document.getElementById('playIcon');
-    const pauseIcon = document.getElementById('pauseIcon');
-
-    if (pauseButton && playIcon && pauseIcon) {
-      let isPaused = false;
-
-      pauseButton.addEventListener('click', () => {
-        if (isPaused) {
-          swiper.autoplay.start();
-          playIcon.classList.add('hidden');
-          pauseIcon.classList.remove('hidden');
-          pauseButton.setAttribute('aria-label', 'Pausar carrusel');
-        } else {
-          swiper.autoplay.stop();
-          pauseIcon.classList.add('hidden');
-          playIcon.classList.remove('hidden');
-          pauseButton.setAttribute('aria-label', 'Reproducir carrusel');
-        }
-        isPaused = !isPaused;
-      });
-    }
   }
 
   // ============================================
@@ -215,17 +194,36 @@ document.addEventListener('DOMContentLoaded', function() {
   forms.forEach(form => {
     form.addEventListener('submit', function(e) {
       let isValid = true;
+      let firstInvalid = null;
       const inputs = form.querySelectorAll('input[required], textarea[required]');
+      const markInvalid = (input) => {
+        isValid = false;
+        if (!firstInvalid) firstInvalid = input;
+      };
 
       inputs.forEach(input => {
         const errorMsg = input.parentElement.querySelector('.error-message');
 
+        // Checkboxes (consentimiento RGPD): validar marcado, no el value
+        if (input.type === 'checkbox') {
+          if (!input.checked) {
+            markInvalid(input);
+            if (errorMsg) errorMsg.classList.remove('hidden');
+          } else {
+            if (errorMsg) errorMsg.classList.add('hidden');
+          }
+          return;
+        }
+
         if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('border-red-500');
-          if (errorMsg) errorMsg.classList.remove('hidden');
+          markInvalid(input);
+          input.classList.add('border-error');
+          if (errorMsg) {
+            errorMsg.textContent = 'Este campo es obligatorio';
+            errorMsg.classList.remove('hidden');
+          }
         } else {
-          input.classList.remove('border-red-500');
+          input.classList.remove('border-error');
           if (errorMsg) errorMsg.classList.add('hidden');
         }
 
@@ -233,8 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (input.type === 'email' && input.value) {
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(input.value)) {
-            isValid = false;
-            input.classList.add('border-red-500');
+            markInvalid(input);
+            input.classList.add('border-error');
             if (errorMsg) {
               errorMsg.textContent = 'Por favor, introduce un email válido';
               errorMsg.classList.remove('hidden');
@@ -242,12 +240,12 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
 
-        // Phone validation (Spanish format)
+        // Phone validation (Spanish format, with or without +34/0034 prefix)
         if (input.type === 'tel' && input.value) {
-          const phoneRegex = /^[6-9]\d{8}$/;
-          if (!phoneRegex.test(input.value.replace(/\s/g, ''))) {
-            isValid = false;
-            input.classList.add('border-red-500');
+          const phoneRegex = /^(?:\+34|0034)?[6-9]\d{8}$/;
+          if (!phoneRegex.test(input.value.replace(/[\s\-\.]/g, ''))) {
+            markInvalid(input);
+            input.classList.add('border-error');
             if (errorMsg) {
               errorMsg.textContent = 'Por favor, introduce un teléfono válido';
               errorMsg.classList.remove('hidden');
@@ -256,9 +254,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
 
-      // Si no es válido, prevenir envío
+      // Si no es válido, prevenir envío y enfocar el primer campo con error
       if (!isValid) {
         e.preventDefault();
+        if (firstInvalid) firstInvalid.focus();
       }
       // Si es válido, dejar que el formulario se envíe normalmente a Formspree
     });
@@ -268,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     inputs.forEach(input => {
       input.addEventListener('blur', function() {
         if (this.value.trim()) {
-          this.classList.remove('border-red-500');
+          this.classList.remove('border-error');
           const errorMsg = this.parentElement.querySelector('.error-message');
           if (errorMsg) errorMsg.classList.add('hidden');
         }

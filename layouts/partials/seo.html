@@ -10,22 +10,35 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}" />
 
+{{- /* Imagen social: el thumbnail del frontmatter vive en assets/ y solo se publica
+       procesado, así que hay que resolverlo con resources.Get (la ruta cruda daría 404) */}}
+{{- $ogImage := printf "%simages/og-image.jpg" .Site.BaseURL }}
+{{- $ogAlt := .Title }}
+{{- $ogWidth := 1200 }}
+{{- $ogHeight := 630 }}
+{{- with .Params.thumbnail }}
+  {{- with .alt }}{{ $ogAlt = . }}{{ end }}
+  {{- with resources.Get .image }}
+    {{- $processed := .Resize "1200x jpg q85" }}
+    {{- $ogImage = $processed.Permalink }}
+    {{- $ogWidth = $processed.Width }}
+    {{- $ogHeight = $processed.Height }}
+  {{- end }}
+{{- end }}
+{{- $isPost := and .IsPage (eq .Type "posts") }}
+
 <!-- Open Graph / Facebook -->
 <meta property="og:locale" content="{{ .Site.Params.seo.locale }}" />
-<meta property="og:type" content="{{ if eq .Type "posts" }}article{{ else }}website{{ end }}" />
+<meta property="og:type" content="{{ if $isPost }}article{{ else }}website{{ end }}" />
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}{{ end }}" />
 <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-{{ if .Params.thumbnail.image }}
-<meta property="og:image" content="{{ .Site.BaseURL }}{{ trim .Params.thumbnail.image "/" }}" />
-<meta property="og:image:alt" content="{{ .Params.thumbnail.alt | default .Title }}" />
-{{ else }}
-<meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.jpg" />
-{{ end }}
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-{{ if eq .Type "posts" }}
+<meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:image:alt" content="{{ $ogAlt }}" />
+<meta property="og:image:width" content="{{ $ogWidth }}" />
+<meta property="og:image:height" content="{{ $ogHeight }}" />
+{{ if $isPost }}
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
 <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
 <meta property="article:author" content="{{ .Site.Params.seo.author }}" />
@@ -37,11 +50,7 @@
 <meta name="twitter:creator" content="{{ .Site.Params.seo.twitterCreator }}" />
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Params.seoTitleSuffix }}{{ end }}" />
 <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
-{{ if .Params.thumbnail.image }}
-<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ trim .Params.thumbnail.image "/" }}" />
-{{ else }}
-<meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-image.jpg" />
-{{ end }}
+<meta name="twitter:image" content="{{ $ogImage }}" />
 
 <!-- JSON-LD Structured Data: Organization & LocalBusiness -->
 <script type="application/ld+json">
@@ -156,13 +165,13 @@
         "@id": "{{ .Site.BaseURL }}#person"
       },
       "inLanguage": "es-ES"
-    }{{ end }}{{ if eq .Type "posts" }},
+    }{{ end }}{{ if $isPost }},
     {
       "@type": "Article",
       "@id": "{{ .Permalink }}#article",
       "headline": "{{ .Title }}",
       "description": "{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary }}{{ end }}",
-      "image": "{{ if .Params.thumbnail.image }}{{ .Site.BaseURL }}{{ trim .Params.thumbnail.image "/" }}{{ else }}{{ .Site.BaseURL }}images/og-image.jpg{{ end }}",
+      "image": "{{ $ogImage }}",
       "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
       "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
       "author": {

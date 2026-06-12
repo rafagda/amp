@@ -1,8 +1,5 @@
 User-Agent: *
 Allow: /
-Disallow: /dist/
-Disallow: /node_modules/
-Disallow: /*.json$
 Disallow: /404.html
 
 # Sitemap

@@ -135,9 +135,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {{ range $related }}
                 <article class="bg-white border border-slate-200 hover:border-accent-300 rounded-2xl overflow-hidden card-elevated card-shine shadow-depth-md border-glow">
-                    {{ if .Params.thumbnail.image }}
+                    {{ $alt := .Params.thumbnail.alt | default .Title }}
+                    {{ with resources.Get (.Params.thumbnail.image | default "") }}
+                    {{ $optimized := .Resize "600x webp q85" }}
                     <div class="h-48 overflow-hidden image-hover-zoom">
-                        <img src="{{ .Params.thumbnail.image }}" alt="{{ .Title }}" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ $optimized.RelPermalink }}" alt="{{ $alt }}" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     {{ end }}
                     <div class="p-6">

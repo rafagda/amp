@@ -30,7 +30,7 @@
                         <h3 class="font-display font-bold text-slate-800 text-lg">{{ .Site.Params.pages.contact.phoneTitle }}</h3>
                     </div>
                     <div>
-                        <a href="tel:{{ .Site.Params.cellphone | replaceRE `\\s` `` }}" class="block text-slate-700 hover:text-accent-600 font-medium transition-colors">
+                        <a href="tel:+34{{ replace .Site.Params.cellphone " " "" }}" class="block text-slate-700 hover:text-accent-600 font-medium transition-colors">
                             {{ .Site.Params.cellphone }}
                         </a>
                     </div>

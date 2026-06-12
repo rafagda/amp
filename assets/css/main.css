@@ -193,63 +193,12 @@
     @apply bg-slate-600 opacity-100 w-7 rounded-md;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    @apply text-slate-600 w-10 h-10 rounded-full transition-all;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    @apply scale-110;
-    background: rgba(255, 255, 255, 0.95);
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    @apply text-lg font-bold;
-}
-
-@media (max-width: 768px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-        @apply hidden;
-    }
-}
-
 /* Ken Burns effect - continuous smooth zoom on all slides */
 .swiper-slide img {
     animation: kenBurns 12s ease-in-out infinite;
     transform: scale(1.02);
 }
 
-/* Pause button */
-.pause-button {
-    @apply absolute bottom-5 right-5 z-10 w-11 h-11 flex items-center justify-center rounded-full cursor-pointer transition-all;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.pause-button:hover {
-    @apply scale-110;
-    background: rgba(255, 255, 255, 0.95);
-}
-
-.pause-button svg {
-    @apply w-5 h-5 text-slate-600;
-}
-
-@media (max-width: 768px) {
-    .pause-button {
-        @apply w-9 h-9 bottom-4 right-4;
-    }
-
-    .pause-button svg {
-        @apply w-4 h-4;
-    }
-}
 /* ============================================
    DEPTH & VISUAL EFFECTS
    Añade profundidad y dinamismo al diseño

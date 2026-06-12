@@ -37,7 +37,8 @@
     gtag('config', '{{ .Site.Params.google.tagManager.globalTag }}');
   };
 
-  if (localStorage.getItem('amp-cookie-consent') === 'accepted') {
+  // El valor se guarda como "accepted|<timestamp>"; la caducidad la gestiona cookie-consent.html
+  if ((localStorage.getItem('amp-cookie-consent') || '').indexOf('accepted') === 0) {
     window.ampLoadGoogleTags();
   }
 </script>

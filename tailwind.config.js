@@ -4,6 +4,7 @@ module.exports = {
     './layouts/**/*.html',
     './content/**/*.{md,html}',
     './archetypes/**/*.md',
+    './assets/js/**/*.js',
   ],
   theme: {
     extend: {
@@ -20,6 +21,12 @@ module.exports = {
           700: '#3a4b54',
           800: '#273238',
           900: '#14191c',
+        },
+        // Error - Rojo teja desaturado, acorde con la paleta terracota
+        // (contraste sobre blanco ~4.9:1, apto para texto pequeño)
+        error: {
+          DEFAULT: '#a85048',
+          light: '#d9a8a3',
         },
         // Accent - Terracota #c98869 (Calidez y destacados)
         accent: {
