@@ -136,7 +136,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </a>
-                <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-depth shadow-depth-md">
+                <a href="tel:+34{{ replace .Site.Params.phone " " "" }}" class="px-8 py-3.5 text-white font-semibold rounded-full cta-enhanced bg-accent-500 hover:bg-accent-600 btn-depth shadow-depth-md">
                     Llamar: {{ .Site.Params.phone }}
                 </a>
             </div>

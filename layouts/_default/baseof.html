@@ -16,7 +16,6 @@
     <!-- Resource Hints for Performance -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://platform.docplanner.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,10 +32,16 @@
         <link rel="stylesheet" href="{{ $swiperCSS.RelPermalink }}">
     {{ end }}
 
-    <!-- Preload primera imagen del carrusel (LCP) -->
+    <!-- Preload primera imagen del carrusel (LCP). imagesrcset/imagesizes deben coincidir
+         con el srcset de la <img> en home.html para que el preload no se descargue en vano -->
     {{ with resources.Get "images/alaitz.jpg" }}
-        {{ $hero := .Resize "1920x webp q85" }}
-        <link rel="preload" as="image" href="{{ $hero.RelPermalink }}" type="image/webp">
+        {{ $sm := .Resize "640x webp q85" }}
+        {{ $md := .Resize "1280x webp q85" }}
+        {{ $lg := .Resize "1920x webp q85" }}
+        <link rel="preload" as="image" type="image/webp"
+              href="{{ $lg.RelPermalink }}"
+              imagesrcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $lg.RelPermalink }} 1920w"
+              imagesizes="100vw">
     {{ end }}
     {{ end }}
 

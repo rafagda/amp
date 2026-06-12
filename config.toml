@@ -52,13 +52,9 @@ target = "assets/vendor/swiper"
     email = "contacto@ampsicologiamadrid.com"
     phone = "686 898 494"
     cellphone = "686 898 494"
-    phones = "686 898 494"
     collegiateNumber = "M-29373"
     address = """Calle Hilarión Eslava, 27bis, piso 1º, puerta 4
     28015 Madrid (Madrid)"""
-    year = 2023
-    background = ""
-    DateForm = "January 2, 2006"
 
     showSubheader = true
     showTerapias = true
@@ -315,7 +311,7 @@ target = "assets/vendor/swiper"
 
 [[menu.main]]
     parent = "áreas intervención"
-    name = "depresion"
+    name = "depresión"
     url = "/areas-intervencion/depresion/"
     weight = 3
 

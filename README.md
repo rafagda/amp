@@ -10,14 +10,14 @@ Sitio web estático construido con Hugo para AM Psicología Madrid, gabinete de 
 
 ### Requisitos
 
-- Hugo v0.155.2+extended ([Descargar](https://gohugo.io/installation/))
-- Node.js 16+ (para Tailwind CSS)
+- Hugo v0.163.1+extended ([Descargar](https://gohugo.io/installation/))
+- Node.js 22+ (para Tailwind CSS / PostCSS, misma versión que CI)
 
 ### Instalación
 
 ```bash
 # Clonar repositorio
-git clone [repository-url]
+git clone git@github.com:rafagda/amp.git
 cd amp
 
 # Instalar dependencias
@@ -115,7 +115,7 @@ amp/
 
 ## 🎨 Stack Tecnológico
 
-- **Hugo** v0.155.2+extended - Static Site Generator
+- **Hugo** v0.163.1+extended - Static Site Generator
 - **Tailwind CSS** v3 - Framework CSS
 - **PostCSS** - Procesamiento CSS
 - **Swiper.js** - Carrusel de imágenes
@@ -214,9 +214,6 @@ hugo version
 
 # Crear nuevo contenido
 hugo new posts/nombre.md
-
-# Compilar solo CSS (Tailwind)
-npm run build:css
 ```
 
 ## 📚 Documentación

@@ -1,11 +1,11 @@
 {
   "name": "am-psicologia-madrid",
-  "version": "2.0.0",
+  "version": "1.1.0",
+  "private": true,
   "description": "AM Psicología Madrid - Sitio web con Hugo y Tailwind CSS",
   "scripts": {
     "dev": "hugo server -D",
-    "build": "hugo --minify",
-    "tw:build": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css"
+    "build": "hugo --minify --cleanDestinationDir --ignoreCache"
   },
   "keywords": [
     "hugo",
@@ -14,7 +14,7 @@
     "website"
   ],
   "author": "AM Psicología Madrid",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",

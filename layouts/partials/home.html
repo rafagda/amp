@@ -4,61 +4,26 @@
     <div class="absolute inset-0 z-0">
         <div class="swiper hero-swiper h-full">
             <div class="swiper-wrapper">
-                <!-- Slide 1: Alaitz -->
+                {{ $slides := slice
+                    (dict "src" "images/alaitz.jpg" "alt" "Alaitz Martínez Latorre - Psicóloga")
+                    (dict "src" "images/towers.jpg" "alt" "AM Psicología Madrid")
+                    (dict "src" "images/desk.jpg" "alt" "Espacio de trabajo") }}
+                {{ range $i, $slide := $slides }}
                 <div class="swiper-slide">
-                    {{ $alaitz := resources.Get "images/alaitz.jpg" }}
-                    {{ if $alaitz }}
-                        {{ $sm := $alaitz.Resize "640x webp q85" }}
-                        {{ $md := $alaitz.Resize "1280x webp q85" }}
-                        {{ $optimized := $alaitz.Resize "1920x webp q85" }}
-                        <img src="{{ $optimized.RelPermalink }}"
-                             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $optimized.RelPermalink }} 1920w"
+                    {{ with resources.Get $slide.src }}
+                        {{ $sm := .Resize "640x webp q85" }}
+                        {{ $md := .Resize "1280x webp q85" }}
+                        {{ $lg := .Resize "1920x webp q85" }}
+                        <img src="{{ $lg.RelPermalink }}"
+                             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $lg.RelPermalink }} 1920w"
                              sizes="100vw"
-                             width="{{ $optimized.Width }}" height="{{ $optimized.Height }}"
-                             alt="Alaitz Martínez Latorre - Psicóloga" loading="eager" fetchpriority="high">
-                    {{ else }}
-                        <img src="{{ .Site.BaseURL }}images/alaitz.jpg" alt="Alaitz Martínez Latorre - Psicóloga" loading="eager">
+                             width="{{ $lg.Width }}" height="{{ $lg.Height }}"
+                             alt="{{ $slide.alt }}"
+                             {{ if eq $i 0 }}loading="eager" fetchpriority="high"{{ else }}loading="lazy"{{ end }}>
                     {{ end }}
                 </div>
-
-                <!-- Slide 2: Torres -->
-                <div class="swiper-slide">
-                    {{ $towers := resources.Get "images/towers.jpg" }}
-                    {{ if $towers }}
-                        {{ $sm := $towers.Resize "640x webp q85" }}
-                        {{ $md := $towers.Resize "1280x webp q85" }}
-                        {{ $optimized := $towers.Resize "1920x webp q85" }}
-                        <img src="{{ $optimized.RelPermalink }}"
-                             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $optimized.RelPermalink }} 1920w"
-                             sizes="100vw"
-                             width="{{ $optimized.Width }}" height="{{ $optimized.Height }}"
-                             alt="AM Psicología Madrid" loading="lazy">
-                    {{ else }}
-                        <img src="{{ .Site.BaseURL }}images/towers.jpg" alt="AM Psicología Madrid" loading="lazy">
-                    {{ end }}
-                </div>
-
-                <!-- Slide 3: Desk -->
-                <div class="swiper-slide">
-                    {{ $desk := resources.Get "images/desk.jpg" }}
-                    {{ if $desk }}
-                        {{ $sm := $desk.Resize "640x webp q85" }}
-                        {{ $md := $desk.Resize "1280x webp q85" }}
-                        {{ $optimized := $desk.Resize "1920x webp q85" }}
-                        <img src="{{ $optimized.RelPermalink }}"
-                             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 1280w, {{ $optimized.RelPermalink }} 1920w"
-                             sizes="100vw"
-                             width="{{ $optimized.Width }}" height="{{ $optimized.Height }}"
-                             alt="Espacio de trabajo" loading="lazy">
-                    {{ else }}
-                        <img src="{{ .Site.BaseURL }}images/desk.jpg" alt="Espacio de trabajo" loading="lazy">
-                    {{ end }}
-                </div>
+                {{ end }}
             </div>
-
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
 
             <!-- Pagination -->
             <div class="swiper-pagination"></div>
@@ -66,16 +31,6 @@
 
         <!-- Overlay gradient -->
         <div class="hero-overlay"></div>
-
-        <!-- Pause/Play button -->
-        <button id="pauseButton" class="pause-button" aria-label="Pausar carrusel">
-            <svg id="playIcon" class="hidden" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-            </svg>
-            <svg id="pauseIcon" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-            </svg>
-        </button>
     </div>
 
     <!-- Decorative floating elements -->
@@ -383,7 +338,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </a>
-                <a href="tel:{{ .Site.Params.phone | replaceRE `\\s` `` }}" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-depth shadow-depth-lg">
+                <a href="tel:+34{{ replace .Site.Params.phone " " "" }}" class="px-8 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full cta-enhanced btn-depth shadow-depth-lg">
                     {{ .Site.Params.cta.call }}: {{ .Site.Params.phone }}
                 </a>
             </div>
