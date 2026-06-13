@@ -1,0 +1,4 @@
+{{- /* Devuelve true si la página no debe indexarse: términos de taxonomía con
+       menos de 2 entradas (contenido escaso) o noindex=true en el frontmatter.
+       Lo usan seo.html (meta robots) y sitemap.xml (exclusión). */ -}}
+{{- return or (and (eq .Kind "term") (lt (len .Pages) 2)) (eq .Params.noindex true) -}}
