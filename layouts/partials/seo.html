@@ -1,9 +1,10 @@
 <!-- SEO Meta Tags -->
 <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.seo.author }}">
-{{- /* Páginas de taxonomía con menos de 2 entradas: noindex (contenido escaso) */}}
-{{- $thinTerm := and (eq .Kind "term") (lt (len .Pages) 2) }}
-<meta name="robots" content="{{ if $thinTerm }}noindex, follow{{ else }}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{{ end }}">
+{{- /* Páginas de taxonomía con menos de 2 entradas: noindex (contenido escaso).
+       Las páginas noindex también se excluyen del sitemap (layouts/sitemap.xml). */}}
+{{- $noindex := partial "page-noindex.html" . }}
+<meta name="robots" content="{{ if $noindex }}noindex, follow{{ else }}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{{ end }}">
 <meta name="geo.region" content="ES-M">
 <meta name="geo.placename" content="Madrid">
 
